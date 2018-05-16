@@ -48,7 +48,7 @@ MoccaCalendar.calendar.create=Crear un nuevo calendario
 MoccaCalendar.calendar.plainlist=Orden del Día
 MoccaCalendar.calendar.plainlist.titlepast=Eventos Pasados
 MoccaCalendar.calendar.plainlist.titleupcoming=Próximos Eventos
-MoccaCalendar.calendar.plainlist.nopastevents=No hay eventos pasados ​​encontrado.
+MoccaCalendar.calendar.plainlist.nopastevents=No hay eventos pasados encontrado.
 MoccaCalendar.calendar.plainlist.noupcomingevents=No hay próximos eventos encontrados.
 ### Missing: MoccaCalendar.calendar.firstDayOfWeek=0
 
