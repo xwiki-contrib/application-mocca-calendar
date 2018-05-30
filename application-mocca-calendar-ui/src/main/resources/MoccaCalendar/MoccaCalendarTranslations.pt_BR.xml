@@ -39,66 +39,87 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language pt_BR generated from http://www.l10n.xwiki.org
-MoccaCalendar.MoccaCalendarClass_color=Cor de eventos na exibição de calendário
-MoccaCalendar.MoccaCalendarClass_content1=Conteúdo
-MoccaCalendar.MoccaCalendarClass_description=Descrição
-MoccaCalendar.MoccaCalendarClass_title=Título
-MoccaCalendar.MoccaCalendarEventClass_allDay=Dia inteiro
-MoccaCalendar.MoccaCalendarEventClass_description=Descrição
-MoccaCalendar.MoccaCalendarEventClass_endDate=Data final
-MoccaCalendar.MoccaCalendarEventClass_startDate=Data de início
-MoccaCalendar.MoccaCalendarEventClass_title=Título
+  <content>#general
 MoccaCalendar.calendar=Calendário
-MoccaCalendar.calendar.create=Criar novo calendário
+MoccaCalendar.calendar.title=Visão Geral do Calendário
 MoccaCalendar.calendar.defaultCalendarTitle=Outros Eventos
-MoccaCalendar.calendar.plainlist.nopastevents=Não há eventos passados encontrado.
-MoccaCalendar.calendar.plainlist.noupcomingevents=Não há eventos programados encontrado.
+MoccaCalendar.calendar.viewall=Visão geral de todos os calendários
+MoccaCalendar.calendar.create=Criar novo calendário
+### Missing: MoccaCalendar.calendar.plainlist=agenda
 MoccaCalendar.calendar.plainlist.titlepast=Eventos Passados
 MoccaCalendar.calendar.plainlist.titleupcoming=Próximos eventos
-MoccaCalendar.calendar.title=Visão Geral do Calendário
-MoccaCalendar.calendar.viewall=Visão geral de todos os calendários
+MoccaCalendar.calendar.plainlist.nopastevents=Não há eventos passados encontrado.
+MoccaCalendar.calendar.plainlist.noupcomingevents=Não há eventos programados encontrado.
+### Missing: MoccaCalendar.calendar.firstDayOfWeek=0
+
+MoccaCalendar.calendarevent.viewall=Todos os eventos
+MoccaCalendar.calendarevent.create=Criar novo evento
 MoccaCalendar.calendarevent.backlink=Voltar ao calendário &amp;\#171;{0}&amp;\#187;
 MoccaCalendar.calendarevent.confirmDelete=Você realmente deseja excluir o evento &amp;\#171;{0}&amp;\#187; ? 
-MoccaCalendar.calendarevent.create=Criar novo evento
 MoccaCalendar.calendarevent.view=Evento
-MoccaCalendar.calendarevent.viewall=Todos os eventos
-moccacalendar.livetable._actions=Ações
-moccacalendar.livetable._actions.delete=Excluir
-moccacalendar.livetable._actions.edit=Editar
-moccacalendar.livetable._attachments=Anexos
-moccacalendar.livetable._images=Imagens
-moccacalendar.livetable.content1=Conteúdo
-moccacalendar.livetable.description=Descrição
-moccacalendar.livetable.doc.author=Último Autor
-moccacalendar.livetable.doc.creationDate=Data de criação
-moccacalendar.livetable.doc.creator=Criador
-moccacalendar.livetable.doc.date=Data de atualização
-moccacalendar.livetable.doc.fullname=Nome completo da página
+### Missing: MoccaCalendar.generic.errormessage=Internal Server Error
+
+# Class fields
+MoccaCalendar.MoccaCalendarClass_title=Título
+MoccaCalendar.MoccaCalendarClass_color=Cor de eventos na exibição de calendário
+MoccaCalendar.MoccaCalendarClass_description=Descrição
+MoccaCalendar.MoccaCalendarClass_content1=Conteúdo
+
+# Live table generic keys
+moccacalendar.livetable.doc.title=Calendário
 moccacalendar.livetable.doc.name=Nome da página
 moccacalendar.livetable.doc.space=Espaço
-moccacalendar.livetable.doc.title=Calendário
+moccacalendar.livetable.doc.fullname=Nome completo da página
+moccacalendar.livetable.doc.author=Último Autor
+moccacalendar.livetable.doc.creator=Criador
+moccacalendar.livetable.doc.date=Data de atualização
+moccacalendar.livetable.doc.creationDate=Data de criação
+### Missing: moccacalendar.livetable._avatar=Avatar
+moccacalendar.livetable._images=Imagens
+moccacalendar.livetable._attachments=Anexos
+moccacalendar.livetable._actions=Ações
+moccacalendar.livetable._actions.edit=Editar
+moccacalendar.livetable._actions.delete=Excluir
+### Missing: moccacalendar.livetable.emptyvalue=-
 moccacalendar.livetable.title=Título
-moccacalendarevent.livetable._actions=Ação
-moccacalendarevent.livetable._actions.delete=Excluir
-moccacalendarevent.livetable._actions.edit=Editar
-moccacalendarevent.livetable._attachments=Anexos
-moccacalendarevent.livetable._images=Imagens
-moccacalendarevent.livetable.description=Descrição
-moccacalendarevent.livetable.doc.author=Último Autor
-moccacalendarevent.livetable.doc.creationDate=Data de criação
-moccacalendarevent.livetable.doc.creator=Criador
-moccacalendarevent.livetable.doc.date=Data de atualização
-moccacalendarevent.livetable.doc.fullname=Nome completo da página
+moccacalendar.livetable.description=Descrição
+moccacalendar.livetable.content1=Conteúdo
+
+# Mocca Calendar Events keys
+# Class fields
+MoccaCalendar.MoccaCalendarEventClass_title=Título
+MoccaCalendar.MoccaCalendarEventClass_startDate=Data de início
+MoccaCalendar.MoccaCalendarEventClass_endDate=Data final
+MoccaCalendar.MoccaCalendarEventClass_description=Descrição
+MoccaCalendar.MoccaCalendarEventClass_allDay=Dia inteiro
+
+# Event live table generic keys (currently unused)
+moccacalendarevent.livetable.doc.title=Título
 moccacalendarevent.livetable.doc.name=Nome da página
 moccacalendarevent.livetable.doc.space=Espaço
-moccacalendarevent.livetable.doc.title=Título
-moccacalendarevent.livetable.endDate=Data final
-moccacalendarevent.livetable.startDate=Data de início
+moccacalendarevent.livetable.doc.fullname=Nome completo da página
+moccacalendarevent.livetable.doc.author=Último Autor
+moccacalendarevent.livetable.doc.creator=Criador
+moccacalendarevent.livetable.doc.date=Data de atualização
+moccacalendarevent.livetable.doc.creationDate=Data de criação
+### Missing: moccacalendarevent.livetable._avatar=Avatar
+moccacalendarevent.livetable._images=Imagens
+moccacalendarevent.livetable._attachments=Anexos
+moccacalendarevent.livetable._actions=Ação
+moccacalendarevent.livetable._actions.edit=Editar
+moccacalendarevent.livetable._actions.delete=Excluir
+### Missing: moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
 moccacalendarevent.livetable.title=Título
+moccacalendarevent.livetable.startDate=Data de início
+moccacalendarevent.livetable.endDate=Data final
+moccacalendarevent.livetable.description=Descrição
+
+# validation messages
+val_title_notvalid=Campo de título contém caracteres inválidos.
+val_title_notempty=Campo de título é necessária.
 val_endDate=Data final deve ser após a data de início.
 val_title_already_exists=Um evento com este nome já existe.
-val_title_notempty=Campo de título é necessária.
-val_title_notvalid=Campo de título contém caracteres inválidos.
 </content>
 </xwikidoc>

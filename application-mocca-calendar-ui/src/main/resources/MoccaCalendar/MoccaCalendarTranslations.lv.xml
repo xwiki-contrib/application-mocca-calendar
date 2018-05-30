@@ -39,54 +39,87 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language lv generated from http://www.l10n.xwiki.org
-MoccaCalendar.MoccaCalendarClass_color=Ierakstu krāsa kalendāra skatā
-MoccaCalendar.MoccaCalendarClass_content1=Saturs
-MoccaCalendar.MoccaCalendarClass_description=Apraksts
-MoccaCalendar.MoccaCalendarClass_title=Virsraksts
-MoccaCalendar.MoccaCalendarEventClass_allDay=Visa diena
-MoccaCalendar.MoccaCalendarEventClass_description=Apraksts
-MoccaCalendar.MoccaCalendarEventClass_endDate=Beigu datums
-MoccaCalendar.MoccaCalendarEventClass_startDate=Sākuma datums
-MoccaCalendar.MoccaCalendarEventClass_title=Virsraksts
+  <content>#general
 MoccaCalendar.calendar=Kalendārs
-MoccaCalendar.calendar.create=Izveidot jaunu kalendāru
+MoccaCalendar.calendar.title=Kalendāra apskats
 MoccaCalendar.calendar.defaultCalendarTitle=Citi notikumi
-MoccaCalendar.calendar.firstDayOfWeek=1
+MoccaCalendar.calendar.viewall=Visu kalendāru apskats
+MoccaCalendar.calendar.create=Izveidot jaunu kalendāru
 MoccaCalendar.calendar.plainlist=plāns
-MoccaCalendar.calendar.plainlist.nopastevents=Nav atrasti pagājuši notikumi
-MoccaCalendar.calendar.plainlist.noupcomingevents=Nav atrasti gaidāmi notikumi
 MoccaCalendar.calendar.plainlist.titlepast=Pagājuši notikumi
 MoccaCalendar.calendar.plainlist.titleupcoming=Gaidāmi notikumi
-MoccaCalendar.calendar.title=Kalendāra apskats
-MoccaCalendar.calendar.viewall=Visu kalendāru apskats
+MoccaCalendar.calendar.plainlist.nopastevents=Nav atrasti pagājuši notikumi
+MoccaCalendar.calendar.plainlist.noupcomingevents=Nav atrasti gaidāmi notikumi
+MoccaCalendar.calendar.firstDayOfWeek=1
+
+MoccaCalendar.calendarevent.viewall=Visi notikumi
+MoccaCalendar.calendarevent.create=Izveidot jaunu notikumu
 MoccaCalendar.calendarevent.backlink=Atpakaļ uz kalendāru &amp;\#171;{0}&amp;\#187;
 MoccaCalendar.calendarevent.confirmDelete=Vai tiešām vēlaties izdzēst kalendāru &amp;\#171;{0}&amp;\#187; ?
-MoccaCalendar.calendarevent.create=Izveidot jaunu notikumu
 MoccaCalendar.calendarevent.view=Notikums
-MoccaCalendar.calendarevent.viewall=Visi notikumi
 MoccaCalendar.generic.errormessage=Iekšēja servera kļūda
-moccacalendar.livetable._actions=Darbības
-moccacalendar.livetable._actions.delete=Dzēst
-moccacalendar.livetable._actions.edit=Mainīt
-moccacalendar.livetable._attachments=Pielikumi
-moccacalendar.livetable._avatar=Iemiesojums
-moccacalendar.livetable._images=Attēli
-moccacalendar.livetable.content1=Saturs
-moccacalendar.livetable.description=Apraksts
-moccacalendar.livetable.doc.author=Pēdējais mainījis
-moccacalendar.livetable.doc.creationDate=Izveidots
-moccacalendar.livetable.doc.creator=Izveidojis
-moccacalendar.livetable.doc.date=Mainīts
-moccacalendar.livetable.doc.fullname=Lapas pilns nosaukums
+
+# Class fields
+MoccaCalendar.MoccaCalendarClass_title=Virsraksts
+MoccaCalendar.MoccaCalendarClass_color=Ierakstu krāsa kalendāra skatā
+MoccaCalendar.MoccaCalendarClass_description=Apraksts
+MoccaCalendar.MoccaCalendarClass_content1=Saturs
+
+# Live table generic keys
+moccacalendar.livetable.doc.title=Kalendārs
 moccacalendar.livetable.doc.name=Lapas nosaukums
 moccacalendar.livetable.doc.space=Vieta
-moccacalendar.livetable.doc.title=Kalendārs
+moccacalendar.livetable.doc.fullname=Lapas pilns nosaukums
+moccacalendar.livetable.doc.author=Pēdējais mainījis
+moccacalendar.livetable.doc.creator=Izveidojis
+moccacalendar.livetable.doc.date=Mainīts
+moccacalendar.livetable.doc.creationDate=Izveidots
+moccacalendar.livetable._avatar=Iemiesojums
+moccacalendar.livetable._images=Attēli
+moccacalendar.livetable._attachments=Pielikumi
+moccacalendar.livetable._actions=Darbības
+moccacalendar.livetable._actions.edit=Mainīt
+moccacalendar.livetable._actions.delete=Dzēst
 moccacalendar.livetable.emptyvalue=-
 moccacalendar.livetable.title=Virsraksts
-moccacalendarevent.livetable._actions=Darbība
-moccacalendarevent.livetable._actions.delete=Dzēst
-moccacalendarevent.livetable._actions.edit=Mainīt
+moccacalendar.livetable.description=Apraksts
+moccacalendar.livetable.content1=Saturs
+
+# Mocca Calendar Events keys
+# Class fields
+MoccaCalendar.MoccaCalendarEventClass_title=Virsraksts
+MoccaCalendar.MoccaCalendarEventClass_startDate=Sākuma datums
+MoccaCalendar.MoccaCalendarEventClass_endDate=Beigu datums
+MoccaCalendar.MoccaCalendarEventClass_description=Apraksts
+MoccaCalendar.MoccaCalendarEventClass_allDay=Visa diena
+
+# Event live table generic keys (currently unused)
+### Missing: moccacalendarevent.livetable.doc.title=Page title
+### Missing: moccacalendarevent.livetable.doc.name=Page name
+### Missing: moccacalendarevent.livetable.doc.space=Space
+### Missing: moccacalendarevent.livetable.doc.fullname=Page full name
+### Missing: moccacalendarevent.livetable.doc.author=Last Author
+### Missing: moccacalendarevent.livetable.doc.creator=Creator
+### Missing: moccacalendarevent.livetable.doc.date=Update date
+### Missing: moccacalendarevent.livetable.doc.creationDate=Creation date
+### Missing: moccacalendarevent.livetable._avatar=Avatar
+### Missing: moccacalendarevent.livetable._images=Images
 moccacalendarevent.livetable._attachments=Pielikumi
+moccacalendarevent.livetable._actions=Darbība
+moccacalendarevent.livetable._actions.edit=Mainīt
+moccacalendarevent.livetable._actions.delete=Dzēst
+### Missing: moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
+### Missing: moccacalendarevent.livetable.title=Title
+### Missing: moccacalendarevent.livetable.startDate=Start date
+### Missing: moccacalendarevent.livetable.endDate=End date
+### Missing: moccacalendarevent.livetable.description=Description
+
+# validation messages
+### Missing: val_title_notvalid=Title field contains invalid characters.
+### Missing: val_title_notempty=Title field is required.
+### Missing: val_endDate=End date must be after start date.
+### Missing: val_title_already_exists=An event with this name already exists.
 </content>
 </xwikidoc>

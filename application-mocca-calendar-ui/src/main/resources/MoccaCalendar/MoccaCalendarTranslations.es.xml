@@ -39,30 +39,87 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language es generated from http://www.l10n.xwiki.org
-MoccaCalendar.MoccaCalendarEventClass_allDay=Todo el día
+  <content>#general
 MoccaCalendar.calendar=Calendario
+MoccaCalendar.calendar.title=Vista general del calendario
+### Missing: MoccaCalendar.calendar.defaultCalendarTitle=Other Events
+MoccaCalendar.calendar.viewall=Visión general de todos los calendarios
 MoccaCalendar.calendar.create=Crear un nuevo calendario
 MoccaCalendar.calendar.plainlist=Orden del Día
-MoccaCalendar.calendar.plainlist.nopastevents=No hay eventos pasados ​​encontrado.
-MoccaCalendar.calendar.plainlist.noupcomingevents=No hay próximos eventos encontrados.
 MoccaCalendar.calendar.plainlist.titlepast=Eventos Pasados
 MoccaCalendar.calendar.plainlist.titleupcoming=Próximos Eventos
-MoccaCalendar.calendar.title=Vista general del calendario
-MoccaCalendar.calendar.viewall=Visión general de todos los calendarios
+MoccaCalendar.calendar.plainlist.nopastevents=No hay eventos pasados ​​encontrado.
+MoccaCalendar.calendar.plainlist.noupcomingevents=No hay próximos eventos encontrados.
+### Missing: MoccaCalendar.calendar.firstDayOfWeek=0
+
+### Missing: MoccaCalendar.calendarevent.viewall=All events
 MoccaCalendar.calendarevent.create=Crear un evento
-moccacalendar.livetable._actions=Acciones
-moccacalendar.livetable._actions.delete=Borrar
-moccacalendar.livetable._actions.edit=Editar
-moccacalendar.livetable._attachments=Adjuntos
-moccacalendar.livetable.doc.creator=Creador
-moccacalendar.livetable.doc.name=Nombre de la página
+### Missing: MoccaCalendar.calendarevent.backlink=Back to calendar &amp;#171;{0}&amp;#187;
+### Missing: MoccaCalendar.calendarevent.confirmDelete=Do you really want to delete the event &amp;#171;{0}&amp;#187; ?
+### Missing: MoccaCalendar.calendarevent.view=Event
+### Missing: MoccaCalendar.generic.errormessage=Internal Server Error
+
+# Class fields
+### Missing: MoccaCalendar.MoccaCalendarClass_title=Title
+### Missing: MoccaCalendar.MoccaCalendarClass_color=Color of entries in the calendar view
+### Missing: MoccaCalendar.MoccaCalendarClass_description=Description
+### Missing: MoccaCalendar.MoccaCalendarClass_content1=Content
+
+# Live table generic keys
 moccacalendar.livetable.doc.title=Calendario
-moccacalendarevent.livetable._actions=Acción
-moccacalendarevent.livetable._actions.delete=Borrar
-moccacalendarevent.livetable._actions.edit=Editar
-moccacalendarevent.livetable._attachments=Adjuntos
-moccacalendarevent.livetable.doc.creator=Creador
+moccacalendar.livetable.doc.name=Nombre de la página
+### Missing: moccacalendar.livetable.doc.space=Space
+### Missing: moccacalendar.livetable.doc.fullname=Page full name
+### Missing: moccacalendar.livetable.doc.author=Last Author
+moccacalendar.livetable.doc.creator=Creador
+### Missing: moccacalendar.livetable.doc.date=Update date
+### Missing: moccacalendar.livetable.doc.creationDate=Creation date
+### Missing: moccacalendar.livetable._avatar=Avatar
+### Missing: moccacalendar.livetable._images=Images
+moccacalendar.livetable._attachments=Adjuntos
+moccacalendar.livetable._actions=Acciones
+moccacalendar.livetable._actions.edit=Editar
+moccacalendar.livetable._actions.delete=Borrar
+### Missing: moccacalendar.livetable.emptyvalue=-
+### Missing: moccacalendar.livetable.title=Title
+### Missing: moccacalendar.livetable.description=Description
+### Missing: moccacalendar.livetable.content1=Content
+
+# Mocca Calendar Events keys
+# Class fields
+### Missing: MoccaCalendar.MoccaCalendarEventClass_title=Title
+### Missing: MoccaCalendar.MoccaCalendarEventClass_startDate=Start date
+### Missing: MoccaCalendar.MoccaCalendarEventClass_endDate=End date
+### Missing: MoccaCalendar.MoccaCalendarEventClass_description=Description
+MoccaCalendar.MoccaCalendarEventClass_allDay=Todo el día
+
+# Event live table generic keys (currently unused)
+### Missing: moccacalendarevent.livetable.doc.title=Page title
 moccacalendarevent.livetable.doc.name=Nombre de la página
+### Missing: moccacalendarevent.livetable.doc.space=Space
+### Missing: moccacalendarevent.livetable.doc.fullname=Page full name
+### Missing: moccacalendarevent.livetable.doc.author=Last Author
+moccacalendarevent.livetable.doc.creator=Creador
+### Missing: moccacalendarevent.livetable.doc.date=Update date
+### Missing: moccacalendarevent.livetable.doc.creationDate=Creation date
+### Missing: moccacalendarevent.livetable._avatar=Avatar
+### Missing: moccacalendarevent.livetable._images=Images
+moccacalendarevent.livetable._attachments=Adjuntos
+moccacalendarevent.livetable._actions=Acción
+moccacalendarevent.livetable._actions.edit=Editar
+moccacalendarevent.livetable._actions.delete=Borrar
+### Missing: moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
+### Missing: moccacalendarevent.livetable.title=Title
+### Missing: moccacalendarevent.livetable.startDate=Start date
+### Missing: moccacalendarevent.livetable.endDate=End date
+### Missing: moccacalendarevent.livetable.description=Description
+
+# validation messages
+### Missing: val_title_notvalid=Title field contains invalid characters.
+### Missing: val_title_notempty=Title field is required.
+### Missing: val_endDate=End date must be after start date.
+### Missing: val_title_already_exists=An event with this name already exists.
 </content>
 </xwikidoc>

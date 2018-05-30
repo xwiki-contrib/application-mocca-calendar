@@ -39,56 +39,87 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language sk generated from http://www.l10n.xwiki.org
-MoccaCalendar.MoccaCalendarClass_content1=Obsah
-MoccaCalendar.MoccaCalendarClass_description=Popis
-MoccaCalendar.MoccaCalendarClass_title=Nadpis
-MoccaCalendar.MoccaCalendarEventClass_description=Popis
-MoccaCalendar.MoccaCalendarEventClass_endDate=Dátum ukončenia
-MoccaCalendar.MoccaCalendarEventClass_startDate=Dátum začiatku
-MoccaCalendar.MoccaCalendarEventClass_title=Nadpis
+  <content>#general
 MoccaCalendar.calendar=Kalendár
-MoccaCalendar.calendar.create=Vytvoriť nový kalendár
+### Missing: MoccaCalendar.calendar.title=Calendar
 MoccaCalendar.calendar.defaultCalendarTitle=Ďalšie udalosti
+### Missing: MoccaCalendar.calendar.viewall=Overview of all calendars
+MoccaCalendar.calendar.create=Vytvoriť nový kalendár
+### Missing: MoccaCalendar.calendar.plainlist=agenda
+### Missing: MoccaCalendar.calendar.plainlist.titlepast=Past Events
+### Missing: MoccaCalendar.calendar.plainlist.titleupcoming=Upcoming Events
+### Missing: MoccaCalendar.calendar.plainlist.nopastevents=No past events found.
+### Missing: MoccaCalendar.calendar.plainlist.noupcomingevents=No upcoming events found.
 MoccaCalendar.calendar.firstDayOfWeek=0
+
+MoccaCalendar.calendarevent.viewall=Všetky akcie
+MoccaCalendar.calendarevent.create=Vytvoriť novú udalosť
 MoccaCalendar.calendarevent.backlink=Späť na kalendár &amp;\#171;{0}&amp;\#187;
 MoccaCalendar.calendarevent.confirmDelete=Naozaj chcete odstrániť udalosť &amp;\#171;{0}&amp;\#187; ?
-MoccaCalendar.calendarevent.create=Vytvoriť novú udalosť
 MoccaCalendar.calendarevent.view=Udalosť
-MoccaCalendar.calendarevent.viewall=Všetky akcie
 MoccaCalendar.generic.errormessage=Vnútorná chyba servera
-moccacalendar.livetable._actions=Akcie
-moccacalendar.livetable._actions.delete=Odstrániť
-moccacalendar.livetable._actions.edit=Editovať
-moccacalendar.livetable._attachments=Prílohy
-moccacalendar.livetable._avatar=Avatar
-moccacalendar.livetable._images=Obrázky
-moccacalendar.livetable.content1=Obsah
-moccacalendar.livetable.description=Popis
-moccacalendar.livetable.doc.author=Posledný autor
-moccacalendar.livetable.doc.creationDate=Dátum vytvorenia
-moccacalendar.livetable.doc.creator=Vytvoril
-moccacalendar.livetable.doc.date=Dátum aktualizácie
+
+# Class fields
+MoccaCalendar.MoccaCalendarClass_title=Nadpis
+### Missing: MoccaCalendar.MoccaCalendarClass_color=Color of entries in the calendar view
+MoccaCalendar.MoccaCalendarClass_description=Popis
+MoccaCalendar.MoccaCalendarClass_content1=Obsah
+
+# Live table generic keys
+moccacalendar.livetable.doc.title=Kalendár
 moccacalendar.livetable.doc.name=Meno stránky
 moccacalendar.livetable.doc.space=Priestor
-moccacalendar.livetable.doc.title=Kalendár
+### Missing: moccacalendar.livetable.doc.fullname=Page full name
+moccacalendar.livetable.doc.author=Posledný autor
+moccacalendar.livetable.doc.creator=Vytvoril
+moccacalendar.livetable.doc.date=Dátum aktualizácie
+moccacalendar.livetable.doc.creationDate=Dátum vytvorenia
+moccacalendar.livetable._avatar=Avatar
+moccacalendar.livetable._images=Obrázky
+moccacalendar.livetable._attachments=Prílohy
+moccacalendar.livetable._actions=Akcie
+moccacalendar.livetable._actions.edit=Editovať
+moccacalendar.livetable._actions.delete=Odstrániť
 moccacalendar.livetable.emptyvalue=-
 moccacalendar.livetable.title=Názov
-moccacalendarevent.livetable._actions=Akcia
-moccacalendarevent.livetable._actions.delete=Odstrániť
-moccacalendarevent.livetable._actions.edit=Editovať
-moccacalendarevent.livetable._attachments=Prílohy
-moccacalendarevent.livetable._avatar=Avatar
-moccacalendarevent.livetable._images=Obrázky
-moccacalendarevent.livetable.description=Popis
-moccacalendarevent.livetable.doc.author=Posledný autor
-moccacalendarevent.livetable.doc.creationDate=Dátum vytvorenia
-moccacalendarevent.livetable.doc.creator=Vytvoril
-moccacalendarevent.livetable.doc.date=Dátum aktualizácie
+moccacalendar.livetable.description=Popis
+moccacalendar.livetable.content1=Obsah
+
+# Mocca Calendar Events keys
+# Class fields
+MoccaCalendar.MoccaCalendarEventClass_title=Nadpis
+MoccaCalendar.MoccaCalendarEventClass_startDate=Dátum začiatku
+MoccaCalendar.MoccaCalendarEventClass_endDate=Dátum ukončenia
+MoccaCalendar.MoccaCalendarEventClass_description=Popis
+### Missing: MoccaCalendar.MoccaCalendarEventClass_allDay=All day
+
+# Event live table generic keys (currently unused)
+moccacalendarevent.livetable.doc.title=Názov stránky
 moccacalendarevent.livetable.doc.name=Meno stránky
 moccacalendarevent.livetable.doc.space=Priestor
-moccacalendarevent.livetable.doc.title=Názov stránky
+### Missing: moccacalendarevent.livetable.doc.fullname=Page full name
+moccacalendarevent.livetable.doc.author=Posledný autor
+moccacalendarevent.livetable.doc.creator=Vytvoril
+moccacalendarevent.livetable.doc.date=Dátum aktualizácie
+moccacalendarevent.livetable.doc.creationDate=Dátum vytvorenia
+moccacalendarevent.livetable._avatar=Avatar
+moccacalendarevent.livetable._images=Obrázky
+moccacalendarevent.livetable._attachments=Prílohy
+moccacalendarevent.livetable._actions=Akcia
+moccacalendarevent.livetable._actions.edit=Editovať
+moccacalendarevent.livetable._actions.delete=Odstrániť
 moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
 moccacalendarevent.livetable.title=Názov
+### Missing: moccacalendarevent.livetable.startDate=Start date
+### Missing: moccacalendarevent.livetable.endDate=End date
+moccacalendarevent.livetable.description=Popis
+
+# validation messages
+### Missing: val_title_notvalid=Title field contains invalid characters.
+### Missing: val_title_notempty=Title field is required.
+### Missing: val_endDate=End date must be after start date.
+### Missing: val_title_already_exists=An event with this name already exists.
 </content>
 </xwikidoc>
