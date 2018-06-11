@@ -54,7 +54,7 @@ MoccaCalendar.calendar.firstDayOfWeek=0
 
 MoccaCalendar.calendarevent.viewall=Wszystkie wydarzenia
 MoccaCalendar.calendarevent.create=Stwórz wydarzenie
-MoccaCalendar.calendarevent.backlink=Powrót do kalendarza &amp;\#171;{0}&amp;\#187; 
+MoccaCalendar.calendarevent.backlink=Powrót do kalendarza &amp;\#171;{0}&amp;\#187;
 ### Missing: MoccaCalendar.calendarevent.confirmDelete=Do you really want to delete the event &amp;#171;{0}&amp;#187; ?
 ### Missing: MoccaCalendar.calendarevent.view=Event
 ### Missing: MoccaCalendar.generic.errormessage=Internal Server Error
@@ -80,7 +80,7 @@ moccacalendar.livetable._attachments=Załączniki
 moccacalendar.livetable._actions=Akcje
 moccacalendar.livetable._actions.edit=Edytuj
 moccacalendar.livetable._actions.delete=Usuń
-moccacalendar.livetable.emptyvalue=- 
+moccacalendar.livetable.emptyvalue=-
 moccacalendar.livetable.title=Tytuł
 moccacalendar.livetable.description=Opis
 moccacalendar.livetable.content1=Zawartość

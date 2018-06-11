@@ -55,7 +55,7 @@ MoccaCalendar.calendar.firstDayOfWeek=1
 MoccaCalendar.calendarevent.viewall=Tous les événements
 MoccaCalendar.calendarevent.create=Créer un événement
 MoccaCalendar.calendarevent.backlink=Retour au calendier &amp;#171;{0}&amp;#187;
-MoccaCalendar.calendarevent.confirmDelete=Voulez-vous vraiment supprimer l''évènement &amp;#171;{0}&amp;#187; ? 
+MoccaCalendar.calendarevent.confirmDelete=Voulez-vous vraiment supprimer l''évènement &amp;#171;{0}&amp;#187; ?
 MoccaCalendar.calendarevent.view=Évènement
 MoccaCalendar.generic.errormessage=Erreur interne au serveur
 
