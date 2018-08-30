@@ -61,9 +61,11 @@ MoccaCalendar.generic.errormessage=Vnútorná chyba servera
 
 # Class fields
 MoccaCalendar.MoccaCalendarClass_title=Nadpis
-### Missing: MoccaCalendar.MoccaCalendarClass_color=Color of entries in the calendar view
+### Missing: MoccaCalendar.MoccaCalendarClass_color=Background color of entries in the calendar view
+### Missing: MoccaCalendar.MoccaCalendarClass_textColor=Text color of entries in the calendar view
 MoccaCalendar.MoccaCalendarClass_description=Popis
 MoccaCalendar.MoccaCalendarClass_content1=Obsah
+### Missing: MoccaCalendar.MoccaCalendarClass.textColor.unset=(white)
 
 # Live table generic keys
 moccacalendar.livetable.doc.title=Kalendár
@@ -119,6 +121,9 @@ moccacalendarevent.livetable.description=Popis
 # validation messages
 ### Missing: val_title_notvalid=Title field contains invalid characters.
 ### Missing: val_title_notempty=Title field is required.
+### Missing: val_startDateMissing=A start date is missing for the event.
+### Missing: val_startDateNotDate=The given start date cannot be read as a date.
+### Missing: val_endDateNotDate=The given end date cannot be read as a date.
 ### Missing: val_endDate=End date must be after start date.
 ### Missing: val_title_already_exists=An event with this name already exists.
 </content>

@@ -62,8 +62,10 @@ MoccaCalendar.generic.errormessage=Erreur interne au serveur
 # Class fields
 MoccaCalendar.MoccaCalendarClass_title=Titre
 MoccaCalendar.MoccaCalendarClass_color=Couleur des entrées dans le calendier
+### Missing: MoccaCalendar.MoccaCalendarClass_textColor=Text color of entries in the calendar view
 MoccaCalendar.MoccaCalendarClass_description=Description
 MoccaCalendar.MoccaCalendarClass_content1=Contenue
+### Missing: MoccaCalendar.MoccaCalendarClass.textColor.unset=(white)
 
 # Live table generic keys
 moccacalendar.livetable.doc.title=Calendrier
@@ -119,6 +121,9 @@ moccacalendarevent.livetable.description=Description
 # validation messages
 val_title_notvalid=Le titre contient des caractères invalides.
 val_title_notempty=Le titre est obligatoire.
+### Missing: val_startDateMissing=A start date is missing for the event.
+### Missing: val_startDateNotDate=The given start date cannot be read as a date.
+### Missing: val_endDateNotDate=The given end date cannot be read as a date.
 val_endDate=La date de début doit être après la date de fin.
 val_title_already_exists=Un événement avec ce nom existe déjà.
 </content>

@@ -62,8 +62,10 @@ MoccaCalendar.calendarevent.backlink=Powrót do kalendarza &amp;\#171;{0}&amp;\#
 # Class fields
 MoccaCalendar.MoccaCalendarClass_title=Tytuł
 MoccaCalendar.MoccaCalendarClass_color=Kolor wpisów w widoku kalendarza
+### Missing: MoccaCalendar.MoccaCalendarClass_textColor=Text color of entries in the calendar view
 MoccaCalendar.MoccaCalendarClass_description=Opis
 MoccaCalendar.MoccaCalendarClass_content1=Zawartość
+### Missing: MoccaCalendar.MoccaCalendarClass.textColor.unset=(white)
 
 # Live table generic keys
 moccacalendar.livetable.doc.title=Kalendarz
@@ -119,6 +121,9 @@ moccacalendarevent.livetable.description=Opis
 # validation messages
 val_title_notvalid=Pole tytułu zawiera nieprawidłowe znaki.
 val_title_notempty=Pole tytułu jest wymagane.
+### Missing: val_startDateMissing=A start date is missing for the event.
+### Missing: val_startDateNotDate=The given start date cannot be read as a date.
+### Missing: val_endDateNotDate=The given end date cannot be read as a date.
 val_endDate=Data końcowa musi następować po dacie początkowej.
 val_title_already_exists=Wydarzenie o tej nazwie już istnieje.
 </content>
