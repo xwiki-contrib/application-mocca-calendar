@@ -44,9 +44,9 @@ rendering.macro.moccacalendar.description=Zeigt einen Kalender an
 rendering.macro.moccacalendar.parameter.filter.name=Zeige Termine von ...
 rendering.macro.moccacalendar.parameter.filter.description=Mögliche Werte: 'wiki','space' oder 'page', wobei 'page' nur Termine eines Kalenders anzeigt, 'space' alle Termine in Unterseiten anzeigt, und 'wiki' alle Termine im Wiki anzeigt.
 rendering.macro.moccacalendar.parameter.calendarDoc.name=Kalenderseite
-rendering.macro.moccacalendar.parameter.calendarDoc.description=Die Kalender-Seite, deren Termine angezeigt werden (wird nur verwendet, wenn im obigen Wert zur Anzeige der Termine 'page' verwendet wird. Falls leer, wird die aktuelle Seite verwendet. Wenn ddie Seite kein Kalender ist, werden keine Termine angezeigt.
+rendering.macro.moccacalendar.parameter.calendarDoc.description=Die Kalender-Seite, deren Termine angezeigt werden (wird nur verwendet, wenn im obigen Wert zur Anzeige der Termine 'page' verwendet wird). Falls leer, wird die aktuelle Seite verwendet. Wenn die Seite kein Kalender ist, werden keine Termine angezeigt.
 rendering.macro.moccacalendar.parameter.defaultView.name=Anzeige
-rendering.macro.moccacalendar.parameter.defaultView.description=Die initiale Anzeige des Kalenders.\nNutzer können diese Einstellung für sich ändern.\nGültige Werte sind: 'month', 'agendaWeek', 'agendaDay' und 'plainList'
+rendering.macro.moccacalendar.parameter.defaultView.description=Die initiale Anzeige des Kalenders.\nNutzer können diese Einstellung für sich ändern.\nGültige Werte sind: 'month', 'agendaWeek', 'agendaDay' und 'plainList'.
 rendering.macro.moccacalendar.parameter.firstDay.name=Wochenanfang
 rendering.macro.moccacalendar.parameter.firstDay.description=Der erste Tag der Woche, wie er im Kalender angezeigt wird (0=Sonntag, 1=Montag, ... 6=Samstag). Falls leer, wird 1=Montag genommen.
 rendering.macro.moccacalendar.parameter.minTime.name=Tagesanfang
