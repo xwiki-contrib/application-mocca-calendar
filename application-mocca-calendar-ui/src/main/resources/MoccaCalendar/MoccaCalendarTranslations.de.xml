@@ -54,8 +54,8 @@ MoccaCalendar.calendar.firstDayOfWeek=1
 
 MoccaCalendar.calendarevent.viewall=Alle Termine
 MoccaCalendar.calendarevent.create=Neuen Termin anlegen
-MoccaCalendar.calendarevent.backlink=Zurück zum Kalender &amp;\#8222;{0}&amp;\#8220;
-MoccaCalendar.calendarevent.confirmDelete=Wollen Sie den Termin &amp;\#171;{0}&amp;\#187; wirklich löschen?
+MoccaCalendar.calendarevent.backlink=Zurück zum Kalender &amp;#8222;{0}&amp;#8220;
+MoccaCalendar.calendarevent.confirmDelete=Wollen Sie den Termin &amp;#171;{0}&amp;#187; wirklich löschen?
 MoccaCalendar.calendarevent.view=Termin
 MoccaCalendar.calendarevent.confirmDelete.allEventsButton=Alle Termine
 MoccaCalendar.generic.errormessage=Interner Fehler
@@ -141,20 +141,22 @@ moccacalendarevent.livetable.startDate=Startdatum
 moccacalendarevent.livetable.endDate=Enddatum
 moccacalendarevent.livetable.description=Beschreibung
 
-# validation messages
+# validation messages: on save
 val_title_notvalid=Der Titel enthält ungültige Zeichen
 val_title_notempty=Bitte geben Sie einen Titel ein
+val_startDateMissing=Für die Veranstaltung fehlt ein Startdatum.
+val_startDateNotDate=Das angegebene Startdatum kann nicht als Datum interpretiert werden.
+val_endDateNotDate=Das angegebene Enddatum kann nicht als Datum interpretiert werden.
 val_endDate=Das Enddatum muss nach dem Startdatum liegen
 val_title_already_exists=Ein Termin mit diesem Namen existiert bereits
-
+moccacalendar.updates.firstInstance.notDate=Das angegebene Datum der ersten Instanz kann nicht als Datum gelesen werden.
+moccacalendar.updates.lastInstance.notDate=Das angegebene Datum der letzten Instanz kann nicht als Datum gelesen werden.
 
 # validation messages: Update Service
 moccacalendar.updates.eventUpdated=Der Termin wurde aktualisiert
 moccacalendar.updates.eventrecurrent=Wiederkehrende Termine können nicht verschoben werden.
-moccacalendar.updates.savefailed=Der Termin konnte nicht gespeichert werden
 moccacalendar.updates.valuesinvalid=Das neue Datum des Termins ist ungültig
 moccacalendar.updates.nodocument=Der Termin ist nicht mehr verfügbar
-
 
 # validation messages: Delete Service
 moccacalendar.delete.startDateInvalid=Das Startdatum des Termins wurde nicht erkannt.

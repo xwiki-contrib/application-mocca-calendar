@@ -57,6 +57,7 @@ MoccaCalendar.calendarevent.create=Crear un evento
 ### Missing: MoccaCalendar.calendarevent.backlink=Back to calendar &amp;#171;{0}&amp;#187;
 ### Missing: MoccaCalendar.calendarevent.confirmDelete=Do you really want to delete the event &amp;#171;{0}&amp;#187; ?
 ### Missing: MoccaCalendar.calendarevent.view=Event
+### Missing: MoccaCalendar.calendarevent.confirmDelete.allEventsButton=All Instances
 ### Missing: MoccaCalendar.generic.errormessage=Internal Server Error
 
 # Class fields
@@ -94,6 +95,28 @@ moccacalendar.livetable._actions.delete=Borrar
 ### Missing: MoccaCalendar.MoccaCalendarEventClass_endDate=End date
 ### Missing: MoccaCalendar.MoccaCalendarEventClass_description=Description
 MoccaCalendar.MoccaCalendarEventClass_allDay=Todo el día
+### Missing: MoccaCalendar.MoccaCalendarEventClass_recurrent=Recurrent
+
+# modification class fields
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=Frequency
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=daily
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=workdays
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=weekly
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=biweekly
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=monthly
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=quarterly
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=yearly
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=First occurrence of the event
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Last occurrence of the event
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=Modified title
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=Modified start date
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=Modified end date
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=Modified description
+
+# the modification switch
+### Missing: moccacalendarevent.editswitch.label=Edit:
+### Missing: moccacalendarevent.editswitch.oneInstance=this instance only
+### Missing: moccacalendarevent.editswitch.allInstances=all instances
 
 # Event live table generic keys (currently unused)
 ### Missing: moccacalendarevent.livetable.doc.title=Page title
@@ -118,12 +141,28 @@ moccacalendarevent.livetable._actions.delete=Borrar
 ### Missing: moccacalendarevent.livetable.endDate=End date
 ### Missing: moccacalendarevent.livetable.description=Description
 
-# validation messages
+# validation messages: on save
 ### Missing: val_title_notvalid=Title field contains invalid characters.
 ### Missing: val_title_notempty=Title field is required.
 ### Missing: val_startDateMissing=A start date is missing for the event.
 ### Missing: val_startDateNotDate=The given start date cannot be read as a date.
 ### Missing: val_endDateNotDate=The given end date cannot be read as a date.
 ### Missing: val_endDate=End date must be after start date.
-### Missing: val_title_already_exists=An event with this name already exists.</content>
+### Missing: val_title_already_exists=An event with this name already exists.
+### Missing: moccacalendar.updates.firstInstance.notDate=The given first instance date cannot be read as a date.
+### Missing: moccacalendar.updates.lastInstance.notDate=The given last instance date cannot be read as a date.
+
+# validation messages: Update Service
+### Missing: moccacalendar.updates.eventUpdated=Updated event time.
+### Missing: moccacalendar.updates.eventrecurrent=Recurrent events cannot be moved.
+### Missing: moccacalendar.updates.valuesinvalid=The new event time is invalid.
+### Missing: moccacalendar.updates.nodocument=The event is no longer available.
+
+# validation messages: Delete Service
+### Missing: moccacalendar.delete.startDateInvalid=The event start date could not be read.
+### Missing: moccacalendar.delete.saveMessage=Event instance at {0} deleted.
+
+# validation messages: Modification Service
+### Missing: moccacalendar.modify.createMessage=Added modification for one event instance.
+### Missing: moccacalendar.modify.saveMessage=Updated modification for one event instance.</content>
 </xwikidoc>
