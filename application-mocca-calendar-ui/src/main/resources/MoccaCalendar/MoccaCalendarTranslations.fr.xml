@@ -57,7 +57,7 @@ MoccaCalendar.calendarevent.create=Créer un événement
 MoccaCalendar.calendarevent.backlink=Retour au calendier &amp;#171;{0}&amp;#187;
 MoccaCalendar.calendarevent.confirmDelete=Voulez-vous vraiment supprimer l''évènement &amp;#171;{0}&amp;#187; ?
 MoccaCalendar.calendarevent.view=Évènement
-### Missing: MoccaCalendar.calendarevent.confirmDelete.allEventsButton=All Instances
+MoccaCalendar.calendarevent.confirmDelete.allEventsButton=Touts les instances
 MoccaCalendar.generic.errormessage=Erreur interne au serveur
 
 # Class fields
@@ -95,28 +95,28 @@ MoccaCalendar.MoccaCalendarEventClass_startDate=Date de début
 MoccaCalendar.MoccaCalendarEventClass_endDate=Date de fin
 MoccaCalendar.MoccaCalendarEventClass_description=Description
 MoccaCalendar.MoccaCalendarEventClass_allDay=Toute la journée
-### Missing: MoccaCalendar.MoccaCalendarEventClass_recurrent=Recurrent
+MoccaCalendar.MoccaCalendarEventClass_recurrent=Toutes les instances
 
 # modification class fields
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=Frequency
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=daily
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=workdays
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=weekly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=biweekly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=monthly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=quarterly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=yearly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=First occurrence of the event
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Last occurrence of the event
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=Modified title
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=Modified start date
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=Modified end date
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=Modified description
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=Fréquence
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=quotidien
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=jours ouvrables
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=hebdomadaire
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=bihebdomadaire
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=mensuel
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=trimestrielle
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=annuel
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=Première occurrence de l'événement
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Dernière occurrence de l'événement
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=Titre modifié
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=Date de début modifiée
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=Date de fin modifiée
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=Description modifiée
 
 # the modification switch
-### Missing: moccacalendarevent.editswitch.label=Edit:
-### Missing: moccacalendarevent.editswitch.oneInstance=this instance only
-### Missing: moccacalendarevent.editswitch.allInstances=all instances
+moccacalendarevent.editswitch.label=Édition :
+moccacalendarevent.editswitch.oneInstance=uniquement cette instance
+moccacalendarevent.editswitch.allInstances=toutes les instances
 
 # Event live table generic keys (currently unused)
 moccacalendarevent.livetable.doc.title=Titre de la page
@@ -149,20 +149,20 @@ val_startDateNotDate=La date de début saisie n'est pas reconnue comme une date.
 val_endDateNotDate=La date de fin saisie n'est pas reconnue comme une date.
 val_endDate=La date de début doit être après la date de fin.
 val_title_already_exists=Un événement avec ce nom existe déjà.
-### Missing: moccacalendar.updates.firstInstance.notDate=The given first instance date cannot be read as a date.
-### Missing: moccacalendar.updates.lastInstance.notDate=The given last instance date cannot be read as a date.
+moccacalendar.updates.firstInstance.notDate=Ce qui est indiqué comme la date de la première instance ne peu pas être lue comme une date.
+moccacalendar.updates.lastInstance.notDate=Ce qui est indiqué comme la date de la dernière instance ne peu pas être lu comme une date.
 
 # validation messages: Update Service
-### Missing: moccacalendar.updates.eventUpdated=Updated event time.
-### Missing: moccacalendar.updates.eventrecurrent=Recurrent events cannot be moved.
-### Missing: moccacalendar.updates.valuesinvalid=The new event time is invalid.
-### Missing: moccacalendar.updates.nodocument=The event is no longer available.
+moccacalendar.updates.eventUpdated=L'heure de l’évènement a été mise à jour.
+moccacalendar.updates.eventrecurrent=Les évènements récurrents ne peuvent être déplacés.
+moccacalendar.updates.valuesinvalid=L'heure du nouvel évènement est invalide.
+moccacalendar.updates.nodocument=L'évènement n'est plus accessible.
 
 # validation messages: Delete Service
-### Missing: moccacalendar.delete.startDateInvalid=The event start date could not be read.
-### Missing: moccacalendar.delete.saveMessage=Event instance at {0} deleted.
+moccacalendar.delete.startDateInvalid=La date de début de l'évènement ne peut pas être lue.
+moccacalendar.delete.saveMessage=L''instance de l''évènement {0} est supprimé.
 
 # validation messages: Modification Service
-### Missing: moccacalendar.modify.createMessage=Added modification for one event instance.
-### Missing: moccacalendar.modify.saveMessage=Updated modification for one event instance.</content>
+moccacalendar.modify.createMessage=Une instance d'un évènement a été ajoutée.
+moccacalendar.modify.saveMessage=Une instance d'un évènement a été mise à jour.</content>
 </xwikidoc>
