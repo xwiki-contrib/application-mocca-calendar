@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -51,7 +51,6 @@ MoccaCalendar.calendar.plainlist.titleupcoming=Eventos futuros
 MoccaCalendar.calendar.plainlist.nopastevents=No se han encontrado eventos antiguos.
 MoccaCalendar.calendar.plainlist.noupcomingevents=No se han encontrados eventos futuros.
 MoccaCalendar.calendar.firstDayOfWeek=0
-
 MoccaCalendar.calendarevent.viewall=Todos los eventos
 MoccaCalendar.calendarevent.create=Crear un evento nuevo
 MoccaCalendar.calendarevent.backlink=Volver al calendario &amp;#171;{0}&amp;#187;
@@ -159,10 +158,11 @@ moccacalendar.updates.valuesinvalid=La nueva hora del evento no es válida.
 moccacalendar.updates.nodocument=El evento ya no está disponible.
 
 # validation messages: Delete Service
-moccacalendar.delete.startDateInvalid=La fecha de inicio del evento no  se puede leer.
+moccacalendar.delete.startDateInvalid=La fecha de inicio del evento no se puede leer.
 moccacalendar.delete.saveMessage=Borrada la instancia del evento a las {0}.
 
 # validation messages: Modification Service
 moccacalendar.modify.createMessage=Modificación añadida para una ocurrencia del evento.
-moccacalendar.modify.saveMessage=Modificación actualizada para una ocurrencia del evento.</content>
+moccacalendar.modify.saveMessage=Modificación actualizada para una ocurrencia del evento.
+</content>
 </xwikidoc>
