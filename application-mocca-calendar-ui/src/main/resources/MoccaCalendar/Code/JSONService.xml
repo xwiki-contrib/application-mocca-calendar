@@ -47,7 +47,7 @@
 {{velocity filter="html" wiki="false"}}
 #if($xcontext.action == 'get')
 ##
-## macro "renderAgencaView"
+## macro "renderAgendaView"
 ## render an event in "agenda" view
 ## this probably can be done better in a template
 ## @param event the event instance
@@ -137,9 +137,12 @@
   #if("$textColor" != "")
     #set($discard = $eventMap.put("textColor", $textColor))
   #end
-  #if("$!{request.outputView}"=="plainList")
+  ## the "outputView" gets no longer updated,
+  ## so we send the HTML with every request
+  ## TODO: move that code to the JavaScript "PlainListEventRenderer.render"
+  ###if("$!{request.outputView}"=="plainList")
     #renderAgendaView($event $itemdoc $eventMap)
-  #end
+  ###end
   #set($discard = $results.add($eventMap))
 #end
 $jsontool.serialize($results)
