@@ -218,7 +218,11 @@ xcontext.setFinished(true)
     $("#moccacalendar .xwiki-livetable-display-body tr").each(function(index) {
       // Get calendar reference
       // TODO: would be cleaner to have that in a UI extension called by the livetable for the actions
-      var calendarLink = $(this).find("td a")[0].attributes.href.value;
+      var calendarLinks = $(this).find("td a")
+      if (calendarLinks.length == 0) {
+        return;
+      }
+      var calendarLink = calendarLinks[0].attributes.href.value;
 
       var baseURL = "$escapetool.javascript($xwiki.getURL('MoccaCalendar.WebHome'))";
       if (baseURL.match('\/WebHome$')) {
