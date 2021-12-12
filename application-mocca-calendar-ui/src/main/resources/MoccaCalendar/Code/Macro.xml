@@ -1196,12 +1196,6 @@ $services.localization.use('document', 'Calendar.Translations')
 #else
   #set($picker_macro = true)
 #end
-#if($xwiki.exists('Calendar.JQueryUI'))
-  $xwiki.jsx.use('Calendar.JQueryUI', {'defer': false, 'minify': false})
-#end
-#if($xwiki.exists('Calendar.Moment'))
-  $xwiki.jsx.use('Calendar.Moment', {'defer': false, 'minify': false})
-#end
 $xwiki.jsx.use("Calendar.FullCalendar", {'defer': false, 'minify': false})
 $xwiki.jsx.use("MoccaCalendar.Code.Macro", {'defer': false})
 $xwiki.jsx.use("MoccaCalendar.Code.DatePickerExtension", {'defer': false})
