@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -46,7 +46,7 @@ rendering.macro.moccacalendar.parameter.filter.description=Mögliche Werte: 'wik
 rendering.macro.moccacalendar.parameter.calendarDoc.name=Kalenderseite
 rendering.macro.moccacalendar.parameter.calendarDoc.description=Die Kalender-Seite, deren Termine angezeigt werden (wird nur verwendet, wenn im obigen Wert zur Anzeige der Termine 'page' verwendet wird). Falls leer, wird die aktuelle Seite verwendet. Wenn die Seite kein Kalender ist, werden keine Termine angezeigt.
 rendering.macro.moccacalendar.parameter.defaultView.name=Anzeige
-rendering.macro.moccacalendar.parameter.defaultView.description=Die initiale Anzeige des Kalenders.\nNutzer können diese Einstellung für sich ändern.\nGültige Werte sind: 'month', 'agendaWeek', 'agendaDay' und 'plainList'.
+rendering.macro.moccacalendar.parameter.defaultView.description=Die initiale Anzeige des Kalenders. Nutzer können diese Einstellung für sich ändern. Gültige Werte sind: 'month', 'agendaWeek', 'agendaDay' und 'plainList'.
 rendering.macro.moccacalendar.parameter.firstDay.name=Wochenanfang
 rendering.macro.moccacalendar.parameter.firstDay.description=Der erste Tag der Woche, wie er im Kalender angezeigt wird (0=Sonntag, 1=Montag, ... 6=Samstag). Falls leer, wird 1=Montag genommen.
 rendering.macro.moccacalendar.parameter.minTime.name=Tagesanfang
@@ -58,5 +58,6 @@ rendering.macro.moccacalendar.parameter.year.description=Das Jahr, für das init
 rendering.macro.moccacalendar.parameter.month.name=Monat
 rendering.macro.moccacalendar.parameter.month.description=Der Monat, für den initial Termine angezeigt werden. Werte von 0=Januar bis 11=Dezember. Falls leer, wird der aktuelle Monat genommen.
 rendering.macro.moccacalendar.parameter.date.name=Tag
-rendering.macro.moccacalendar.parameter.date.description=Der Tag, für den initial Termine angezeigt werden. Werte von 1 bis 31. Falls leer, wird der heutige Tag genommen.</content>
+rendering.macro.moccacalendar.parameter.date.description=Der Tag, für den initial Termine angezeigt werden. Werte von 1 bis 31. Falls leer, wird der heutige Tag genommen.
+</content>
 </xwikidoc>
