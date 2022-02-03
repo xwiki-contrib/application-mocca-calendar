@@ -42,7 +42,7 @@
   <content>rendering.macro.moccacalendar.name=Mocca Calendar
 rendering.macro.moccacalendar.description=Met un calendrier à disposition
 rendering.macro.moccacalendar.parameter.filter.name=Afficher les événements depuis ...
-rendering.macro.moccacalendar.parameter.filter.description=Les valeurs disponibles sont : "wiki", "espace", "page".\nWiki : Tous les événements\nEspace : Uniquement les événements de l'espace du calendrier\nPage : Uniquement les événements qui sont enfants de cette page.
+rendering.macro.moccacalendar.parameter.filter.description=Les valeurs disponibles sont : "wiki", "space", "page".\nWiki : Tous les événements\nSpace : Uniquement les événements de l'espace du calendrier\nPage : Uniquement les événements qui sont enfants de cette page.
 rendering.macro.moccacalendar.parameter.calendarDoc.name=Page du calendrier
 rendering.macro.moccacalendar.parameter.calendarDoc.description=Ce document présente les événements disponibles.
 rendering.macro.moccacalendar.parameter.defaultView.name=Visualisation par défaut
