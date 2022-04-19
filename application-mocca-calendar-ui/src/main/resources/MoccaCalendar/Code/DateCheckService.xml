@@ -27,12 +27,9 @@
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1557867268000</creationDate>
   <parent>MoccaCalendar.Code.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1557867349000</date>
-  <contentUpdateDate>1557867349000</contentUpdateDate>
   <version>1.1</version>
   <title>DateCheckService</title>
   <comment/>

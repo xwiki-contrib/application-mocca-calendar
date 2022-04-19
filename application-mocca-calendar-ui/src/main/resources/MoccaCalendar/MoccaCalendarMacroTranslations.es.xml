@@ -27,12 +27,9 @@
   <defaultLanguage>en</defaultLanguage>
   <translation>1</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1412945493000</creationDate>
   <parent>MoccaCalendar.MoccaCalendarTranslations</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1412947804000</date>
-  <contentUpdateDate>1412947804000</contentUpdateDate>
   <version>1.1</version>
   <title>MoccaCalendarMacroTranslations</title>
   <comment/>
@@ -59,5 +56,4 @@ rendering.macro.moccacalendar.parameter.month.name=Mes
 rendering.macro.moccacalendar.parameter.month.description=Mes (de 0 a 11) de la fecha a mostrar al cargar el calendario. Dejar vacío para hoy.
 rendering.macro.moccacalendar.parameter.date.name=Día
 rendering.macro.moccacalendar.parameter.date.description=Día (de 1 a 31) de la fecha a mostrar al cargar el calendario. Dejar vacío para hoy.</content>
-  
 </xwikidoc>

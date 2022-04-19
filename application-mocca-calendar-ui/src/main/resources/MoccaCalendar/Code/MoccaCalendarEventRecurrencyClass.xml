@@ -27,12 +27,9 @@
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1557772634000</creationDate>
   <parent>MoccaCalendar.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1557772634000</date>
-  <contentUpdateDate>1557772634000</contentUpdateDate>
   <version>1.1</version>
   <title>MoccaCalendarEventRecurrencyClass</title>
   <comment/>

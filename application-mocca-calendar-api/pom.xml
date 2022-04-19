@@ -84,6 +84,23 @@
           </excludes>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.revapi</groupId>
+        <artifactId>revapi-maven-plugin</artifactId>
+        <version>0.14.6</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.revapi</groupId>
+            <artifactId>revapi-java</artifactId>
+            <version>0.26.1</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <analysisConfigurationFiles>
+            <file>${project.basedir}/src/revapi/ignore.json</file>
+          </analysisConfigurationFiles>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 

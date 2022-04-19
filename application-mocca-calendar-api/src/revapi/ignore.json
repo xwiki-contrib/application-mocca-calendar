@@ -1,0 +1,17 @@
+[
+  {
+    "configuration": {
+      "differences": [
+        {
+          "code": ".*",
+          "justification": "not our code",
+          "matcher": "java-package",
+          "new": "(class|field|method [a-zA-Z]+) (org\\.xwiki\\.model\\.|com\\.xpn\\.).*",
+          "regex": true
+        }
+      ],
+      "ignore": true
+    },
+    "extension": "revapi.differences"
+  }
+]

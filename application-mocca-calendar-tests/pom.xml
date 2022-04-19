@@ -58,6 +58,14 @@
       <scope>runtime</scope>
       <version>${platform.version}</version>
     </dependency>
+    <!-- repeat from application-mocca-calendar-ui;
+        not sure why this is needed here again -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>[1.7.30,)</version>
+      <scope>runtime</scope>
+    </dependency>
     <!-- Test dependencies -->
     <!-- dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -71,12 +79,6 @@
       <version>${platform.version}</version>
       <scope>test</scope>
     </dependency>
-    <!-- dependency>
-      <groupId>org.xwiki.contrib</groupId>
-      <artifactId>application-mocca-calendar-test-pageobjects</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-    </dependency -->
   </dependencies>
   <build>
     <testSourceDirectory>src/test/it</testSourceDirectory>

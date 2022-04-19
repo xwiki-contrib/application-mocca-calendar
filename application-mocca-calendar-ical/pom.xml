@@ -43,10 +43,19 @@
       <type>xar</type>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
+    <!-- now provided by fullcalendar -->
+    <!-- dependency>
       <groupId>org.mnode.ical4j</groupId>
       <artifactId>ical4j</artifactId>
       <version>2.0.4</version>
+      <scope>runtime</scope>
+    </dependency -->
+    <!-- repeat from application-mocca-calendar-ui;
+        not sure why this is needed here again -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>[1.7.30,)</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>
