@@ -122,14 +122,6 @@
       </exclusions>
       <type>xar</type>
     </dependency>
-    <!-- the next dependency constraint is needed
-        as otherwise the enforce-upper-bounds fails -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>[1.7.30,)</version>
-      <scope>runtime</scope>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -137,10 +129,18 @@
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-tool-xar-plugin</artifactId>
         <configuration>
+          <contentPages>
+            <contentPage>.*/MoccaCalendar/WebHome.xml</contentPage>
+            <contentPage>.*/MoccaCalendar/Events/WebHome.xml</contentPage>
+          </contentPages>
           <entries>
             <entry>
               <document>MoccaCalendar.Events.WebHome</document>
               <type>demo</type>
+            </entry>
+            <entry>
+              <document>MoccaCalendar.WebHome</document>
+              <type>configuration</type>
             </entry>
           </entries>
         </configuration>

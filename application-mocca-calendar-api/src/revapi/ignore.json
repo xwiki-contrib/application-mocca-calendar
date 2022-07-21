@@ -6,10 +6,29 @@
           "code": ".*",
           "justification": "not our code",
           "matcher": "java-package",
-          "new": "(class|field|method [a-zA-Z]+) (org\\.xwiki\\.model\\.|com\\.xpn\\.).*",
+          "new": "(class|field|method [.a-zA-Z<>]+) (org\\.xwiki\\.model\\.|com\\.xpn\\.).*",
+          "regex": true
+        },
+        {
+          "code": "java.method.removed",
+          "justification": "not our code",
+          "old": "method [.a-zA-Z<>]+ (com\\.xpn\\.xwiki\\.|org\\.apache\\.struts\\.).*",
+          "regex": true
+        },
+        {
+          "code": "java.field.removed",
+          "justification": "not our code",
+          "old": "field (org\\.apache\\.struts\\.action\\.).*",
+          "regex": true
+        },
+        {
+          "code": "java.method.addedToInterface",
+          "justification": "not our code",
+          "new": "method [.a-zA-Z <>]+ (javax\\.servlet\\.).*",
           "regex": true
         }
       ],
+      "comment" : "no idea why these transitive dependencies are suddenly checked",
       "ignore": true
     },
     "extension": "revapi.differences"

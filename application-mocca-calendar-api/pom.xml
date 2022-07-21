@@ -96,6 +96,7 @@
           </dependency>
         </dependencies>
         <configuration>
+          <ignoreSuggestionsFormat>json</ignoreSuggestionsFormat>
           <analysisConfigurationFiles>
             <file>${project.basedir}/src/revapi/ignore.json</file>
           </analysisConfigurationFiles>
