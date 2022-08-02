@@ -161,7 +161,30 @@ moccacalendar.delete.saveMessage=Event instance at {0} deleted.
 
 # validation messages: Modification Service
 moccacalendar.modify.createMessage=Added modification for one event instance.
-moccacalendar.modify.saveMessage=Updated modification for one event instance.</content>
+moccacalendar.modify.saveMessage=Updated modification for one event instance.
+
+# Calendar macro
+rendering.macro.moccacalendar.name=Mocca Calendar
+rendering.macro.moccacalendar.description=Displays a Calendar
+rendering.macro.moccacalendar.parameter.filter.name=Show events from ...
+rendering.macro.moccacalendar.parameter.filter.description=Possible values are 'wiki','space' or 'page', where: 'page': only events which are children pages of this page will be included,  'space': only events which are in the space of the calendar doc will be included, 'wiki': all events will be included.
+rendering.macro.moccacalendar.parameter.calendarDoc.name=Calendar page
+rendering.macro.moccacalendar.parameter.calendarDoc.description=The calendar document whose events are shown (only if filter is set to 'page'). This value is also used as the default calendar to create new events for. If missing, the current document is used.
+rendering.macro.moccacalendar.parameter.defaultView.name=Default View
+rendering.macro.moccacalendar.parameter.defaultView.description=The initial way the calendar is displayed; can be changed by the user. Possible values are: 'month', 'agendaWeek', 'agendaDay' or 'plainList'.
+rendering.macro.moccacalendar.parameter.firstDay.name=First day of week
+rendering.macro.moccacalendar.parameter.firstDay.description=First day (from 0 being Sunday to 6 being Monday) of the week to show in the calendar. Leave empty for Sunday.
+rendering.macro.moccacalendar.parameter.minTime.name=First time
+rendering.macro.moccacalendar.parameter.minTime.description=First time to show in the calendar. Users won't see hours before this time. Leave empty for default (8:00).
+rendering.macro.moccacalendar.parameter.maxTime.name=Last time
+rendering.macro.moccacalendar.parameter.maxTime.description=Last time to show in the calendar. Users won't see hours after this time. Leave empty for default (23:00).
+rendering.macro.moccacalendar.parameter.year.name=Year
+rendering.macro.moccacalendar.parameter.year.description=Year of the date to show when loading the calendar. Leave empty for today.
+rendering.macro.moccacalendar.parameter.month.name=Month
+rendering.macro.moccacalendar.parameter.month.description=Month (from 0 to 11) of the date to show when loading the calendar. Leave empty for today.
+rendering.macro.moccacalendar.parameter.date.name=Day
+rendering.macro.moccacalendar.parameter.date.description=Day (from 1 to 31) of the date to show when loading the calendar. Leave empty for today.
+  </content>
   <object>
     <name>MoccaCalendar.MoccaCalendarTranslations</name>
     <number>0</number>
