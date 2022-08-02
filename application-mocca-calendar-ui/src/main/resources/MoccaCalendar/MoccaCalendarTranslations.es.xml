@@ -161,5 +161,27 @@ moccacalendar.delete.saveMessage=Borrada la instancia del evento a las {0}.
 # validation messages: Modification Service
 moccacalendar.modify.createMessage=Modificación añadida para una ocurrencia del evento.
 moccacalendar.modify.saveMessage=Modificación actualizada para una ocurrencia del evento.
+
+# Calendar macro
+rendering.macro.moccacalendar.name=Calendario Mocca
+rendering.macro.moccacalendar.description=Muestra un Calendario
+rendering.macro.moccacalendar.parameter.filter.name=Mostrar eventos de ...
+rendering.macro.moccacalendar.parameter.filter.description=Los valores posibles son "wiki", "space" o "page", donde: "page": solo se incluirán eventos cuyas páginas son hijos de esta página, "space": solo se incluirán eventos que están en el espacio del documento de calendario, "wiki": se incluirá todos los eventos.
+rendering.macro.moccacalendar.parameter.calendarDoc.name=Página de calendario
+rendering.macro.moccacalendar.parameter.calendarDoc.description=El documento de calendario cuyos eventos se muestran (solo si el filtro tiene el valor "page"). Este valor también se emplea como el calendario predeterminado para el que crear eventos nuevos. Si no se ha definido, se emplea el documento actual.
+rendering.macro.moccacalendar.parameter.defaultView.name=Vista predeterminada
+rendering.macro.moccacalendar.parameter.defaultView.description=La forma inicial en que se muestra el calendario; la puede cambiar cualquier usuario. Sus valores posibles son: "month" (mes), "agendaWeek" (semana de agenda), "agendaDay" (día de agenda) o "plainList" (lista simple).
+rendering.macro.moccacalendar.parameter.firstDay.name=Primer día de la semana
+rendering.macro.moccacalendar.parameter.firstDay.description=Primer día (desde 0 siendo Domingo a 6 siendo Lunes) de la semana a mostrar en el calendario. Dejar vacío para el Domingo.
+rendering.macro.moccacalendar.parameter.minTime.name=Primera hora
+rendering.macro.moccacalendar.parameter.minTime.description=Primera hora a mostrar en el calendario. Los usuarios no verán las horas anteriores a esta hora. Dejar vacío para la predeterminada (8:00).
+rendering.macro.moccacalendar.parameter.maxTime.name=Última hora
+rendering.macro.moccacalendar.parameter.maxTime.description=Última hora a mostrar en el calendario. Los usuarios no verán las horas posteriores a esta hora. Dejar vacío para la predeterminada (23:00).
+rendering.macro.moccacalendar.parameter.year.name=Año
+rendering.macro.moccacalendar.parameter.year.description=Año de la fecha a mostrar al cargar el calendario. Dejar vacío para hoy.
+rendering.macro.moccacalendar.parameter.month.name=Mes
+rendering.macro.moccacalendar.parameter.month.description=Mes (de 0 a 11) de la fecha a mostrar al cargar el calendario. Dejar vacío para hoy.
+rendering.macro.moccacalendar.parameter.date.name=Día
+rendering.macro.moccacalendar.parameter.date.description=Día (de 1 a 31) de la fecha a mostrar al cargar el calendario. Dejar vacío para hoy.
 </content>
 </xwikidoc>

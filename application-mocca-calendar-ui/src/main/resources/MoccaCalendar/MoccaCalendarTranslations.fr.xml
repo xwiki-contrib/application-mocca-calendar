@@ -161,5 +161,28 @@ moccacalendar.delete.saveMessage=L''instance de l''évènement {0} est supprimé
 
 # validation messages: Modification Service
 moccacalendar.modify.createMessage=Une instance d'un évènement a été ajoutée.
-moccacalendar.modify.saveMessage=Une instance d'un évènement a été mise à jour.</content>
+moccacalendar.modify.saveMessage=Une instance d'un évènement a été mise à jour.
+
+# Calendar macro
+rendering.macro.moccacalendar.name=Mocca Calendar
+rendering.macro.moccacalendar.description=Met un calendrier à disposition
+rendering.macro.moccacalendar.parameter.filter.name=Afficher les événements depuis ...
+rendering.macro.moccacalendar.parameter.filter.description=Les valeurs disponibles sont : "wiki", "space", "page".\nWiki : Tous les événements\nSpace : Uniquement les événements de l'espace du calendrier\nPage : Uniquement les événements qui sont enfants de cette page.
+rendering.macro.moccacalendar.parameter.calendarDoc.name=Page du calendrier
+rendering.macro.moccacalendar.parameter.calendarDoc.description=Ce document présente les événements disponibles.
+rendering.macro.moccacalendar.parameter.defaultView.name=Visualisation par défaut
+rendering.macro.moccacalendar.parameter.defaultView.description=Type d'affichage par défaut pour le calendrier, personnalisable par l'utilisateur.\nAffichages disponibles : "mois", "semaine", "journée", "liste d'événements".
+rendering.macro.moccacalendar.parameter.firstDay.name=Premier jour de la semaine
+rendering.macro.moccacalendar.parameter.firstDay.description=La semaine débute le :\n0 = dimanche\n1 = samedi\n...\n6 = lundi\nSi vide, par défaut, la semaine débute le dimanche.
+rendering.macro.moccacalendar.parameter.minTime.name=Heure minimale du calendrier
+rendering.macro.moccacalendar.parameter.minTime.description=Heure minimale affichée dans le calendrier.\nLaissez vide pour utiliser la valeur par défaut (08h00).
+rendering.macro.moccacalendar.parameter.maxTime.name=Heure maximale du calendrier
+rendering.macro.moccacalendar.parameter.maxTime.description=Heure maximale affichée dans le calendrier.\nLaissez vide pour utiliser la valeur par défaut (23h00).
+rendering.macro.moccacalendar.parameter.year.name=Année
+rendering.macro.moccacalendar.parameter.year.description=Année affichée lors du chargement du calendrier.\nPar défaut, le calendrier affiche l'année courante.
+rendering.macro.moccacalendar.parameter.month.name=Mois
+rendering.macro.moccacalendar.parameter.month.description=Mois (du 1 au 12) affiché lors du chargement du calendrier.\nPar défaut, le calendrier affiche le mois courant.
+rendering.macro.moccacalendar.parameter.date.name=Jour
+rendering.macro.moccacalendar.parameter.date.description=Jour (du 1 au 31) affiché lors du chargement du calendrier.\nPar défaut, le calendrier affiche le jour courant.
+</content>
 </xwikidoc>
