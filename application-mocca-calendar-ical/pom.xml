@@ -50,9 +50,12 @@
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-tool-xar-plugin</artifactId>
         <configuration>
-          <contentPages>
-            <contentPage>.*/MoccaiCalendar/WebHome.xml</contentPage>
-          </contentPages>
+          <entries>
+            <entry>
+              <document>MoccaiCalendar.WebHome</document>
+              <type>configuration</type>
+            </entry>
+          </entries>
         </configuration>
       </plugin>
     </plugins>

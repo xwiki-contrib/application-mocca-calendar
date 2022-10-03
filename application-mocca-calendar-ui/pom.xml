@@ -129,10 +129,6 @@
         <groupId>org.xwiki.commons</groupId>
         <artifactId>xwiki-commons-tool-xar-plugin</artifactId>
         <configuration>
-          <contentPages>
-            <contentPage>.*/MoccaCalendar/WebHome.xml</contentPage>
-            <contentPage>.*/MoccaCalendar/Events/WebHome.xml</contentPage>
-          </contentPages>
           <entries>
             <entry>
               <document>MoccaCalendar.Events.WebHome</document>
