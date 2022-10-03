@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -20,7 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 -->
 
-<xwikidoc version="1.2" reference="MoccaCalendar.Code.Macro" locale="">
+<xwikidoc version="1.3" reference="MoccaCalendar.Code.Macro" locale="">
   <web>MoccaCalendar.Code</web>
   <name>Macro</name>
   <language/>
@@ -69,8 +69,11 @@ or
       <validationScript/>
       <cache>
         <cache>0</cache>
+        <defaultValue>long</defaultValue>
         <disabled>0</disabled>
         <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>cache</name>
         <number>5</number>
@@ -118,6 +121,8 @@ or
         <cache>0</cache>
         <disabled>0</disabled>
         <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>use</name>
         <number>3</number>
@@ -306,6 +311,7 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
           onClose : function() {
             document.stopObserving('xwiki:moccacalendar:editmode');
             document.stopObserving('xwiki:moccacalendar:instancesaved');
+            jQuery(document).trigger('xwiki:actions:cancel')
           }
         }
       );
@@ -327,6 +333,16 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
             });
             // use handler to init date picker, too
             that.handleAllDayFieldChange(null, that.allDay);
+
+            // try to load editor
+            if (document.getElementById('MoccaCalendar.MoccaCalendarEventClass_0_description')) {
+              try {
+                var newElements =  jQuery.makeArray(jQuery('#formcontent'))
+                jQuery(document).trigger('xwiki:dom:updated', { 'elements' : newElements })
+              } catch (e) {
+                console.log(e)
+              }
+            }
       });
 
       // only in case we are editing a recurrent event:
@@ -381,7 +397,8 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
       }
 
       this.saving = true; // signal other events we are about to save
-
+      // also tell the Editor to update the contents to save:
+      jQuery(document).trigger('xwiki:actions:beforeSave')
       this.savedBox.hide();
       this.savingBox.show();
 
@@ -441,6 +458,7 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
           this.saving = false;
           this.savingBox.hide();
           this.savedBox.show();
+          jQuery(document).trigger('xwiki:actions:save')
           this.closeDialog();
           this.helper.calendar.fullCalendar('refetchEvents');
         }.bind(this),
@@ -582,15 +600,16 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
               }
               leftGroup.down("#edit-moccacalendar-event").observe('click', this.loadEditForm.bind(this));
             }
-            // FIXME: this should be a plain link, but then it has no styles
             if (oldSkin) {
+              // FIXME: this should be a plain link, but then it has no styles
               leftGroup.insert(this.createButton("button","$escapetool.javascript($services.localization.render('view'))","","view-moccacalendar-event","btn"));
+              leftGroup.down("#view-moccacalendar-event").observe('click', function(e) { e.stop(); window.location.href = this.interactionParameters.event.url; }.bind(this));
               leftGroup.insert('&lt;span class="buttonwrapper"&gt;&lt;a href="#" id="cancel-moccacalendar-event" class="secondary button"&gt;' + "$escapetool.javascript($services.localization.render('cancel'))" + '&lt;/a&gt;&lt;/span&gt;');
             } else {
-              leftGroup.insert(' &lt;button class="button btn btn-default" id="view-moccacalendar-event"&gt;&lt;span class="glyphicon glyphicon-file"&gt;&lt;/span&gt; '+"$escapetool.javascript($services.localization.render('view'))"+'&lt;/button&gt;');
+              leftGroup.insert(' &lt;a class="btn btn-default" id="view-moccacalendar-event" href="#"&gt;&lt;span class="glyphicon glyphicon-file"&gt;&lt;/span&gt; '+"$escapetool.javascript($services.localization.render('view'))"+'&lt;/button&gt;');
+              leftGroup.down("#view-moccacalendar-event").setAttribute('href',this.interactionParameters.event.url);
               leftGroup.insert('&lt;button class="button btn btn-default" id="cancel-moccacalendar-event"&gt;&lt;span class="glyphicon glyphicon-remove"&gt;&lt;/span&gt; '+"$escapetool.javascript($services.localization.render('cancel'))"+'&lt;/button&gt;');
             }
-            leftGroup.down("#view-moccacalendar-event").observe('click', function(e) { e.stop(); window.location.href = this.interactionParameters.event.url; }.bind(this));
             leftGroup.down('#cancel-moccacalendar-event').observe('click', this.closeDialog.bind(this));
             if (this.interactionParameters.event.canDelete) {
               var rightGroup = new Element('div', {'class':'btn-group btn-group-right'});
@@ -877,8 +896,11 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
       <validationScript/>
       <cache>
         <cache>0</cache>
+        <defaultValue>long</defaultValue>
         <disabled>0</disabled>
         <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>cache</name>
         <number>5</number>
@@ -907,6 +929,8 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
         <cache>0</cache>
         <disabled>0</disabled>
         <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>contentType</name>
         <number>6</number>
@@ -942,6 +966,8 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
         <cache>0</cache>
         <disabled>0</disabled>
         <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>use</name>
         <number>3</number>
@@ -1072,11 +1098,51 @@ div.fc-view.fc-plainList-view {
       <defaultWeb/>
       <nameField/>
       <validationScript/>
+      <async_cached>
+        <defaultValue>0</defaultValue>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType/>
+        <name>async_cached</name>
+        <number>12</number>
+        <prettyName>Cached</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </async_cached>
+      <async_context>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
+        <multiSelect>1</multiSelect>
+        <name>async_context</name>
+        <number>13</number>
+        <prettyName>Context elements</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>5</size>
+        <unmodifiable>0</unmodifiable>
+        <values>doc.reference=Document|icon.theme=Icon theme|locale=Language|rendering.defaultsyntax=Default syntax|rendering.restricted=Restricted|rendering.targetsyntax=Target syntax|request.base=Request base URL|request.parameters=Request parameters|request.url=Request URL|request.wiki=Request wiki|user=User|wiki=Wiki</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </async_context>
+      <async_enabled>
+        <defaultValue>0</defaultValue>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType/>
+        <name>async_enabled</name>
+        <number>11</number>
+        <prettyName>Asynchronous rendering</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </async_enabled>
       <code>
         <disabled>0</disabled>
         <editor>Text</editor>
         <name>code</name>
-        <number>9</number>
+        <number>10</number>
         <prettyName>Macro code</prettyName>
         <rows>20</rows>
         <size>40</size>
@@ -1088,21 +1154,43 @@ div.fc-view.fc-plainList-view {
         <disabled>0</disabled>
         <editor>PureText</editor>
         <name>contentDescription</name>
-        <number>8</number>
+        <number>9</number>
         <prettyName>Content description (Not applicable for "No content" type)</prettyName>
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </contentDescription>
+      <contentJavaType>
+        <cache>0</cache>
+        <defaultValue>Unknown</defaultValue>
+        <disabled>0</disabled>
+        <displayType>input</displayType>
+        <freeText>allowed</freeText>
+        <largeStorage>1</largeStorage>
+        <multiSelect>0</multiSelect>
+        <name>contentJavaType</name>
+        <number>8</number>
+        <picker>1</picker>
+        <prettyName>Macro content type</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator>|</separator>
+        <separators>|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>Unknown|Wiki</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </contentJavaType>
       <contentType>
         <cache>0</cache>
         <disabled>0</disabled>
         <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>contentType</name>
         <number>7</number>
-        <prettyName>Macro content type</prettyName>
+        <prettyName>Macro content availability</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator>|</separator>
         <separators>|</separators>
@@ -1164,6 +1252,8 @@ div.fc-view.fc-plainList-view {
         <cache>0</cache>
         <disabled>0</disabled>
         <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>visibility</name>
         <number>6</number>
@@ -1177,6 +1267,15 @@ div.fc-view.fc-plainList-view {
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </visibility>
     </class>
+    <property>
+      <async_cached>0</async_cached>
+    </property>
+    <property>
+      <async_context/>
+    </property>
+    <property>
+      <async_enabled>0</async_enabled>
+    </property>
     <property>
       <code>{{velocity output="false"}}
 $services.localization.use('document', 'Calendar.Translations')
@@ -1193,7 +1292,7 @@ $services.localization.use('document', 'Calendar.Translations')
 #else
   #set($picker_macro = true)
 #end
-$xwiki.jsx.use("Calendar.FullCalendar", {'defer': false, 'minify': false})
+$xwiki.jsx.use("Calendar.FullCalendar", {'defer': false})
 $xwiki.jsx.use("MoccaCalendar.Code.Macro", {'defer': false})
 $xwiki.jsx.use("MoccaCalendar.Code.DatePickerExtension", {'defer': false})
 $xwiki.jsx.use("MoccaCalendar.MoccaCalendarEventSheet")
@@ -1279,6 +1378,10 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 ## end create event link
 #end
 &lt;div id="calendar${calcounter}"&gt;&lt;/div&gt;
+#if($calcounter==0 &amp;&amp; $canCreateEvents)
+## show event description form to trigger load of CK Editor resources
+&lt;form class="hidden"&gt;$xwiki.getDocument('MoccaCalendar.MoccaCalendarEventTemplate').getObject('MoccaCalendar.MoccaCalendarEventClass').display('description','edit')&lt;/form&gt;
+#end
 &lt;script type="text/javascript"&gt;
 require(['jquery', 'moccacalendar'], function(jQuery) {
  jQuery(document).ready(function() {
@@ -1304,11 +1407,11 @@ require(['jquery', 'moccacalendar'], function(jQuery) {
       data : function() {
         // as we also get called before the calendar is fully initialized
         // we cannot get the current view reliably from the calendar itself
-        // instead use our trusty helper 
+        // instead use our trusty helper
         return jQuery.extend(defaultEventData, {'outputView': XWiki.MoccaCalendar.Helper.getCalendarView(defaultView)} );
       },
       error: function() {
-        calendarHelper.displayError();        
+        calendarHelper.displayError();
       },
     },
     eventClick: function(calEvent, jsEvent, view) {
@@ -1394,6 +1497,9 @@ Mocca Calendar Macro
       <contentDescription/>
     </property>
     <property>
+      <contentJavaType/>
+    </property>
+    <property>
       <contentType>No content</contentType>
     </property>
     <property>
@@ -1467,6 +1573,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue>page</defaultValue>
@@ -1482,6 +1597,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>filter</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1536,6 +1654,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue/>
@@ -1548,6 +1675,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>calendarDoc</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1602,6 +1732,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue>month</defaultValue>
@@ -1614,6 +1753,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>defaultView</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1668,6 +1810,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue/>
@@ -1680,6 +1831,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>firstDay</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1734,6 +1888,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue>8:00</defaultValue>
@@ -1746,6 +1909,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>minTime</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1800,6 +1966,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue>23:00</defaultValue>
@@ -1812,6 +1987,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>maxTime</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1866,6 +2044,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue/>
@@ -1878,6 +2065,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>year</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1932,6 +2122,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue/>
@@ -1944,6 +2143,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>month</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
   <object>
@@ -1998,6 +2200,15 @@ Mocca Calendar Macro
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
     </class>
     <property>
       <defaultValue/>
@@ -2010,6 +2221,9 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>date</name>
+    </property>
+    <property>
+      <type/>
     </property>
   </object>
 </xwikidoc>
