@@ -39,111 +39,111 @@
   <content>#general
 MoccaCalendar.calendar=カレンダー
 MoccaCalendar.calendar.title=カレンダー
-### Missing: MoccaCalendar.calendar.defaultCalendarTitle=Other Events
-### Missing: MoccaCalendar.calendar.viewall=Overview of all calendars
-### Missing: MoccaCalendar.calendar.create=Create new calendar
-### Missing: MoccaCalendar.calendar.plainlist=agenda
-### Missing: MoccaCalendar.calendar.plainlist.titlepast=Past Events
-### Missing: MoccaCalendar.calendar.plainlist.titleupcoming=Upcoming Events
-### Missing: MoccaCalendar.calendar.plainlist.nopastevents=No past events found.
-### Missing: MoccaCalendar.calendar.plainlist.noupcomingevents=No upcoming events found.
+MoccaCalendar.calendar.defaultCalendarTitle=他の予定
+MoccaCalendar.calendar.viewall=全てのカレンダーを表示
+MoccaCalendar.calendar.create=新しいカレンダーを作成
+MoccaCalendar.calendar.plainlist=予定表
+MoccaCalendar.calendar.plainlist.titlepast=過去の予定
+MoccaCalendar.calendar.plainlist.titleupcoming=今後の予定
+MoccaCalendar.calendar.plainlist.nopastevents=過去の予定はありません。
+MoccaCalendar.calendar.plainlist.noupcomingevents=今後の予定はありません。
 ### Missing: MoccaCalendar.calendar.firstDayOfWeek=0
-### Missing: MoccaCalendar.calendarevent.viewall=All events
-### Missing: MoccaCalendar.calendarevent.create=Create new event
-### Missing: MoccaCalendar.calendarevent.backlink=Back to calendar &amp;#171;{0}&amp;#187;
-### Missing: MoccaCalendar.calendarevent.confirmDelete=Do you really want to delete the event &amp;#171;{0}&amp;#187; ?
-### Missing: MoccaCalendar.calendarevent.view=Event
-### Missing: MoccaCalendar.calendarevent.confirmDelete.allEventsButton=All Instances
-### Missing: MoccaCalendar.generic.errormessage=Internal Server Error
+MoccaCalendar.calendarevent.viewall=全ての予定
+MoccaCalendar.calendarevent.create=新しい予定を作成
+MoccaCalendar.calendarevent.backlink=カレンダーに戻る &amp;#171;{0}&amp;#187;
+MoccaCalendar.calendarevent.confirmDelete=予定を削除してよろしいですか &amp;#171;{0}&amp;#187; ？
+MoccaCalendar.calendarevent.view=予定
+MoccaCalendar.calendarevent.confirmDelete.allEventsButton=全ての予定
+MoccaCalendar.generic.errormessage=内部サーバーエラー
 
 # Class fields
-### Missing: MoccaCalendar.MoccaCalendarClass_title=Title
-### Missing: MoccaCalendar.MoccaCalendarClass_color=Background color of entries in the calendar view
-### Missing: MoccaCalendar.MoccaCalendarClass_textColor=Text color of entries in the calendar view
-### Missing: MoccaCalendar.MoccaCalendarClass_description=Description
-### Missing: MoccaCalendar.MoccaCalendarClass_content1=Content
-### Missing: MoccaCalendar.MoccaCalendarClass.textColor.unset=(white)
+MoccaCalendar.MoccaCalendarClass_title=タイトル
+MoccaCalendar.MoccaCalendarClass_color=カレンダーに表示するエントリーの背景色
+MoccaCalendar.MoccaCalendarClass_textColor=カレンダーに表示するエントリーのテキストの色
+MoccaCalendar.MoccaCalendarClass_description=説明
+MoccaCalendar.MoccaCalendarClass_content1=内容
+MoccaCalendar.MoccaCalendarClass.textColor.unset=（白色）
 
 # Live table generic keys
-### Missing: moccacalendar.livetable.doc.title=Calendar
-### Missing: moccacalendar.livetable.doc.name=Page name
-### Missing: moccacalendar.livetable.doc.space=Space
-### Missing: moccacalendar.livetable.doc.fullname=Page full name
-### Missing: moccacalendar.livetable.doc.author=Last Author
-### Missing: moccacalendar.livetable.doc.creator=Creator
-### Missing: moccacalendar.livetable.doc.date=Update date
-### Missing: moccacalendar.livetable.doc.creationDate=Creation date
-### Missing: moccacalendar.livetable._avatar=Avatar
-### Missing: moccacalendar.livetable._images=Images
-### Missing: moccacalendar.livetable._attachments=Attachments
-### Missing: moccacalendar.livetable._actions=Actions
-### Missing: moccacalendar.livetable._actions.edit=Edit
-### Missing: moccacalendar.livetable._actions.delete=Delete
-### Missing: moccacalendar.livetable.emptyvalue=-
-### Missing: moccacalendar.livetable.title=Title
-### Missing: moccacalendar.livetable.description=Description
+moccacalendar.livetable.doc.title=カレンダー
+moccacalendar.livetable.doc.name=ページ名
+moccacalendar.livetable.doc.space=スペース
+moccacalendar.livetable.doc.fullname=ページの完全な名称
+moccacalendar.livetable.doc.author=最終更新者
+moccacalendar.livetable.doc.creator=作者
+moccacalendar.livetable.doc.date=アップデート日
+moccacalendar.livetable.doc.creationDate=作成日
+moccacalendar.livetable._avatar=アバター
+moccacalendar.livetable._images=画像
+moccacalendar.livetable._attachments=添付ファイル
+moccacalendar.livetable._actions=アクション
+moccacalendar.livetable._actions.edit=編集
+moccacalendar.livetable._actions.delete=削除
+moccacalendar.livetable.emptyvalue=-
+moccacalendar.livetable.title=タイトル
+moccacalendar.livetable.description=説明
 moccacalendar.livetable.content1=内容
 
 # Mocca Calendar Events keys
 # Class fields
-### Missing: MoccaCalendar.MoccaCalendarEventClass_title=Title
-### Missing: MoccaCalendar.MoccaCalendarEventClass_startDate=Start date
-### Missing: MoccaCalendar.MoccaCalendarEventClass_endDate=End date
-### Missing: MoccaCalendar.MoccaCalendarEventClass_description=Description
-### Missing: MoccaCalendar.MoccaCalendarEventClass_allDay=All day
+MoccaCalendar.MoccaCalendarEventClass_title=タイトル
+MoccaCalendar.MoccaCalendarEventClass_startDate=開始日
+MoccaCalendar.MoccaCalendarEventClass_endDate=終了日
+MoccaCalendar.MoccaCalendarEventClass_description=説明
+MoccaCalendar.MoccaCalendarEventClass_allDay=全日
 ### Missing: MoccaCalendar.MoccaCalendarEventClass_recurrent=Recurrent
 
 # modification class fields
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=Frequency
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=daily
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=workdays
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=weekly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=biweekly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=monthly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=quarterly
-### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=yearly
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=頻度
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=毎日
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=平日
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=毎週
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=隔週
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=毎月
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=毎四半期
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=毎年
 ### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=First occurrence of the event
 ### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Last occurrence of the event
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=Modified title
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=Modified start date
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=Modified end date
-### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=Modified description
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=変更したタイトル
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=変更した開始日
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=変更した終了日
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=変更した説明
 
 # the modification switch
-### Missing: moccacalendarevent.editswitch.label=Edit:
+moccacalendarevent.editswitch.label=編集：
 ### Missing: moccacalendarevent.editswitch.oneInstance=this instance only
 ### Missing: moccacalendarevent.editswitch.allInstances=all instances
 
 # Event live table generic keys (currently unused)
-### Missing: moccacalendarevent.livetable.doc.title=Page title
-### Missing: moccacalendarevent.livetable.doc.name=Page name
-### Missing: moccacalendarevent.livetable.doc.space=Space
-### Missing: moccacalendarevent.livetable.doc.fullname=Page full name
-### Missing: moccacalendarevent.livetable.doc.author=Last Author
-### Missing: moccacalendarevent.livetable.doc.creator=Creator
-### Missing: moccacalendarevent.livetable.doc.date=Update date
-### Missing: moccacalendarevent.livetable.doc.creationDate=Creation date
-### Missing: moccacalendarevent.livetable._avatar=Avatar
-### Missing: moccacalendarevent.livetable._images=Images
-### Missing: moccacalendarevent.livetable._attachments=Attachments
-### Missing: moccacalendarevent.livetable._actions=Action
-### Missing: moccacalendarevent.livetable._actions.edit=Edit
-### Missing: moccacalendarevent.livetable._actions.delete=Delete
-### Missing: moccacalendarevent.livetable.emptyvalue=-
+moccacalendarevent.livetable.doc.title=ページのタイトル
+moccacalendarevent.livetable.doc.name=ページ名
+moccacalendarevent.livetable.doc.space=スペース
+moccacalendarevent.livetable.doc.fullname=ページの完全な名称
+moccacalendarevent.livetable.doc.author=最終更新者
+moccacalendarevent.livetable.doc.creator=作者
+moccacalendarevent.livetable.doc.date=アップデート日
+moccacalendarevent.livetable.doc.creationDate=作成日
+moccacalendarevent.livetable._avatar=アバター
+moccacalendarevent.livetable._images=画像
+moccacalendarevent.livetable._attachments=添付ファイル
+moccacalendarevent.livetable._actions=アクション
+moccacalendarevent.livetable._actions.edit=編集
+moccacalendarevent.livetable._actions.delete=削除
+moccacalendarevent.livetable.emptyvalue=-
 
 # Live table specific keys
-### Missing: moccacalendarevent.livetable.title=Title
-### Missing: moccacalendarevent.livetable.startDate=Start date
-### Missing: moccacalendarevent.livetable.endDate=End date
-### Missing: moccacalendarevent.livetable.description=Description
+moccacalendarevent.livetable.title=タイトル
+moccacalendarevent.livetable.startDate=開始日
+moccacalendarevent.livetable.endDate=終了日
+moccacalendarevent.livetable.description=説明
 
 # validation messages: on save
-### Missing: val_title_notvalid=Title field contains invalid characters.
-### Missing: val_title_notempty=Title field is required.
-### Missing: val_startDateMissing=A start date is missing for the event.
-### Missing: val_startDateNotDate=The given start date cannot be read as a date.
-### Missing: val_endDateNotDate=The given end date cannot be read as a date.
-### Missing: val_endDate=End date must be after start date.
+val_title_notvalid=タイトルのフィールドに不正な文字があります。
+val_title_notempty=タイトルのフィールドは必須です。
+val_startDateMissing=予定の開始日が設定されていません。
+val_startDateNotDate=指定した開始日の形式が正しくありません。
+val_endDateNotDate=指定した終了日の形式が正しくありません。
+val_endDate=終了日は開始日よりも後に設定してください。
 ### Missing: val_title_already_exists=An event with this name already exists.
 ### Missing: moccacalendar.updates.firstInstance.notDate=The given first instance date cannot be read as a date.
 ### Missing: moccacalendar.updates.lastInstance.notDate=The given last instance date cannot be read as a date.
