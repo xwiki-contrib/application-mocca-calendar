@@ -1,0 +1,187 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="MoccaCalendar.MoccaCalendarTranslations" locale="ja">
+  <web>MoccaCalendar</web>
+  <name>MoccaCalendarTranslations</name>
+  <language>ja</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>MoccaCalendarClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title>Mocca Calendar Translations</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>#general
+MoccaCalendar.calendar=カレンダー
+MoccaCalendar.calendar.title=カレンダー
+MoccaCalendar.calendar.defaultCalendarTitle=他の予定
+MoccaCalendar.calendar.viewall=全てのカレンダーを表示
+MoccaCalendar.calendar.create=新しいカレンダーを作成
+MoccaCalendar.calendar.plainlist=予定表
+MoccaCalendar.calendar.plainlist.titlepast=過去の予定
+MoccaCalendar.calendar.plainlist.titleupcoming=今後の予定
+MoccaCalendar.calendar.plainlist.nopastevents=過去の予定はありません。
+MoccaCalendar.calendar.plainlist.noupcomingevents=今後の予定はありません。
+### Missing: MoccaCalendar.calendar.firstDayOfWeek=0
+MoccaCalendar.calendarevent.viewall=全ての予定
+MoccaCalendar.calendarevent.create=新しい予定を作成
+MoccaCalendar.calendarevent.backlink=カレンダーに戻る &amp;#171;{0}&amp;#187;
+MoccaCalendar.calendarevent.confirmDelete=予定を削除してよろしいですか &amp;#171;{0}&amp;#187; ？
+MoccaCalendar.calendarevent.view=予定
+MoccaCalendar.calendarevent.confirmDelete.allEventsButton=全ての予定
+MoccaCalendar.generic.errormessage=内部サーバーエラー
+
+# Class fields
+MoccaCalendar.MoccaCalendarClass_title=タイトル
+MoccaCalendar.MoccaCalendarClass_color=カレンダーに表示するエントリーの背景色
+MoccaCalendar.MoccaCalendarClass_textColor=カレンダーに表示するエントリーのテキストの色
+MoccaCalendar.MoccaCalendarClass_description=説明
+MoccaCalendar.MoccaCalendarClass_content1=内容
+MoccaCalendar.MoccaCalendarClass.textColor.unset=（白色）
+
+# Live table generic keys
+moccacalendar.livetable.doc.title=カレンダー
+moccacalendar.livetable.doc.name=ページ名
+moccacalendar.livetable.doc.space=スペース
+moccacalendar.livetable.doc.fullname=ページの完全な名称
+moccacalendar.livetable.doc.author=最終更新者
+moccacalendar.livetable.doc.creator=作者
+moccacalendar.livetable.doc.date=アップデート日
+moccacalendar.livetable.doc.creationDate=作成日
+moccacalendar.livetable._avatar=アバター
+moccacalendar.livetable._images=画像
+moccacalendar.livetable._attachments=添付ファイル
+moccacalendar.livetable._actions=アクション
+moccacalendar.livetable._actions.edit=編集
+moccacalendar.livetable._actions.delete=削除
+moccacalendar.livetable.emptyvalue=-
+moccacalendar.livetable.title=タイトル
+moccacalendar.livetable.description=説明
+moccacalendar.livetable.content1=内容
+
+# Mocca Calendar Events keys
+# Class fields
+MoccaCalendar.MoccaCalendarEventClass_title=タイトル
+MoccaCalendar.MoccaCalendarEventClass_startDate=開始日
+MoccaCalendar.MoccaCalendarEventClass_endDate=終了日
+MoccaCalendar.MoccaCalendarEventClass_description=説明
+MoccaCalendar.MoccaCalendarEventClass_allDay=全日
+### Missing: MoccaCalendar.MoccaCalendarEventClass_recurrent=Recurrent
+
+# modification class fields
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=頻度
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=毎日
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=平日
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=毎週
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=隔週
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=毎月
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=毎四半期
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=毎年
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=First occurrence of the event
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Last occurrence of the event
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=変更したタイトル
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=変更した開始日
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=変更した終了日
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=変更した説明
+
+# the modification switch
+moccacalendarevent.editswitch.label=編集：
+### Missing: moccacalendarevent.editswitch.oneInstance=this instance only
+### Missing: moccacalendarevent.editswitch.allInstances=all instances
+
+# Event live table generic keys (currently unused)
+moccacalendarevent.livetable.doc.title=ページのタイトル
+moccacalendarevent.livetable.doc.name=ページ名
+moccacalendarevent.livetable.doc.space=スペース
+moccacalendarevent.livetable.doc.fullname=ページの完全な名称
+moccacalendarevent.livetable.doc.author=最終更新者
+moccacalendarevent.livetable.doc.creator=作者
+moccacalendarevent.livetable.doc.date=アップデート日
+moccacalendarevent.livetable.doc.creationDate=作成日
+moccacalendarevent.livetable._avatar=アバター
+moccacalendarevent.livetable._images=画像
+moccacalendarevent.livetable._attachments=添付ファイル
+moccacalendarevent.livetable._actions=アクション
+moccacalendarevent.livetable._actions.edit=編集
+moccacalendarevent.livetable._actions.delete=削除
+moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
+moccacalendarevent.livetable.title=タイトル
+moccacalendarevent.livetable.startDate=開始日
+moccacalendarevent.livetable.endDate=終了日
+moccacalendarevent.livetable.description=説明
+
+# validation messages: on save
+val_title_notvalid=タイトルのフィールドに不正な文字があります。
+val_title_notempty=タイトルのフィールドは必須です。
+val_startDateMissing=予定の開始日が設定されていません。
+val_startDateNotDate=指定した開始日の形式が正しくありません。
+val_endDateNotDate=指定した終了日の形式が正しくありません。
+val_endDate=終了日は開始日よりも後に設定してください。
+### Missing: val_title_already_exists=An event with this name already exists.
+### Missing: moccacalendar.updates.firstInstance.notDate=The given first instance date cannot be read as a date.
+### Missing: moccacalendar.updates.lastInstance.notDate=The given last instance date cannot be read as a date.
+
+# validation messages: Update Service
+### Missing: moccacalendar.updates.eventUpdated=Updated event time.
+### Missing: moccacalendar.updates.eventrecurrent=Recurrent events cannot be moved.
+### Missing: moccacalendar.updates.valuesinvalid=The new event time is invalid.
+### Missing: moccacalendar.updates.nodocument=The event is no longer available.
+
+# validation messages: Delete Service
+### Missing: moccacalendar.delete.startDateInvalid=The event start date could not be read.
+### Missing: moccacalendar.delete.saveMessage=Event instance at {0} deleted.
+
+# validation messages: Modification Service
+### Missing: moccacalendar.modify.createMessage=Added modification for one event instance.
+### Missing: moccacalendar.modify.saveMessage=Updated modification for one event instance.
+
+# Calendar macro
+### Missing: rendering.macro.moccacalendar.name=Mocca Calendar
+### Missing: rendering.macro.moccacalendar.description=Displays a Calendar
+### Missing: rendering.macro.moccacalendar.parameter.filter.name=Show events from ...
+### Missing: rendering.macro.moccacalendar.parameter.filter.description=Possible values are 'wiki','space' or 'page', where: 'page': only events which are children pages of this page will be included,  'space': only events which are in the space of the calendar doc will be included, 'wiki': all events will be included.
+### Missing: rendering.macro.moccacalendar.parameter.calendarDoc.name=Calendar page
+### Missing: rendering.macro.moccacalendar.parameter.calendarDoc.description=The calendar document whose events are shown (only if filter is set to 'page'). This value is also used as the default calendar to create new events for. If missing, the current document is used.
+### Missing: rendering.macro.moccacalendar.parameter.defaultView.name=Default View
+### Missing: rendering.macro.moccacalendar.parameter.defaultView.description=The initial way the calendar is displayed; can be changed by the user. Possible values are: 'month', 'agendaWeek', 'agendaDay' or 'plainList'.
+### Missing: rendering.macro.moccacalendar.parameter.firstDay.name=First day of week
+### Missing: rendering.macro.moccacalendar.parameter.firstDay.description=First day (from 0 being Sunday to 6 being Monday) of the week to show in the calendar. Leave empty for Sunday.
+### Missing: rendering.macro.moccacalendar.parameter.minTime.name=First time
+### Missing: rendering.macro.moccacalendar.parameter.minTime.description=First time to show in the calendar. Users won't see hours before this time. Leave empty for default (8:00).
+### Missing: rendering.macro.moccacalendar.parameter.maxTime.name=Last time
+### Missing: rendering.macro.moccacalendar.parameter.maxTime.description=Last time to show in the calendar. Users won't see hours after this time. Leave empty for default (23:00).
+### Missing: rendering.macro.moccacalendar.parameter.year.name=Year
+### Missing: rendering.macro.moccacalendar.parameter.year.description=Year of the date to show when loading the calendar. Leave empty for today.
+### Missing: rendering.macro.moccacalendar.parameter.month.name=Month
+### Missing: rendering.macro.moccacalendar.parameter.month.description=Month (from 0 to 11) of the date to show when loading the calendar. Leave empty for today.
+### Missing: rendering.macro.moccacalendar.parameter.date.name=Day
+### Missing: rendering.macro.moccacalendar.parameter.date.description=Day (from 1 to 31) of the date to show when loading the calendar. Leave empty for today.
+</content>
+  </xwikidoc>
