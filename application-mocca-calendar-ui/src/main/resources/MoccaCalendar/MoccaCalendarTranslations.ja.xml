@@ -91,7 +91,7 @@ MoccaCalendar.MoccaCalendarEventClass_startDate=開始日
 MoccaCalendar.MoccaCalendarEventClass_endDate=終了日
 MoccaCalendar.MoccaCalendarEventClass_description=説明
 MoccaCalendar.MoccaCalendarEventClass_allDay=全日
-### Missing: MoccaCalendar.MoccaCalendarEventClass_recurrent=Recurrent
+MoccaCalendar.MoccaCalendarEventClass_recurrent=繰り返し
 
 # modification class fields
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=頻度
@@ -144,14 +144,14 @@ val_startDateMissing=予定の開始日が設定されていません。
 val_startDateNotDate=指定した開始日の形式が正しくありません。
 val_endDateNotDate=指定した終了日の形式が正しくありません。
 val_endDate=終了日は開始日よりも後に設定してください。
-### Missing: val_title_already_exists=An event with this name already exists.
+val_title_already_exists=この名称の予定は既に存在します。
 ### Missing: moccacalendar.updates.firstInstance.notDate=The given first instance date cannot be read as a date.
 ### Missing: moccacalendar.updates.lastInstance.notDate=The given last instance date cannot be read as a date.
 
 # validation messages: Update Service
-### Missing: moccacalendar.updates.eventUpdated=Updated event time.
-### Missing: moccacalendar.updates.eventrecurrent=Recurrent events cannot be moved.
-### Missing: moccacalendar.updates.valuesinvalid=The new event time is invalid.
+moccacalendar.updates.eventUpdated=予定の時間を更新しました。
+moccacalendar.updates.eventrecurrent=繰り返しの予定は移動できません。
+moccacalendar.updates.valuesinvalid=新しい予定の時間が不正です。
 ### Missing: moccacalendar.updates.nodocument=The event is no longer available.
 
 # validation messages: Delete Service
@@ -163,25 +163,25 @@ val_endDate=終了日は開始日よりも後に設定してください。
 ### Missing: moccacalendar.modify.saveMessage=Updated modification for one event instance.
 
 # Calendar macro
-### Missing: rendering.macro.moccacalendar.name=Mocca Calendar
-### Missing: rendering.macro.moccacalendar.description=Displays a Calendar
+rendering.macro.moccacalendar.name=Moccaカレンダー
+rendering.macro.moccacalendar.description=カレンダーを表示
 ### Missing: rendering.macro.moccacalendar.parameter.filter.name=Show events from ...
-### Missing: rendering.macro.moccacalendar.parameter.filter.description=Possible values are 'wiki','space' or 'page', where: 'page': only events which are children pages of this page will be included,  'space': only events which are in the space of the calendar doc will be included, 'wiki': all events will be included.
-### Missing: rendering.macro.moccacalendar.parameter.calendarDoc.name=Calendar page
-### Missing: rendering.macro.moccacalendar.parameter.calendarDoc.description=The calendar document whose events are shown (only if filter is set to 'page'). This value is also used as the default calendar to create new events for. If missing, the current document is used.
-### Missing: rendering.macro.moccacalendar.parameter.defaultView.name=Default View
+rendering.macro.moccacalendar.parameter.filter.description=設定可能な値は'wiki'、'space'、'page'のいずれかです。'page'を設定すると、このページの下位ページの予定のみを対象とします。'space'を設定すると、カレンダーのスペースにある予定のみを対象とします。'wiki'を設定すると、全ての予定を対象とします。
+rendering.macro.moccacalendar.parameter.calendarDoc.name=カレンダーのページ
+rendering.macro.moccacalendar.parameter.calendarDoc.description=イベントを表示する、カレンダーのドキュメント（フィルターが'page'に設定されている場合のみ）。この値は新しいイベントの予定を作成する際に規程の値としても用いられます。設定されていない場合は、現在のドキュメントを使用します。
+rendering.macro.moccacalendar.parameter.defaultView.name=既定の表示
 ### Missing: rendering.macro.moccacalendar.parameter.defaultView.description=The initial way the calendar is displayed; can be changed by the user. Possible values are: 'month', 'agendaWeek', 'agendaDay' or 'plainList'.
-### Missing: rendering.macro.moccacalendar.parameter.firstDay.name=First day of week
-### Missing: rendering.macro.moccacalendar.parameter.firstDay.description=First day (from 0 being Sunday to 6 being Monday) of the week to show in the calendar. Leave empty for Sunday.
+rendering.macro.moccacalendar.parameter.firstDay.name=週の最初の日
+rendering.macro.moccacalendar.parameter.firstDay.description=カレンダーに表示する週の最初の日（0が日曜日で6が月曜日）。空のままにすると日曜日に設定します。
 ### Missing: rendering.macro.moccacalendar.parameter.minTime.name=First time
 ### Missing: rendering.macro.moccacalendar.parameter.minTime.description=First time to show in the calendar. Users won't see hours before this time. Leave empty for default (8:00).
 ### Missing: rendering.macro.moccacalendar.parameter.maxTime.name=Last time
 ### Missing: rendering.macro.moccacalendar.parameter.maxTime.description=Last time to show in the calendar. Users won't see hours after this time. Leave empty for default (23:00).
-### Missing: rendering.macro.moccacalendar.parameter.year.name=Year
+rendering.macro.moccacalendar.parameter.year.name=年
 ### Missing: rendering.macro.moccacalendar.parameter.year.description=Year of the date to show when loading the calendar. Leave empty for today.
-### Missing: rendering.macro.moccacalendar.parameter.month.name=Month
+rendering.macro.moccacalendar.parameter.month.name=月
 ### Missing: rendering.macro.moccacalendar.parameter.month.description=Month (from 0 to 11) of the date to show when loading the calendar. Leave empty for today.
-### Missing: rendering.macro.moccacalendar.parameter.date.name=Day
-### Missing: rendering.macro.moccacalendar.parameter.date.description=Day (from 1 to 31) of the date to show when loading the calendar. Leave empty for today.
+rendering.macro.moccacalendar.parameter.date.name=日
+rendering.macro.moccacalendar.parameter.date.description=カレンダーを読み込む際に表示する日付を指定（1から31まで）。空のままにすると今日に設定します。
 </content>
   </xwikidoc>
