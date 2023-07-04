@@ -40,8 +40,8 @@
 ## pretty desparate measure to avoid edit form mess when embedded into another document, which in turn gets edited
 #set($myEdit = ($xcontext.action == 'edit') &amp;&amp; ($doc.getURL("edit") == $xcontext.getRequest().getRequestURI()) )
 #if(($xcontext.action == 'edit') &amp;&amp; !$myEdit)
-#set($oldView = $xcontext.get('display'))
-#set($discard = $xcontext.put('display','view'))
+  #set($oldView = $xcontext.get('display'))
+  #set($discard = $xcontext.put('display','view'))
 #end
 #macro(colorInput $fieldName)
   #if($hasColorPickerMacro)
@@ -56,40 +56,33 @@
   #end
 #end
 {{html wiki="true"}}
-#if("#colorPicker()" == '#colorPicker()')
-  #set($discard = $xwiki.jsfx.use('uicomponents/widgets/colorpicker/procolor.js', true))
-  #set($discard = $xwiki.jsx.use("ColorThemes.ColorThemeSheet", {'defer': false}))
-  #set($discard = $xwiki.ssx.use("ColorThemes.ColorThemeSheet"))
-  #set($hasColorPickerMacro = false)
-#else
-  #set($hasColorPickerMacro = true)
+#if($myEdit)
+  #if("#colorPicker()" == '#colorPicker()')
+    #set($discard = $xwiki.jsfx.use('uicomponents/widgets/colorpicker/procolor.js', true))
+    #set($discard = $xwiki.jsx.use("ColorThemes.ColorThemeSheet", {'defer': false}))
+    #set($discard = $xwiki.ssx.use("ColorThemes.ColorThemeSheet"))
+    #set($hasColorPickerMacro = false)
+  #else
+    #set($hasColorPickerMacro = true)
+  #end
+  #set($discard = $xwiki.jsx.use("MoccaCalendar.MoccaCalendarSheet"))
 #end
 #set($discard = $doc.use('MoccaCalendar.MoccaCalendarClass'))
-#set($discard = $xwiki.jsx.use("MoccaCalendar.MoccaCalendarSheet"))
 (% class="xform" %)
 (((
+#if($myEdit)
   ; &lt;label for="MoccaCalendar.MoccaCalendarClass_0_title"&gt;$escapetool.xml($doc.displayPrettyName('title', false, false))&lt;/label&gt;
   : $doc.display('title')
-#if($myEdit)
   ; &lt;label for="MoccaCalendar.MoccaCalendarClass_0_color"&gt;$escapetool.xml($doc.displayPrettyName('color', false, false))&lt;/label&gt;
   : #colorInput('color')
   ; &lt;label for="MoccaCalendar.MoccaCalendarClass_0_textColor"&gt;$escapetool.xml($doc.displayPrettyName('textColor', false, false))&lt;/label&gt;
   : #colorInput('textColor')
-#else
-  ; &lt;label for="MoccaCalendar.MoccaCalendarClass_0_color"&gt;$escapetool.xml($doc.displayPrettyName('color', false, false))&lt;/label&gt;
-  : &lt;div class="moccaevent" style="border-color:${escapetool.html($doc.display('color'))}"&gt;&amp;#160;&lt;/div&gt;
-  ; &lt;label for="MoccaCalendar.MoccaCalendarClass_0_textColor"&gt;$escapetool.xml($doc.displayPrettyName('textColor', false, false))&lt;/label&gt;
-  #if($doc.getValue('textColor'))
-  : &lt;div class="moccaevent" style="border-color:${escapetool.html($doc.display('textColor'))}"&gt;&amp;#160;&lt;/div&gt;
-  #else
-  : $services.localization.render('MoccaCalendar.MoccaCalendarClass.textColor.unset')
-  #end
-#end
   ; &lt;label for="MoccaCalendar.MoccaCalendarClass_0_description"&gt;$escapetool.xml($doc.displayPrettyName('description', false, false))&lt;/label&gt;
   : $doc.display('description')
-#if(!${myEdit})
-  ; &lt;label for="MoccaCalendar.MoccaCalendarClass_0_content1"&gt;$escapetool.xml($doc.displayPrettyName('content1', false, false))&lt;/label&gt;
-  : $doc.display('content1')
+#else
+  $doc.display('description')
+
+  $doc.display('content1')
 #end
 )))
 
