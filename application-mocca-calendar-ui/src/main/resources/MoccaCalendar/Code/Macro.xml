@@ -1099,74 +1099,102 @@ div.fc-view.fc-plainList-view {
       <nameField/>
       <validationScript/>
       <async_cached>
+        <customDisplay/>
         <defaultValue>0</defaultValue>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType/>
+        <hint/>
         <name>async_cached</name>
         <number>12</number>
         <prettyName>Cached</prettyName>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </async_cached>
       <async_context>
         <cache>0</cache>
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <freeText>forbidden</freeText>
+        <hint/>
         <largeStorage>0</largeStorage>
         <multiSelect>1</multiSelect>
         <name>async_context</name>
         <number>13</number>
+        <picker>1</picker>
         <prettyName>Context elements</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
         <separators>|, </separators>
         <size>5</size>
+        <sort/>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <values>doc.reference=Document|icon.theme=Icon theme|locale=Language|rendering.defaultsyntax=Default syntax|rendering.restricted=Restricted|rendering.targetsyntax=Target syntax|request.base=Request base URL|request.parameters=Request parameters|request.url=Request URL|request.wiki=Request wiki|user=User|wiki=Wiki</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </async_context>
       <async_enabled>
+        <customDisplay/>
         <defaultValue>0</defaultValue>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType/>
+        <hint/>
         <name>async_enabled</name>
         <number>11</number>
         <prettyName>Asynchronous rendering</prettyName>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </async_enabled>
       <code>
+        <contenttype>---</contenttype>
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>Text</editor>
+        <hint/>
         <name>code</name>
         <number>10</number>
+        <picker>0</picker>
         <prettyName>Macro code</prettyName>
         <rows>20</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </code>
       <contentDescription>
         <contenttype>PureText</contenttype>
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>PureText</editor>
+        <hint/>
         <name>contentDescription</name>
         <number>9</number>
+        <picker>0</picker>
         <prettyName>Content description (Not applicable for "No content" type)</prettyName>
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </contentDescription>
       <contentJavaType>
         <cache>0</cache>
+        <customDisplay/>
         <defaultValue>Unknown</defaultValue>
         <disabled>0</disabled>
         <displayType>input</displayType>
         <freeText>allowed</freeText>
+        <hint/>
         <largeStorage>1</largeStorage>
         <multiSelect>0</multiSelect>
         <name>contentJavaType</name>
@@ -1177,92 +1205,134 @@ div.fc-view.fc-plainList-view {
         <separator>|</separator>
         <separators>|</separators>
         <size>1</size>
+        <sort/>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <values>Unknown|Wiki</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </contentJavaType>
       <contentType>
         <cache>0</cache>
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <freeText>forbidden</freeText>
+        <hint/>
         <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>contentType</name>
         <number>7</number>
+        <picker>1</picker>
         <prettyName>Macro content availability</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator>|</separator>
         <separators>|</separators>
         <size>1</size>
+        <sort/>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <values>Optional|Mandatory|No content</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </contentType>
       <defaultCategory>
+        <customDisplay/>
         <disabled>0</disabled>
+        <hint/>
         <name>defaultCategory</name>
         <number>4</number>
+        <picker>1</picker>
         <prettyName>Default category</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </defaultCategory>
       <description>
         <contenttype>PureText</contenttype>
+        <customDisplay/>
         <disabled>0</disabled>
         <editor>PureText</editor>
+        <hint/>
         <name>description</name>
         <number>3</number>
+        <picker>0</picker>
         <prettyName>Macro description</prettyName>
         <rows>5</rows>
         <size>40</size>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </description>
       <id>
+        <customDisplay/>
         <disabled>0</disabled>
+        <hint/>
         <name>id</name>
         <number>1</number>
+        <picker>1</picker>
         <prettyName>Macro id</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </id>
       <name>
+        <customDisplay/>
         <disabled>0</disabled>
+        <hint/>
         <name>name</name>
         <number>2</number>
+        <picker>1</picker>
         <prettyName>Macro name</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </name>
       <supportsInlineMode>
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayFormType>select</displayFormType>
         <displayType>yesno</displayType>
+        <hint/>
         <name>supportsInlineMode</name>
         <number>5</number>
         <prettyName>Supports inline mode</prettyName>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
       </supportsInlineMode>
       <visibility>
         <cache>0</cache>
+        <customDisplay/>
+        <defaultValue/>
         <disabled>0</disabled>
         <displayType>select</displayType>
         <freeText>forbidden</freeText>
+        <hint/>
         <largeStorage>0</largeStorage>
         <multiSelect>0</multiSelect>
         <name>visibility</name>
         <number>6</number>
+        <picker>1</picker>
         <prettyName>Macro visibility</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator>|</separator>
         <separators>|</separators>
         <size>1</size>
+        <sort/>
         <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
         <values>Current User|Current Wiki|Global</values>
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </visibility>
