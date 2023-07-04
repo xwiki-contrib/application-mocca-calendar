@@ -1532,6 +1532,7 @@ require(['jquery', 'moccacalendar'], function(jQuery) {
     dayNamesShort: $services.localization.render('xwiki.calendar.dayNamesShort'),
     allDayText: "$escapetool.javascript($services.localization.render('xwiki.calendar.allDayText'))",
     axisFormat: "$escapetool.javascript($services.localization.render('xwiki.calendar.axisFormat'))",
+    smallTimeFormat: "$escapetool.javascript($services.localization.render('xwiki.calendar.axisFormat'))",
     timeFormat: "$!escapetool.javascript($services.localization.render('xwiki.calendar.timeFormat'))",
     views: {
       month: {
