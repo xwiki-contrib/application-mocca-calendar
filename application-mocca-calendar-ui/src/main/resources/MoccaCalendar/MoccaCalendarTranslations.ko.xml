@@ -1,1 +1,187 @@
+<?xml version="1.1" encoding="UTF-8"?>
 
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="MoccaCalendar.MoccaCalendarTranslations" locale="ko">
+  <web>MoccaCalendar</web>
+  <name>MoccaCalendarTranslations</name>
+  <language>ko</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>MoccaCalendarClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title>Mocca Calendar Translations</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>#general
+MoccaCalendar.calendar=달력
+MoccaCalendar.calendar.title=달력
+MoccaCalendar.calendar.defaultCalendarTitle=기타 이벤트
+MoccaCalendar.calendar.viewall=모든 캘린더 개요
+MoccaCalendar.calendar.create=새 캘린더 만들기
+MoccaCalendar.calendar.plainlist=의제
+MoccaCalendar.calendar.plainlist.titlepast=과거 사건들
+MoccaCalendar.calendar.plainlist.titleupcoming=다가오는 이벤트
+MoccaCalendar.calendar.plainlist.nopastevents=지난 이벤트를 찾을 수 없습니다.
+MoccaCalendar.calendar.plainlist.noupcomingevents=여기에 사용자의 식별자를 입력하세요.
+MoccaCalendar.calendar.firstDayOfWeek=0
+MoccaCalendar.calendarevent.viewall=모든 이벤트
+MoccaCalendar.calendarevent.create=새 이벤트 만들기
+MoccaCalendar.calendarevent.backlink=캘린더로 돌아가기 «{0}»
+MoccaCalendar.calendarevent.confirmDelete=이벤트 «{0}»를 삭제하시겠습니까? ?
+MoccaCalendar.calendarevent.view=이벤트
+MoccaCalendar.calendarevent.confirmDelete.allEventsButton=모든 인스턴스
+MoccaCalendar.generic.errormessage=인터넷 서버 오류
+
+# Class fields
+MoccaCalendar.MoccaCalendarClass_title=제목
+MoccaCalendar.MoccaCalendarClass_color=달력 보기 항목의 배경색
+MoccaCalendar.MoccaCalendarClass_textColor=달력 보기 항목의 텍스트 색상
+MoccaCalendar.MoccaCalendarClass_description=설명
+MoccaCalendar.MoccaCalendarClass_content1=콘텐츠
+MoccaCalendar.MoccaCalendarClass.textColor.unset=(하얀색)
+
+# Live table generic keys
+moccacalendar.livetable.doc.title=달력
+moccacalendar.livetable.doc.name=페이지 이름
+moccacalendar.livetable.doc.space=공간
+moccacalendar.livetable.doc.fullname=페이지 전체 이름
+moccacalendar.livetable.doc.author=삭제 진행 중...
+moccacalendar.livetable.doc.creator=삭제 진행 중...
+moccacalendar.livetable.doc.date=삭제 진행 중...
+moccacalendar.livetable.doc.creationDate=삭제 진행 중...
+moccacalendar.livetable._avatar=삭제 진행 중...
+moccacalendar.livetable._images=삭제 진행 중...
+moccacalendar.livetable._attachments=삭제 진행 중...
+moccacalendar.livetable._actions=삭제 진행 중...
+moccacalendar.livetable._actions.edit=삭제 진행 중...
+moccacalendar.livetable._actions.delete=삭제 진행 중...
+moccacalendar.livetable.emptyvalue=삭제 진행 중...
+moccacalendar.livetable.title=삭제 진행 중...
+moccacalendar.livetable.description=삭제 진행 중...
+moccacalendar.livetable.content1=삭제 진행 중...
+
+# Mocca Calendar Events keys
+# Class fields
+MoccaCalendar.MoccaCalendarEventClass_title=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_startDate=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_endDate=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_description=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_allDay=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.)
+MoccaCalendar.MoccaCalendarEventClass_recurrent=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.)
+
+# modification class fields
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=quarterly
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=yearly
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=First occurrence of the event
+### Missing: MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Last occurrence of the event
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=Modified title
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=Modified start date
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=Modified end date
+### Missing: MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=Modified description
+
+# the modification switch
+### Missing: moccacalendarevent.editswitch.label=Edit:
+### Missing: moccacalendarevent.editswitch.oneInstance=this instance only
+### Missing: moccacalendarevent.editswitch.allInstances=all instances
+
+# Event live table generic keys (currently unused)
+### Missing: moccacalendarevent.livetable.doc.title=Page title
+### Missing: moccacalendarevent.livetable.doc.name=Page name
+### Missing: moccacalendarevent.livetable.doc.space=Space
+### Missing: moccacalendarevent.livetable.doc.fullname=Page full name
+### Missing: moccacalendarevent.livetable.doc.author=Last Author
+### Missing: moccacalendarevent.livetable.doc.creator=Creator
+### Missing: moccacalendarevent.livetable.doc.date=Update date
+### Missing: moccacalendarevent.livetable.doc.creationDate=Creation date
+### Missing: moccacalendarevent.livetable._avatar=Avatar
+### Missing: moccacalendarevent.livetable._images=Images
+### Missing: moccacalendarevent.livetable._attachments=Attachments
+### Missing: moccacalendarevent.livetable._actions=Action
+### Missing: moccacalendarevent.livetable._actions.edit=Edit
+### Missing: moccacalendarevent.livetable._actions.delete=Delete
+### Missing: moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
+### Missing: moccacalendarevent.livetable.title=Title
+### Missing: moccacalendarevent.livetable.startDate=Start date
+### Missing: moccacalendarevent.livetable.endDate=End date
+### Missing: moccacalendarevent.livetable.description=Description
+
+# validation messages: on save
+### Missing: val_title_notvalid=Title field contains invalid characters.
+### Missing: val_title_notempty=Title field is required.
+### Missing: val_startDateMissing=A start date is missing for the event.
+### Missing: val_startDateNotDate=The given start date cannot be read as a date.
+### Missing: val_endDateNotDate=The given end date cannot be read as a date.
+### Missing: val_endDate=End date must be after start date.
+### Missing: val_title_already_exists=An event with this name already exists.
+### Missing: moccacalendar.updates.firstInstance.notDate=The given first instance date cannot be read as a date.
+### Missing: moccacalendar.updates.lastInstance.notDate=The given last instance date cannot be read as a date.
+
+# validation messages: Update Service
+### Missing: moccacalendar.updates.eventUpdated=Updated event time.
+### Missing: moccacalendar.updates.eventrecurrent=Recurrent events cannot be moved.
+### Missing: moccacalendar.updates.valuesinvalid=The new event time is invalid.
+### Missing: moccacalendar.updates.nodocument=The event is no longer available.
+
+# validation messages: Delete Service
+### Missing: moccacalendar.delete.startDateInvalid=The event start date could not be read.
+### Missing: moccacalendar.delete.saveMessage=Event instance at {0} deleted.
+
+# validation messages: Modification Service
+### Missing: moccacalendar.modify.createMessage=Added modification for one event instance.
+### Missing: moccacalendar.modify.saveMessage=Updated modification for one event instance.
+
+# Calendar macro
+### Missing: rendering.macro.moccacalendar.name=Mocca Calendar
+### Missing: rendering.macro.moccacalendar.description=Displays a Calendar
+### Missing: rendering.macro.moccacalendar.parameter.filter.name=Show events from ...
+### Missing: rendering.macro.moccacalendar.parameter.filter.description=Possible values are 'wiki','space' or 'page', where: 'page': only events which are children pages of this page will be included,  'space': only events which are in the space of the calendar doc will be included, 'wiki': all events will be included.
+### Missing: rendering.macro.moccacalendar.parameter.calendarDoc.name=Calendar page
+### Missing: rendering.macro.moccacalendar.parameter.calendarDoc.description=The calendar document whose events are shown (only if filter is set to 'page'). This value is also used as the default calendar to create new events for. If missing, the current document is used.
+### Missing: rendering.macro.moccacalendar.parameter.defaultView.name=Default View
+### Missing: rendering.macro.moccacalendar.parameter.defaultView.description=The initial way the calendar is displayed; can be changed by the user. Possible values are: 'month', 'agendaWeek', 'agendaDay' or 'plainList'.
+### Missing: rendering.macro.moccacalendar.parameter.firstDay.name=First day of week
+### Missing: rendering.macro.moccacalendar.parameter.firstDay.description=First day (from 0 being Sunday to 6 being Monday) of the week to show in the calendar. Leave empty for Sunday.
+### Missing: rendering.macro.moccacalendar.parameter.minTime.name=First time
+### Missing: rendering.macro.moccacalendar.parameter.minTime.description=First time to show in the calendar. Users won't see hours before this time. Leave empty for default (8:00).
+### Missing: rendering.macro.moccacalendar.parameter.maxTime.name=Last time
+### Missing: rendering.macro.moccacalendar.parameter.maxTime.description=Last time to show in the calendar. Users won't see hours after this time. Leave empty for default (23:00).
+### Missing: rendering.macro.moccacalendar.parameter.year.name=Year
+### Missing: rendering.macro.moccacalendar.parameter.year.description=Year of the date to show when loading the calendar. Leave empty for today.
+### Missing: rendering.macro.moccacalendar.parameter.month.name=Month
+### Missing: rendering.macro.moccacalendar.parameter.month.description=Month (from 0 to 11) of the date to show when loading the calendar. Leave empty for today.
+### Missing: rendering.macro.moccacalendar.parameter.date.name=Day
+### Missing: rendering.macro.moccacalendar.parameter.date.description=Day (from 1 to 31) of the date to show when loading the calendar. Leave empty for today.
+</content>
+  </xwikidoc>
