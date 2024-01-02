@@ -1,0 +1,187 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="MoccaCalendar.MoccaCalendarTranslations" locale="ko">
+  <web>MoccaCalendar</web>
+  <name>MoccaCalendarTranslations</name>
+  <language>ko</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>MoccaCalendarClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title>Mocca Calendar Translations</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>#general
+MoccaCalendar.calendar=달력
+MoccaCalendar.calendar.title=달력
+MoccaCalendar.calendar.defaultCalendarTitle=기타 이벤트
+MoccaCalendar.calendar.viewall=모든 캘린더 개요
+MoccaCalendar.calendar.create=새 캘린더 만들기
+MoccaCalendar.calendar.plainlist=의제
+MoccaCalendar.calendar.plainlist.titlepast=과거 사건들
+MoccaCalendar.calendar.plainlist.titleupcoming=다가오는 이벤트
+MoccaCalendar.calendar.plainlist.nopastevents=지난 이벤트를 찾을 수 없습니다.
+MoccaCalendar.calendar.plainlist.noupcomingevents=여기에 사용자의 식별자를 입력하세요.
+MoccaCalendar.calendar.firstDayOfWeek=0
+MoccaCalendar.calendarevent.viewall=모든 이벤트
+MoccaCalendar.calendarevent.create=새 이벤트 만들기
+MoccaCalendar.calendarevent.backlink=캘린더로 돌아가기 «{0}»
+MoccaCalendar.calendarevent.confirmDelete=이벤트 «{0}»를 삭제하시겠습니까? ?
+MoccaCalendar.calendarevent.view=이벤트
+MoccaCalendar.calendarevent.confirmDelete.allEventsButton=모든 인스턴스
+MoccaCalendar.generic.errormessage=인터넷 서버 오류
+
+# Class fields
+MoccaCalendar.MoccaCalendarClass_title=제목
+MoccaCalendar.MoccaCalendarClass_color=달력 보기 항목의 배경색
+MoccaCalendar.MoccaCalendarClass_textColor=달력 보기 항목의 텍스트 색상
+MoccaCalendar.MoccaCalendarClass_description=설명
+MoccaCalendar.MoccaCalendarClass_content1=콘텐츠
+MoccaCalendar.MoccaCalendarClass.textColor.unset=(하얀색)
+
+# Live table generic keys
+moccacalendar.livetable.doc.title=달력
+moccacalendar.livetable.doc.name=페이지 이름
+moccacalendar.livetable.doc.space=공간
+moccacalendar.livetable.doc.fullname=페이지 전체 이름
+moccacalendar.livetable.doc.author=삭제 진행 중...
+moccacalendar.livetable.doc.creator=삭제 진행 중...
+moccacalendar.livetable.doc.date=삭제 진행 중...
+moccacalendar.livetable.doc.creationDate=삭제 진행 중...
+moccacalendar.livetable._avatar=삭제 진행 중...
+moccacalendar.livetable._images=삭제 진행 중...
+moccacalendar.livetable._attachments=삭제 진행 중...
+moccacalendar.livetable._actions=삭제 진행 중...
+moccacalendar.livetable._actions.edit=삭제 진행 중...
+moccacalendar.livetable._actions.delete=삭제 진행 중...
+moccacalendar.livetable.emptyvalue=삭제 진행 중...
+moccacalendar.livetable.title=삭제 진행 중...
+moccacalendar.livetable.description=삭제 진행 중...
+moccacalendar.livetable.content1=삭제 진행 중...
+
+# Mocca Calendar Events keys
+# Class fields
+MoccaCalendar.MoccaCalendarEventClass_title=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_startDate=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_endDate=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_description=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+MoccaCalendar.MoccaCalendarEventClass_allDay=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.)
+MoccaCalendar.MoccaCalendarEventClass_recurrent=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.)
+
+# modification class fields
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 콜론(:)
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=계간지
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=매년
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=이벤트의 첫 번째 발생
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=이벤트의 마지막 발생
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=수정된 제목
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=수정된 시작일
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=수정된 종료일
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=수정된 설명
+
+# the modification switch
+moccacalendarevent.editswitch.label=편집하다:
+moccacalendarevent.editswitch.oneInstance=이 인스턴스만
+moccacalendarevent.editswitch.allInstances=모든 인스턴스
+
+# Event live table generic keys (currently unused)
+moccacalendarevent.livetable.doc.title=페이지 제목
+moccacalendarevent.livetable.doc.name=페이지 이름
+moccacalendarevent.livetable.doc.space=공간
+moccacalendarevent.livetable.doc.fullname=페이지 전체 이름
+moccacalendarevent.livetable.doc.author=마지막 저자
+moccacalendarevent.livetable.doc.creator=창조자
+moccacalendarevent.livetable.doc.date=업데이트 날짜
+moccacalendarevent.livetable.doc.creationDate=생산 일
+moccacalendarevent.livetable._avatar=화신
+moccacalendarevent.livetable._images=이미지
+moccacalendarevent.livetable._attachments=첨부파일
+moccacalendarevent.livetable._actions=행동
+moccacalendarevent.livetable._actions.edit=편집하다
+moccacalendarevent.livetable._actions.delete=삭제
+moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
+moccacalendarevent.livetable.title=제목
+moccacalendarevent.livetable.startDate=시작일
+moccacalendarevent.livetable.endDate=종료일
+moccacalendarevent.livetable.description=설명
+
+# validation messages: on save
+val_title_notvalid=제목 필드에 잘못된 문자가 포함되어 있습니다.
+val_title_notempty=제목 필드는 필수입니다.
+val_startDateMissing=이벤트 시작일이 누락되었습니다.
+val_startDateNotDate=지정된 시작 날짜를 날짜로 읽을 수 없습니다.
+val_endDateNotDate=지정된 종료 날짜를 날짜로 읽을 수 없습니다.
+val_endDate=종료일은 시작일 이후여야 합니다.
+val_title_already_exists=같은 이름의 이벤트가 이미 존재합니다.
+moccacalendar.updates.firstInstance.notDate=주어진 첫 번째 인스턴스 날짜는 날짜로 읽을 수 없습니다.
+moccacalendar.updates.lastInstance.notDate=주어진 마지막 인스턴스 날짜는 날짜로 읽을 수 없습니다.
+
+# validation messages: Update Service
+moccacalendar.updates.eventUpdated=이벤트 시간이 업데이트되었습니다.
+moccacalendar.updates.eventrecurrent=반복 이벤트는 이동할 수 없습니다.
+moccacalendar.updates.valuesinvalid=새 이벤트 시간이 잘못되었습니다.
+moccacalendar.updates.nodocument=해당 이벤트는 더 이상 이용할 수 없습니다.
+
+# validation messages: Delete Service
+moccacalendar.delete.startDateInvalid=이벤트 시작일을 읽을 수 없습니다.
+moccacalendar.delete.saveMessage={0}의 이벤트 인스턴스가 삭제되었습니다.
+
+# validation messages: Modification Service
+moccacalendar.modify.createMessage=하나의 이벤트 인스턴스에 대한 수정 사항이 추가되었습니다.
+moccacalendar.modify.saveMessage=하나의 이벤트 인스턴스에 대한 수정 사항이 업데이트되었습니다.
+
+# Calendar macro
+rendering.macro.moccacalendar.name=모카 달력
+rendering.macro.moccacalendar.description=달력을 표시합니다
+rendering.macro.moccacalendar.parameter.filter.name=이벤트 표시...
+rendering.macro.moccacalendar.parameter.filter.description=가능한 값은 'wiki','space' 또는 'page'입니다. 여기서: 'page': 이 페이지의 하위 페이지인 이벤트만 포함됩니다.  'space': 캘린더 문서의 스페이스에 있는 이벤트만 포함됩니다. 'wiki': 모든 이벤트가 포함됩니다.
+rendering.macro.moccacalendar.parameter.calendarDoc.name=캘린더 페이지
+rendering.macro.moccacalendar.parameter.calendarDoc.description=이벤트가 표시되는 캘린더 문서입니다(필터가 '페이지'로 설정된 경우에만). 이 값은 새 이벤트를 생성하기 위한 기본 달력으로도 사용됩니다. 누락된 경우 현재 문서가 사용됩니다.
+rendering.macro.moccacalendar.parameter.defaultView.name=기본 보기
+rendering.macro.moccacalendar.parameter.defaultView.description=달력이 표시되는 초기 방법입니다. 사용자가 변경할 수 있습니다. 가능한 값은 'month', 'agendaWeek', 'agendaDay' 또는 'plainList'입니다.
+rendering.macro.moccacalendar.parameter.firstDay.name=주의 첫날
+rendering.macro.moccacalendar.parameter.firstDay.description=달력에 표시할 주의 첫 번째 날(0은 일요일, 6은 월요일)입니다. 일요일에는 비워두세요.
+rendering.macro.moccacalendar.parameter.minTime.name=처음으로
+rendering.macro.moccacalendar.parameter.minTime.description=달력에 처음으로 등장합니다. 사용자는 이 시간 이전의 시간을 볼 수 없습니다. 기본값(8:00)의 경우 비워 두세요.
+rendering.macro.moccacalendar.parameter.maxTime.name=마지막으로
+rendering.macro.moccacalendar.parameter.maxTime.description=달력에 마지막으로 표시되는 시간입니다. 이 시간 이후에는 사용자에게 몇 시간이 표시되지 않습니다. 기본값(23:00)의 경우 비워 두세요.
+rendering.macro.moccacalendar.parameter.year.name=년도
+rendering.macro.moccacalendar.parameter.year.description=달력을 로드할 때 표시할 날짜의 연도입니다. 오늘은 비워두세요.
+rendering.macro.moccacalendar.parameter.month.name=월
+rendering.macro.moccacalendar.parameter.month.description=달력을 로드할 때 표시할 날짜의 월(0~11)입니다. 오늘은 비워두세요.
+rendering.macro.moccacalendar.parameter.date.name=낮
+rendering.macro.moccacalendar.parameter.date.description=달력을 로드할 때 표시할 날짜의 일(1~31)입니다. 오늘은 비워두세요.
+</content>
+  </xwikidoc>
