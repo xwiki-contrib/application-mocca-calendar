@@ -111,7 +111,7 @@ events.each {
     event.getProperties().add(new Description(description));
 
     // Generate a UID for the event..
-    UidGenerator ug = new UidGenerator(new SimpleHostInfo('atelier-medias.org'), eventDocument.documentReference.toString());
+    UidGenerator ug = new FixedUidGenerator(new SimpleHostInfo('atelier-medias.org'), eventDocument.documentReference.toString());
     event.getProperties().add(ug.generateUid());
     calendar.getComponents().add(event)
   }
