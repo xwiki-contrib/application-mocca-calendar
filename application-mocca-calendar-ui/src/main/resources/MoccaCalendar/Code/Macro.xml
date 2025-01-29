@@ -1441,7 +1441,7 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 
 #set($canCreateEvents = $xwiki.hasAccessLevel("edit", $xcontext.getUser(), $calendarDoc))
 
-{{/velocity}}{{velocity}}#if($xcontext.action=='view'){{html clean="false" wiki="false"}}
+{{/velocity}}{{velocity}}#if($xcontext.action=='view' || $xcontext.action=='export'){{html clean="false" wiki="false"}}
 #if($canCreateEvents)
 ## create event link
 &lt;div class="calendar-buttons"&gt;
