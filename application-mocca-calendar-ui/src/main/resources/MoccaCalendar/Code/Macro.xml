@@ -1422,6 +1422,10 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 #if("$!dateFormat" == "")
   #set($dateFormat = "dd.MM.yyyy HH:mm:ss")
 #end
+#set ($eventLimit = $xcontext.macro.params.eventLimit)
+#if (!$eventLimit)
+ #set ($eventLimit = false)
+#end
 
 ##
 ## some hardwired values that you can feel free to customize
@@ -1471,6 +1475,7 @@ require(['jquery', 'moccacalendar'], function(jQuery) {
 
   // page is now ready, initialize the calendar...
   var calendar = jQuery('#calendar${calcounter}').fullCalendar({
+    eventLimit: $escapetool.javascript($eventLimit),
     events: {
       url : "$!escapetool.javascript($jsonUrl)",
       type: 'GET',
@@ -2292,6 +2297,84 @@ Mocca Calendar Macro
     </property>
     <property>
       <name>date</name>
+    </property>
+    <property>
+      <type/>
+    </property>
+  </object>
+  <object>
+    <name>MoccaCalendar.Code.Macro</name>
+    <number>9</number>
+    <className>XWiki.WikiMacroParameterClass</className>
+    <guid>d77a01be-1c2f-433c-93d0-f3703b0e6d48</guid>
+    <class>
+      <name>XWiki.WikiMacroParameterClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <defaultValue>
+        <disabled>0</disabled>
+        <name>defaultValue</name>
+        <number>4</number>
+        <prettyName>Parameter default value</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </defaultValue>
+      <description>
+        <disabled>0</disabled>
+        <name>description</name>
+        <number>2</number>
+        <prettyName>Parameter description</prettyName>
+        <rows>5</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </description>
+      <mandatory>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>mandatory</name>
+        <number>3</number>
+        <prettyName>Parameter mandatory</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </mandatory>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Parameter name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <type>
+        <disabled>0</disabled>
+        <name>type</name>
+        <number>5</number>
+        <prettyName>Parameter type</prettyName>
+        <size>60</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </type>
+    </class>
+    <property>
+      <defaultValue>false</defaultValue>
+    </property>
+    <property>
+      <description>Sets a limit on daily event display. Extra events appear in a popover. If false (default) shows all events, else (true) restricts them to the day cell’s height.</description>
+    </property>
+    <property>
+      <mandatory>0</mandatory>
+    </property>
+    <property>
+      <name>eventLimit</name>
     </property>
     <property>
       <type/>

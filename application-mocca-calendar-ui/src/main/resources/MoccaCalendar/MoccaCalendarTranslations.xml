@@ -184,6 +184,8 @@ rendering.macro.moccacalendar.parameter.month.name=Month
 rendering.macro.moccacalendar.parameter.month.description=Month (from 0 to 11) of the date to show when loading the calendar. Leave empty for today.
 rendering.macro.moccacalendar.parameter.date.name=Day
 rendering.macro.moccacalendar.parameter.date.description=Day (from 1 to 31) of the date to show when loading the calendar. Leave empty for today.
+rendering.macro.moccacalendar.parameter.eventLimit.name=Event limit
+rendering.macro.moccacalendar.parameter.eventLimit.description=Sets a limit on daily event display. Extra events appear in a popover. If false (default) shows all events, else (true) restricts them to the day cell’s height.
   </content>
   <object>
     <name>MoccaCalendar.MoccaCalendarTranslations</name>
