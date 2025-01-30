@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -48,7 +48,6 @@ MoccaCalendar.calendar.plainlist.titleupcoming=Anstehende Termine
 MoccaCalendar.calendar.plainlist.nopastevents=Keine vergangenen Termine gefunden.
 MoccaCalendar.calendar.plainlist.noupcomingevents=Keine anstehenden Termine gefunden.
 MoccaCalendar.calendar.firstDayOfWeek=1
-
 MoccaCalendar.calendarevent.viewall=Alle Termine
 MoccaCalendar.calendarevent.create=Neuen Termin anlegen
 MoccaCalendar.calendarevent.backlink=Zurück zum Kalender &amp;#8222;{0}&amp;#8220;
@@ -184,5 +183,7 @@ rendering.macro.moccacalendar.parameter.month.name=Monat
 rendering.macro.moccacalendar.parameter.month.description=Der Monat, für den initial Termine angezeigt werden. Werte von 0=Januar bis 11=Dezember. Falls leer, wird der aktuelle Monat genommen.
 rendering.macro.moccacalendar.parameter.date.name=Tag
 rendering.macro.moccacalendar.parameter.date.description=Der Tag, für den initial Termine angezeigt werden. Werte von 1 bis 31. Falls leer, wird der heutige Tag genommen.
+rendering.macro.moccacalendar.parameter.eventLimit.name=Ereignis-Limit
+rendering.macro.moccacalendar.parameter.eventLimit.description=Legt eine Grenze für die tägliche Ereignisanzeige fest. Zusätzliche Ereignisse werden in einem Popover angezeigt. Bei falsch (Standard) werden alle Ereignisse angezeigt, ansonsten (wahr) werden sie auf die Höhe der Tageszelle beschränkt.
 </content>
 </xwikidoc>
