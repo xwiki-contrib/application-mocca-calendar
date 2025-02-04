@@ -45,6 +45,11 @@
   #if($eventName == "")
     #set($eventName = "event")
   #end
+  ## Transform a name according to the current name strategy, if the configuration is set to use transformation. Else it will just return the given name.
+  ## TODO: Remove the check when the parent version will be XWiki 12.0 or greather.
+  #if ($services.modelvalidation)
+    #set ($eventName = $services.modelvalidation.transformName($eventName))
+  #end
   ## find a new unused event name
   #set($wiki = $doc.wiki)
   #set($space = $doc.space) ## fallback only!
