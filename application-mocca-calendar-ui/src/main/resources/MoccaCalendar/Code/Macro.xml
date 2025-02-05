@@ -1450,7 +1450,7 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
   #if ($results.size() &gt; 1)
     === $services.localization.render('MoccaCalendar.calendarevent.filterEvents') ===
     {{html clean="false"}}
-      &lt;form action="" method="post"&gt;
+      &lt;form action="" method="get"&gt;
         #foreach ($result in $results)
           #set ($docFullName = $result[0])
           #set ($backgroundColor = $result[1])
