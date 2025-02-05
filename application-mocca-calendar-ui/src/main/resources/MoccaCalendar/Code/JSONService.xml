@@ -77,7 +77,6 @@
   ##
   #set($html = "${html}" + '&lt;p class="date"&gt;')
   #if($allDay)
-    #set($discard = $services.localization.use('document', 'Calendar.Translations'))
     #if($sameDay)
        #set($html = $html + $dateprinter.print($startDate))
     #else

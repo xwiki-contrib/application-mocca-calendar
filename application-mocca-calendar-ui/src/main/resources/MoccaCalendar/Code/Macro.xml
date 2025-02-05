@@ -1348,7 +1348,6 @@ div.fc-view.fc-plainList-view {
     </property>
     <property>
       <code>{{velocity output="false"}}
-$services.localization.use('document', 'Calendar.Translations')
 #if('#dateTimePicker_import()' == "#dateTimePicker_import()")
   #set($picker_macro = false)
   ## A simple date picker widget.
