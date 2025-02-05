@@ -105,7 +105,18 @@
   #set($orderAsc=false)
 #end
 ##
-#set($events = $services.moccacalendar.queryEvents($startQuery, $endQuery, "$!{request.filter}", ${request.calendarDoc}, $orderAsc))
+## TODO: Remove the check when the parent version will be XWiki 12.1 or greather.
+#if ($collectiontool)
+  #set ($calendarsSet = $collectiontool.set)
+#else
+  #set ($calendarsSet = $collectionstool.set)
+#end
+#if ("$!request.calendarsFilter" != '')
+  #set ($calendarsArray = $request.calendarsFilter.split(','))
+  ## We need to convert the String[] to a List&lt;String&gt; before calling addAll (which expects a collection).
+  #set ($discard = $calendarsSet.addAll($calendarsArray.subList(0, $calendarsArray.size())))
+#end
+#set ($events = $services.moccacalendar.queryEvents($startQuery, $endQuery, "$!request.filter", $request.calendarDoc, $orderAsc, $calendarsSet))
 ##
 #set($jsondateformat = $xwiki.jodatime.getDateTimeFormatterForPattern("yyyy-MM-dd'T'HH:mm"))
 #set($calDocParam = "calendarDoc=$!{escapetool.url($request.calendarDoc)}")

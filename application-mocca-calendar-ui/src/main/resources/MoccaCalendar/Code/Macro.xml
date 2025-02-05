@@ -1440,8 +1440,34 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 #set($right = "agendaDay,agendaWeek,month,plainList")
 
 #set($canCreateEvents = $xwiki.hasAccessLevel("edit", $xcontext.getUser(), $calendarDoc))
+#set ($calendarsFilter = $request.parameterMap['calendarsFiltler'])
+{{/velocity}}
 
-{{/velocity}}{{velocity}}#if($xcontext.action=='view' || $xcontext.action=='export'){{html clean="false" wiki="false"}}
+{{velocity}}
+#if ($xcontext.action == 'view' &amp;&amp; $filter != 'page')
+  #set ($statement = "select doc.fullName, calendar.color from Document doc, doc.object(MoccaCalendar.MoccaCalendarClass) calendar where doc.name &lt;&gt; 'MoccaCalendarTemplate'")
+  #set ($results = $services.query.xwql($statement).execute())
+  #if ($results.size() &gt; 1)
+    === $services.localization.render('MoccaCalendar.calendarevent.filterEvents') ===
+    {{html clean="false"}}
+      &lt;form action="" method="post"&gt;
+        #foreach ($result in $results)
+          #set ($docFullName = $result[0])
+          #set ($backgroundColor = $result[1])
+          #set ($checked = $calendarsFilter.contains($docFullName))
+          #set ($title = $xwiki.getDocument($docFullName).displayTitle)
+          &lt;div&gt;
+            &lt;input type="checkbox" id="$docFullName" name="calendarsFiltler" value="$docFullName" #if ($checked) checked #end style="accent-color:$backgroundColor"/&gt;
+            &lt;label for="$docFullName"&gt;$title&lt;/label&gt;
+          &lt;/div&gt;
+        #end
+        &lt;input type="submit" class="btn btn-primary" value="$services.localization.render('MoccaCalendar.calendarevent.filterEvents.submit')" /&gt;
+      &lt;/form&gt;
+    {{/html}}
+  #end
+#end
+#if ($xcontext.action=='view' || $xcontext.action=='export')
+{{html clean="false" wiki="false"}}
 #if($canCreateEvents)
 ## create event link
 &lt;div class="calendar-buttons"&gt;
@@ -1467,6 +1493,7 @@ require(['jquery', 'moccacalendar'], function(jQuery) {
     outputSyntax: 'plain',
     calendarDoc: "$!escapetool.javascript($calendarDoc)",
     filter: "$!escapetool.javascript($filter)",
+    calendarsFilter: "$!escapetool.javascript($stringtool.join($calendarsFilter, ','))",
     classname: "MoccaCalendar.MoccaCalendarEventClass",
     startfield: "startDate",
     endfield: "endDate",

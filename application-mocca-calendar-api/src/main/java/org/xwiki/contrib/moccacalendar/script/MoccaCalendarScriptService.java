@@ -170,22 +170,18 @@ public class MoccaCalendarScriptService implements ScriptService
 
     /**
      * get a list of events matching the date and filter criteria.
-     * 
-     * @param dateFrom
-     *            the start range
-     * @param dateTo
-     *            the end range; can be null. in that case dates form a single day are returned
-     * @param filter
-     *            how to filter the event. if null or "wiki" return all events
-     * @param parentReference
-     *            the page reference to use for the filter. can be null if filter is null or "wiki".
-     * @param sortAscending
-     *            if true, sort events ascending by start date, else descending
+     *
+     * @param dateFrom the start range
+     * @param dateTo the end range; can be null. in that case dates form a single day are returned
+     * @param filter how to filter the event. if null or "wiki" return all events
+     * @param parentReference the page reference to use for the filter. can be null if filter is null or "wiki".
+     * @param sortAscending if true, sort events ascending by start date, else descending
+     * @param calendars the calendars to display events from
      * @return a list of event instances matching the criteria; might be empty but never null
      * @throws QueryException if an error occurs while fetching the events
      */
     public List<EventInstance> queryEvents(Date dateFrom, Date dateTo, String filter, String parentReference,
-        boolean sortAscending) throws QueryException
+        boolean sortAscending, List<String> calendars) throws QueryException
     {
 
         final XWikiContext context = xcontextProvider.get();
@@ -212,6 +208,9 @@ public class MoccaCalendarScriptService implements ScriptService
         //
 
         addLocationFilter(simpleEvents, filter, parentReference);
+
+        // Filter by calendar.
+        addCalendarFilter(simpleEvents, calendars);
 
         // finally the ordering
         addOrderBy(sortAscending, simpleEvents);
@@ -313,6 +312,23 @@ public class MoccaCalendarScriptService implements ScriptService
         sortEvents(events, sortAscending);
 
         return events;
+    }
+
+    /**
+     * get a list of events matching the date and filter criteria.
+     *
+     * @param dateFrom the start range
+     * @param dateTo the end range; can be null. in that case dates form a single day are returned
+     * @param filter how to filter the event. if null or "wiki" return all events
+     * @param parentReference the page reference to use for the filter. can be null if filter is null or "wiki".
+     * @param sortAscending if true, sort events ascending by start date, else descending
+     * @return a list of event instances matching the criteria; might be empty but never null
+     * @throws QueryException if an error occurs while fetching the events
+     */
+    public List<EventInstance> queryEvents(Date dateFrom, Date dateTo, String filter, String parentReference,
+        boolean sortAscending) throws QueryException
+    {
+        return queryEvents(dateFrom, dateTo, filter, parentReference, sortAscending, Collections.emptyList());
     }
 
     private List<DocumentReference> filterViewableEvents(List<String> eventDocRefs)
@@ -623,6 +639,28 @@ public class MoccaCalendarScriptService implements ScriptService
             default:
                 // get events from the complete wiki: no filter to be added
                 break;
+        }
+    }
+
+
+    private void addCalendarFilter(QueryData data, List<String> calendars)
+    {
+        if (!calendars.isEmpty()) {
+            data.getHql().append(" and (");
+            int index = 0;
+            for (String calendar : calendars) {
+                String spaceParamName = String.format("space%s", index);
+                if (index > 0) {
+                    data.getHql().append(" or ");
+                }
+                data.getHql().append(String.format("doc.space like :%s", spaceParamName));
+                DocumentReference calendarRef = stringDocRefResolver.resolve(calendar);
+                String spaceRefStr = compactWikiSerializer.serialize(calendarRef.getLastSpaceReference());
+                String spaceLikeStr = spaceRefStr.concat(".%");
+                data.getQueryParams().put(spaceParamName, spaceLikeStr);
+                index ++;
+            }
+            data.getHql().append(")");
         }
     }
 
