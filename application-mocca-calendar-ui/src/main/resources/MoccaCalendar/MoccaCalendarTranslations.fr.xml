@@ -48,8 +48,9 @@ MoccaCalendar.calendar.plainlist.titleupcoming=Événements à venir
 MoccaCalendar.calendar.plainlist.nopastevents=Aucun événement trouvé.
 MoccaCalendar.calendar.plainlist.noupcomingevents=Aucun événement à venir trouvé.
 MoccaCalendar.calendar.firstDayOfWeek=1
-
 MoccaCalendar.calendarevent.viewall=Tous les événements
+### Missing: MoccaCalendar.calendarevent.filterEvents=Filter Events by Calendar
+MoccaCalendar.calendarevent.filterEvents.submit=Filtrer les événements
 MoccaCalendar.calendarevent.create=Créer un événement
 MoccaCalendar.calendarevent.backlink=Retour au calendier &amp;#171;{0}&amp;#187;
 MoccaCalendar.calendarevent.confirmDelete=Voulez-vous vraiment supprimer l''évènement &amp;#171;{0}&amp;#187; ?
@@ -184,5 +185,7 @@ rendering.macro.moccacalendar.parameter.month.name=Mois
 rendering.macro.moccacalendar.parameter.month.description=Mois (du 1 au 12) affiché lors du chargement du calendrier.\nPar défaut, le calendrier affiche le mois courant.
 rendering.macro.moccacalendar.parameter.date.name=Jour
 rendering.macro.moccacalendar.parameter.date.description=Jour (du 1 au 31) affiché lors du chargement du calendrier.\nPar défaut, le calendrier affiche le jour courant.
+### Missing: rendering.macro.moccacalendar.parameter.eventLimit.name=Event limit
+### Missing: rendering.macro.moccacalendar.parameter.eventLimit.description=Sets a limit on daily event display. Extra events appear in a popover. If false (default) shows all events, else (true) restricts them to the day cell’s height.
 </content>
 </xwikidoc>
