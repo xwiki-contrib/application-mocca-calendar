@@ -1477,9 +1477,12 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 ## end create event link
 #end
 &lt;div id="calendar${calcounter}"&gt;&lt;/div&gt;
-#if($calcounter==0 &amp;&amp; $canCreateEvents)
-## show event description form to trigger load of CK Editor resources
-&lt;form class="hidden"&gt;$xwiki.getDocument('MoccaCalendar.MoccaCalendarEventTemplate').getObject('MoccaCalendar.MoccaCalendarEventClass').display('description','edit')&lt;/form&gt;
+#if ($calcounter == 0 &amp;&amp; $canCreateEvents)
+  ## Show event description form to trigger load of CK Editor resources.
+  &lt;form class="hidden"&gt;
+    #set ($eventObject = $xwiki.getDocument('MoccaCalendar.MoccaCalendarEventTemplate').getObject('MoccaCalendar.MoccaCalendarEventClass'))
+    $eventObject.display('description','edit').replace('{{html clean="false" wiki="false"}}', '').replace('{{/html}}', '')
+  &lt;/form&gt;
 #end
 &lt;script type="text/javascript"&gt;
 require(['jquery', 'moccacalendar'], function(jQuery) {
