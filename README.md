@@ -1,9 +1,8 @@
 # Mocca Calendar Application
-===============================
 
 A calendar application for XWiki
 
-* Project Lead: [Alexandru Cotiugă](http://www.xwiki.org/xwiki/bin/view/XWiki/ClemensRobbenhaar)
+* Project Lead: [Clemens Robbenhaar](http://www.xwiki.org/xwiki/bin/view/XWiki/ClemensRobbenhaar)
 * [Documentation & Download](http://extensions.xwiki.org/xwiki/bin/view/Extension/MoccaCalendar)
 * [Issue Tracker](http://jira.xwiki.org/browse/MOCCACAL)
 * Communication: [Mailing List](http://dev.xwiki.org/xwiki/bin/view/Community/MailingLists>), [IRC]( http://dev.xwiki.org/xwiki/bin/view/Community/IRC)
