@@ -1438,7 +1438,7 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 #set($center = "title")
 #set($right = "agendaDay,agendaWeek,month,plainList")
 ## Can create event in the current calendar or in the space or wiki calendar view if at least one calendar is editable for the current user.
-#set ($canCreateEvents = $xwiki.hasAccessLevel('edit', $xcontext.getUser(), $calendarDoc) || ($filter != 'page' &amp;&amp; $services.moccacalendar.getAllEditableCalendars().size() &gt; 0))
+#set ($canCreateEvents = $xwiki.hasAccessLevel('edit', $xcontext.getUser(), $calendarDoc) || ($filter != 'page' &amp;&amp; $services.moccacalendar.allEditableCalendars.size() &gt; 0))
 #set ($calendarsFilter = $request.parameterMap['calendarsFiltler'])
 {{/velocity}}
 
@@ -1586,7 +1586,12 @@ require(['jquery', 'moccacalendar'], function(jQuery) {
   jQuery('#calendar${calcounter}-btn').click( function(e) { calendarHelper.showCreateEvent(); e.preventDefault(); });
   // helper to be used in callback above
 #set($newPageParams = "template=MoccaCalendar.MoccaCalendarEventTemplate&amp;parentFROM=${escapetool.url($calendarDoc)}&amp;form_token=${services.csrf.getToken()}&amp;ocalcaction=create")
-#set($randomDocUrl = $xwiki.getURL("randomPage${util.generateRandomString(10)}",'edit',$newPageParams))
+## If the current user is not allowed to edit the current calendar, then create the temporary randomPage in a calendar that can be edited by the current user.
+#set ($randomSpace = 'MoccaCalendar')
+#if ($services.moccacalendar.allEditableCalendars.size() &gt; 0)
+  #set ($randomSpace = $services.model.resolveDocument($services.moccacalendar.allEditableCalendars[0]).lastSpaceReference)
+#end
+#set($randomDocUrl = $xwiki.getURL("${randomSpace}.randomPage${util.generateRandomString(10)}",'edit',$newPageParams))
 #set($updateUrlParams="?xpage=plain&amp;outputSyntax=plain&amp;calendarDoc=${escapetool.url(${calendarDoc})}&amp;")
   var calendarHelper = new XWiki.MoccaCalendar.Helper(calendar, "$!escapetool.javascript($dateFormat)", "$escapetool.javascript($jsonUrl)", "$escapetool.javascript($randomDocUrl)", "$escapetool.javascript("${updateUrl}${updateUrlParams}")", "$escapetool.javascript($newPageNameUrl)",  "$escapetool.javascript($dateCheckUrl)","$escapetool.javascript($deleteEventInstanceUrl)","$escapetool.javascript($newPageParams)", "${escapetool.javascript($services.csrf.getToken())}");
   });

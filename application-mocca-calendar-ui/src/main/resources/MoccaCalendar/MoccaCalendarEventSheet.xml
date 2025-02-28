@@ -159,15 +159,13 @@ $doc.display($field)
 
   ; &lt;label for="calendar"&gt;$escapetool.xml($services.localization.render('MoccaCalendar.calendar'))&lt;/label&gt;
   : &lt;select id="calendarParent" name="$parentParamName"&gt;
-  #foreach($item in $services.moccacalendar.getAllCalendars()) ## TODO: add filter here, see MOCCACAL-76
-    #set($itemdoc = $xwiki.getDocument($item))
-    #if($!{itemdoc} &amp;&amp; ${itemdoc.hasAccessLevel("edit")})
-      #set($selected="")
-      #if($itemdoc.getId() == $calendarDoc.getId())
-        #set($selected=" selected='selected'")
-      #end
-      &lt;option value="$escapetool.html($itemdoc.getFullName())"$selected&gt;$itemdoc.getDisplayTitle()&lt;/option&gt;
+  #foreach ($item in $services.moccacalendar.allEditableCalendars) ## TODO: add filter here, see MOCCACAL-76
+    #set ($itemDoc = $xwiki.getDocument($item))
+    #set ($selected = '')
+    #if ($itemDoc.id == $calendarDoc.id)
+      #set($selected = "selected='selected'")
     #end
+    &lt;option value="$escapetool.xml($item)" $selected&gt;$itemDoc.displayTitle&lt;/option&gt;
   #end
   &lt;/select&gt;
 
