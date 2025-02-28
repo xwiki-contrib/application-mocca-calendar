@@ -1437,8 +1437,8 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 #set($left = "prev,next today")
 #set($center = "title")
 #set($right = "agendaDay,agendaWeek,month,plainList")
-
-#set($canCreateEvents = $xwiki.hasAccessLevel("edit", $xcontext.getUser(), $calendarDoc))
+## Can create event in the current calendar or in the space or wiki calendar view if at least one calendar is editable for the current user.
+#set ($canCreateEvents = $xwiki.hasAccessLevel('edit', $xcontext.getUser(), $calendarDoc) || ($filter != 'page' &amp;&amp; $services.moccacalendar.getAllEditableCalendars().size() &gt; 0))
 #set ($calendarsFilter = $request.parameterMap['calendarsFiltler'])
 {{/velocity}}
 

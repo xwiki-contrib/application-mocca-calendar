@@ -169,6 +169,25 @@ public class MoccaCalendarScriptService implements ScriptService
     }
 
     /**
+     * Retrieves all editable calendars.
+     *
+     * @return a list of DocumentReference objects representing the editable calendars. If no editable calendars are
+     *     found, an empty list is returned.
+     */
+    public List<DocumentReference> getAllEditableCalendars()
+    {
+        try {
+            Query query = queryManager.createQuery(CALENDAR_BASE_QUERY, Query.HQL);
+            List<String> results = query.execute();
+            return filterEditableCalendars(results);
+        } catch (QueryException qe) {
+            logger.error("Error while fetching calendars", qe);
+        }
+
+        return Collections.emptyList();
+    }
+
+    /**
      * get a list of events matching the date and filter criteria.
      *
      * @param dateFrom the start range
@@ -344,6 +363,21 @@ public class MoccaCalendarScriptService implements ScriptService
         }
 
         return visibleRefs;
+    }
+
+    private List<DocumentReference> filterEditableCalendars(List<String> calendars)
+    {
+        List<DocumentReference> editableCalendars = new ArrayList<>();
+        // Check edit rights on results.
+        final DocumentReference userReference = xcontextProvider.get().getUserReference();
+        for (String calendar : calendars) {
+            DocumentReference calendarDocRef = stringDocRefResolver.resolve(calendar);
+            if (authorizationManager.hasAccess(Right.EDIT, userReference, calendarDocRef)) {
+                editableCalendars.add(calendarDocRef);
+            }
+        }
+
+        return editableCalendars;
     }
 
     private List<EventInstance> filterRecurrentEvents(List<DocumentReference> eventReferences, Date dateFrom,
