@@ -38,7 +38,7 @@
   <hidden>true</hidden>
   <content>#general
 MoccaCalendar.calendar=Kalendarz
-MoccaCalendar.calendar.title=Kalendarza
+MoccaCalendar.calendar.title=Kalendarz
 MoccaCalendar.calendar.defaultCalendarTitle=Inne Wydarzenia
 MoccaCalendar.calendar.viewall=Przegląd wszystkich kalendarzy
 MoccaCalendar.calendar.create=Stwórz nowy kalendarz
@@ -49,6 +49,8 @@ MoccaCalendar.calendar.plainlist.nopastevents=Nie znaleziono minionych wydarzeń
 MoccaCalendar.calendar.plainlist.noupcomingevents=Nie znaleziono nadchodzących wydarzeń.
 MoccaCalendar.calendar.firstDayOfWeek=0
 MoccaCalendar.calendarevent.viewall=Wszystkie wydarzenia
+MoccaCalendar.calendarevent.filterEvents=Filtrowanie wydarzeń według kalendarza
+MoccaCalendar.calendarevent.filterEvents.submit=Filtr zdarzeń
 MoccaCalendar.calendarevent.create=Stwórz nowe wydarzenie
 MoccaCalendar.calendarevent.backlink=Powrót do kalendarza &amp;#171;{0}&amp;#187;
 MoccaCalendar.calendarevent.confirmDelete=Czy na pewno chcesz usunąć wydarzenie &amp;#171;{0}&amp;#187; ?
@@ -183,5 +185,7 @@ rendering.macro.moccacalendar.parameter.month.name=Miesiąc
 rendering.macro.moccacalendar.parameter.month.description=Miesiąc (od 0 do 11) daty wyświetlanej podczas ładowania kalendarza. Pozostaw puste dla dnia dzisiejszego.
 rendering.macro.moccacalendar.parameter.date.name=Dzień
 rendering.macro.moccacalendar.parameter.date.description=Dzień (od 1 do 31) daty wyświetlanej podczas ładowania kalendarza. Zostaw puste na dziś.
+rendering.macro.moccacalendar.parameter.eventLimit.name=Limit zdarzeń
+rendering.macro.moccacalendar.parameter.eventLimit.description=Ustawia limit dziennego wyświetlania zdarzeń. Dodatkowe wydarzenia są wyświetlane w wyskakującym okienku. Jeśli fausz (domyślnie) pokazuje wszystkie wydarzenia, w przeciwnym razie (prawda) ogranicza je do wysokości komórki dziennej.
 </content>
 </xwikidoc>
