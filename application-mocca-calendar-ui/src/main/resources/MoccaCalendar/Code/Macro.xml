@@ -1589,7 +1589,7 @@ require(['jquery', 'moccacalendar'], function(jQuery) {
 ## If the current user is not allowed to edit the current calendar, then create the temporary randomPage in a calendar that can be edited by the current user.
 #set ($randomSpace = 'MoccaCalendar')
 #if ($services.moccacalendar.allEditableCalendars.size() &gt; 0)
-  #set ($randomSpace = $services.model.resolveDocument($services.moccacalendar.allEditableCalendars[0]).lastSpaceReference)
+  #set ($randomSpace = $services.model.serialize($services.model.resolveDocument($services.moccacalendar.allEditableCalendars[0]).lastSpaceReference))
 #end
 #set($randomDocUrl = $xwiki.getURL("${randomSpace}.randomPage${util.generateRandomString(10)}",'edit',$newPageParams))
 #set($updateUrlParams="?xpage=plain&amp;outputSyntax=plain&amp;calendarDoc=${escapetool.url(${calendarDoc})}&amp;")
