@@ -221,7 +221,7 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
     var params = "page=" +  encodeURIComponent(page) + "&amp;isResize=" + (isResize ? "1" : "0") + "&amp;delta=" + delta.asMilliseconds() + "&amp;startDate=" + startDate.format()
     if (endDate) { params += "&amp;endDate=" + endDate.format(); }
     params += "&amp;allDay=" + (startDate.hasTime()?"":"1");
-    var url = this.updateEventUrl + params;
+    var url = this.updateEventUrl + '&amp;' + params;
     jQuery.ajax(url).fail(function (data) {
       savingBox.hide();
       this.displayError();
@@ -1429,11 +1429,10 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 ##
 ## some hardwired values that you can feel free to customize
 ##
-#set($jsonUrl = $xwiki.getDocument("MoccaCalendar.Code.JSONService").getURL("get"))
-#set($newPageNameUrl = $xwiki.getDocument("MoccaCalendar.Code.NewEventNameService").getURL("get"))
-#set($dateCheckUrl = $xwiki.getDocument("MoccaCalendar.Code.DateCheckService").getURL("get"))
-#set($updateUrl = $xwiki.getDocument("MoccaCalendar.Code.UpdateService").getURL("get"))
-#set($deleteEventInstanceUrl = $xwiki.getDocument("MoccaCalendar.Code.DeleteEventInstanceService").getURL("get"))
+#set($jsonUrl = $xwiki.getURL('MoccaCalendar.Code.JSONService', 'get'))
+#set($newPageNameUrl = $xwiki.getURL('MoccaCalendar.Code.NewEventNameService', 'get'))
+#set($dateCheckUrl = $xwiki.getURL('MoccaCalendar.Code.DateCheckService', 'get'))
+#set($deleteEventInstanceUrl = $xwiki.getURL('MoccaCalendar.Code.DeleteEventInstanceService', 'get'))
 #set($left = "prev,next today")
 #set($center = "title")
 #set($right = "agendaDay,agendaWeek,month,plainList")
@@ -1585,16 +1584,36 @@ require(['jquery', 'moccacalendar'], function(jQuery) {
   });
   jQuery('#calendar${calcounter}-btn').click( function(e) { calendarHelper.showCreateEvent(); e.preventDefault(); });
   // helper to be used in callback above
-#set($newPageParams = "template=MoccaCalendar.MoccaCalendarEventTemplate&amp;parentFROM=${escapetool.url($calendarDoc)}&amp;form_token=${services.csrf.getToken()}&amp;ocalcaction=create")
+#set ($newPageParams = $escapetool.url({
+  'template': 'MoccaCalendar.MoccaCalendarEventTemplate',
+  'parentFROM': $calendarDoc,
+  'form_token': $services.csrf.token,
+  'ocalcaction': 'create'
+}))
 ## If the current user is not allowed to edit the current calendar, then create the temporary randomPage in a calendar that can be edited by the current user.
 #set ($randomSpace = 'MoccaCalendar')
 #if ($services.moccacalendar.allEditableCalendars.size() &gt; 0)
   #set ($randomSpace = $services.model.serialize($services.model.resolveDocument($services.moccacalendar.allEditableCalendars[0]).lastSpaceReference))
 #end
-#set($randomDocUrl = $xwiki.getURL("${randomSpace}.randomPage${util.generateRandomString(10)}",'edit',$newPageParams))
-#set($updateUrlParams="?xpage=plain&amp;outputSyntax=plain&amp;calendarDoc=${escapetool.url(${calendarDoc})}&amp;")
-  var calendarHelper = new XWiki.MoccaCalendar.Helper(calendar, "$!escapetool.javascript($dateFormat)", "$escapetool.javascript($jsonUrl)", "$escapetool.javascript($randomDocUrl)", "$escapetool.javascript("${updateUrl}${updateUrlParams}")", "$escapetool.javascript($newPageNameUrl)",  "$escapetool.javascript($dateCheckUrl)","$escapetool.javascript($deleteEventInstanceUrl)","$escapetool.javascript($newPageParams)", "${escapetool.javascript($services.csrf.getToken())}");
-  });
+#set ($randomDocUrl = $xwiki.getURL("${randomSpace}.randomPage${util.generateRandomString(10)}",'edit',$newPageParams))
+#set ($updateUrlParams = $escapetool.url({
+  'xpage': 'plain',
+  'outputSyntax': 'plain',
+  'calendarDoc': $calendarDoc
+}))
+#set ($updateUrl = $xwiki.getURL('MoccaCalendar.Code.UpdateService', 'get', $updateUrlParams))
+var calendarHelper = new XWiki.MoccaCalendar.Helper(calendar,
+  "$escapetool.javascript($dateFormat)",
+  "$escapetool.javascript($jsonUrl)",
+  "$escapetool.javascript($randomDocUrl)",
+  "$escapetool.javascript($updateUrl)",
+  "$escapetool.javascript($newPageNameUrl)",
+  "$escapetool.javascript($dateCheckUrl)",
+  "$escapetool.javascript($deleteEventInstanceUrl)",
+  "$escapetool.javascript($newPageParams)",
+  "$escapetool.javascript($services.csrf.token)"
+);
+});
 });
 &lt;/script&gt;
 {{/html}}
