@@ -300,6 +300,9 @@ public class MoccaCalendarScriptService implements ScriptService
         //
         addLocationFilter(recurrentEventQuery, filter, parentReference);
 
+        // Filter the recurrent events by calendar.
+        addCalendarFilter(recurrentEventQuery, calendars);
+
         // and search only recurrent events
         recurrentEventQuery.getHql().append(" and recurrent.value = 1 ");
 
