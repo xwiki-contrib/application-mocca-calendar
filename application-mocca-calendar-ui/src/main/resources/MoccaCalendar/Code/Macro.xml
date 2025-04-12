@@ -868,6 +868,14 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
 
 } // if the XWiki.widgets.ModalPopup  is defined
 
+});
+
+// Toggle the Filter Events by Calendar section.
+require(['jquery'], function ($) {
+  $('#toggleCalendarsFilter').on('click', function() {
+    $(this).children('span').toggleClass('fa-angle-up fa-angle-down');
+    $('#calendarsFilter form').toggleClass('hidden');
+  });
 });</code>
     </property>
     <property>
@@ -1069,10 +1077,42 @@ div.calendar-buttons span.buttonwrapper {
 
 div.fc-view.fc-plainList-view {
   border-width: 0;
+}
+
+/* Filterable calendars */
+#calendarsFilter {
+  h4 {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  #toggleCalendarsFilter {
+    margin-bottom: 10px;
+    span.fa-angle-down {
+      font-weight: bold;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      label {
+        margin: 0;
+      }
+      input, label {
+        cursor: inherit;
+      }
+    }
+  }
+  input[type='submit'] {
+    display: block;
+  }
 }</code>
     </property>
     <property>
-      <contentType>CSS</contentType>
+      <contentType>LESS</contentType>
     </property>
     <property>
       <name/>
@@ -1438,7 +1478,7 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 #set($right = "agendaDay,agendaWeek,month,plainList")
 ## Can create event in the current calendar or in the space or wiki calendar view if at least one calendar is editable for the current user.
 #set ($canCreateEvents = $xwiki.hasAccessLevel('edit', $xcontext.getUser(), $calendarDoc) || ($filter != 'page' &amp;&amp; $services.moccacalendar.allEditableCalendars.size() &gt; 0))
-#set ($calendarsFilter = $request.parameterMap['calendarsFiltler'])
+#set ($calendarsFilter = $request.parameterMap['calendarsFilter'])
 {{/velocity}}
 
 {{velocity}}
@@ -1446,22 +1486,38 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
   #set ($statement = "select doc.fullName, calendar.color from Document doc, doc.object(MoccaCalendar.MoccaCalendarClass) calendar where doc.name &lt;&gt; 'MoccaCalendarTemplate'")
   #set ($results = $services.query.xwql($statement).execute())
   #if ($results.size() &gt; 1)
-    === $services.localization.render('MoccaCalendar.calendarevent.filterEvents') ===
-    {{html clean="false"}}
-      &lt;form action="" method="get"&gt;
-        #foreach ($result in $results)
-          #set ($docFullName = $result[0])
-          #set ($backgroundColor = $result[1])
-          #set ($checked = $calendarsFilter.contains($docFullName))
-          #set ($title = $xwiki.getDocument($docFullName).displayTitle)
-          &lt;div&gt;
-            &lt;input type="checkbox" id="$docFullName" name="calendarsFiltler" value="$docFullName" #if ($checked) checked #end style="accent-color:$backgroundColor"/&gt;
-            &lt;label for="$docFullName"&gt;$title&lt;/label&gt;
-          &lt;/div&gt;
-        #end
-        &lt;input type="submit" class="btn btn-primary" value="$services.localization.render('MoccaCalendar.calendarevent.filterEvents.submit')" /&gt;
-      &lt;/form&gt;
-    {{/html}}
+    (% id="calendarsFilter" %)(((
+      #set ($hasCalendarsFilter = "$!request.calendarsFilter" != '')
+      ==== $services.localization.render('MoccaCalendar.calendarevent.filterEvents') ====
+      {{html clean="false"}}
+        &lt;div class="btn-group flat-buttons"&gt;
+          &lt;a id="toggleCalendarsFilter" class="btn btn-default"&gt;
+            #set ($faClass = 'fa-angle-down')
+            #if ($hasCalendarsFilter)
+              #set ($faClass = 'fa-angle-up')
+            #end
+            &lt;span class="fa $faClass"&gt;&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;form action="" method="post" #if(!$hasCalendarsFilter)class="hidden"#end&gt;
+          &lt;ul class="btn-group flat-buttons"&gt;
+            #foreach ($result in $results)
+              #set ($docFullName = $result[0])
+              #set ($backgroundColor = $result[1])
+              #set ($checked = $calendarsFilter.contains($docFullName))
+              #set ($title = $xwiki.getDocument($docFullName).displayTitle)
+              &lt;li&gt;
+                &lt;a class="btn btn-default"&gt;
+                  &lt;input type="checkbox" id="$docFullName" name="calendarsFilter" value="$docFullName" #if ($checked) checked #end style="accent-color:$backgroundColor"/&gt;
+                  &lt;label for="$docFullName"&gt;$title&lt;/label&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+            #end
+          &lt;/ul&gt;
+          &lt;input type="submit" class="btn btn-primary" value="$services.localization.render('MoccaCalendar.calendarevent.filterEvents.submit')" /&gt;
+        &lt;/form&gt;
+      {{/html}}
+    )))
   #end
 #end
 #if ($xcontext.action=='view' || $xcontext.action=='export')
