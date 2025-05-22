@@ -100,9 +100,6 @@
   #set($discard = $result.set('message', $services.localization.render('moccacalendar.updates.nodocument')))
 #end
 #set($discard = $result.put('success', $success))
-#if("$!{request.outputSyntax}" == 'plain')
-  $response.setContentType('application/json')
-#end
-$jsontool.serialize($result)
+#jsonResponse($result)
 {{/velocity}}</content>
 </xwikidoc>

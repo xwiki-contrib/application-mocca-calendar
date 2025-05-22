@@ -51,7 +51,7 @@
   #else
     #set($discard = $result.put('error',$services.localization.render('moccacalendar.delete.startDateInvalid')))
   #end
-  $jsontool.serialize($result)
+  #jsonResponse($result)
 #else
   Service page to delete a single instance on a recurrent event
 #end

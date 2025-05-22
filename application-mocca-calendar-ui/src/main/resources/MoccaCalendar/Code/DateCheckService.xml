@@ -37,9 +37,6 @@
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
   <content>{{velocity wiki="false"}}
-#if("$!{request.outputSyntax}" == 'plain')
-  $response.setContentType('application/json')
-#end
 #if($xcontext.action == 'get')
 ## check if a date has a time part
 #set($isAllDay = '')
@@ -64,7 +61,7 @@
   #set($fmt = $xwiki.getDocument("MoccaCalendar.MoccaCalendarEventClass").getxWikiClass().get("endDate").getProperty('dateFormat').value)
   #checkDate($fmt $endDateStr)
 #end
-$jsontool.serialize( { 'isAllDay' : $isAllDay } )
+#jsonResponse({'isAllDay': $isAllDay})
 #end
 {{/velocity}}</content>
 </xwikidoc>

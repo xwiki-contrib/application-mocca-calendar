@@ -36,12 +36,7 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>{{velocity output="false"}}
-#if("$!{request.outputSyntax}" == 'plain')
-  $response.setContentType('application/json')
-#end
-{{/velocity}}
-{{velocity filter="html" wiki="false"}}
+  <content>{{velocity filter="html" wiki="false"}}
 #if($xcontext.action == 'get')
 ##
 ## macro "renderAgendaView"
@@ -152,7 +147,7 @@
   ###end
   #set($discard = $results.add($eventMap))
 #end
-$jsontool.serialize($results)
+#jsonResponse($results)
 #else
 Service Page for the Mocca Calendar Application
 #end ## end of #if($xcontext.action == 'get')

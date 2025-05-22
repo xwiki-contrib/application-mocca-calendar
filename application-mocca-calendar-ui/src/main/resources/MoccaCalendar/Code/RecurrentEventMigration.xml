@@ -73,7 +73,6 @@
 {{/velocity}}
 {{velocity wiki="false"}}
 #if("$!{request.outputSyntax}" == 'plain')
-  $response.setContentType('application/json')
   #set($offset = $numbertool.toNumber($request.getParameter('offset')))
   #set($limit = $numbertool.toNumber($request.getParameter('stepSize')))
   #if($limit &gt; 0 &amp;&amp; $offset &gt;=0)
@@ -84,7 +83,7 @@
   #else
     #set($result = { 'errorMessage' : 'parameter "offset" or "stepSize" is missing'})
   #end
-  $jsontool.serialize($result)
+  #jsonResponse($result)
 #end
 {{/velocity}}
 </content>
