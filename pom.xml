@@ -61,6 +61,10 @@
       <id>tmortagne</id>
       <name>Thomas Mortagne</name>
     </developer>
+    <developer>
+      <id>acotiuga</id>
+      <name>Alex Cotiugă</name>
+    </developer>
   </developers>
   <build>
     <pluginManagement>
