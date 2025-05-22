@@ -1456,7 +1456,7 @@ $xwiki.ssx.use("MoccaCalendar.Code.Macro")
 ## create event link
 &lt;div class="calendar-buttons"&gt;
 &lt;span class="buttonwrapper"&gt;
-&lt;button class="btn btn-success" id="calendar${calcounter}-btn"&gt;&lt;span class="glyphicon glyphicon-plus"&gt;&lt;/span&gt; $escapetool.html($services.localization.render('MoccaCalendar.calendarevent.create'))&lt;/button&gt;
+&lt;button class="btn btn-success" id="calendar${calcounter}-btn"&gt;&lt;span class="glyphicon glyphicon-plus"&gt;&lt;/span&gt; $escapetool.xml($services.localization.render('MoccaCalendar.calendarevent.create'))&lt;/button&gt;
 &lt;/span&gt;
 &lt;/div&gt;
 ## end create event link

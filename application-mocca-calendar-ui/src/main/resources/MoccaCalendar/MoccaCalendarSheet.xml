@@ -52,7 +52,7 @@
     })
     #colorPicker($colorPickerParams)
   #else
-    &lt;input class="procolor" name="MoccaCalendar.MoccaCalendarClass_0_${fieldName}" size="30" type="text" value="$escapetool.html($doc.getValue($fieldName))"/&gt;
+    &lt;input class="procolor" name="MoccaCalendar.MoccaCalendarClass_0_${fieldName}" size="30" type="text" value="$escapetool.xml($doc.getValue($fieldName))"/&gt;
   #end
 #end
 {{html wiki="true"}}
