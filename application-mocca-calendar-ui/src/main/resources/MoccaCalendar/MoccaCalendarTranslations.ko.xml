@@ -20,7 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 -->
 
-<xwikidoc version="1.2" reference="MoccaCalendar.MoccaCalendarTranslations" locale="ko">
+<xwikidoc version="1.3" reference="MoccaCalendar.MoccaCalendarTranslations" locale="ko">
   <web>MoccaCalendar</web>
   <name>MoccaCalendarTranslations</name>
   <language>ko</language>
@@ -184,4 +184,4 @@ rendering.macro.moccacalendar.parameter.month.description=달력을 로드할 �
 rendering.macro.moccacalendar.parameter.date.name=낮
 rendering.macro.moccacalendar.parameter.date.description=달력을 로드할 때 표시할 날짜의 일(1~31)입니다. 오늘은 비워두세요.
 </content>
-  </xwikidoc>
+</xwikidoc>

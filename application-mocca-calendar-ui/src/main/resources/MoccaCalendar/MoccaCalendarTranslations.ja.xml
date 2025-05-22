@@ -20,7 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 -->
 
-<xwikidoc version="1.2" reference="MoccaCalendar.MoccaCalendarTranslations" locale="ja">
+<xwikidoc version="1.3" reference="MoccaCalendar.MoccaCalendarTranslations" locale="ja">
   <web>MoccaCalendar</web>
   <name>MoccaCalendarTranslations</name>
   <language>ja</language>
@@ -184,4 +184,4 @@ rendering.macro.moccacalendar.parameter.month.name=月
 rendering.macro.moccacalendar.parameter.date.name=日
 rendering.macro.moccacalendar.parameter.date.description=カレンダーを読み込む際に表示する日付を指定（1から31まで）。空のままにすると今日に設定します。
 </content>
-  </xwikidoc>
+</xwikidoc>
