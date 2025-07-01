@@ -147,8 +147,8 @@ val_startDateNotDate=La date de début saisie n'est pas reconnue comme une date.
 val_endDateNotDate=La date de fin saisie n'est pas reconnue comme une date.
 val_endDate=La date de fin doit être après la date de début.
 val_title_already_exists=Un événement avec ce nom existe déjà.
-moccacalendar.updates.firstInstance.notDate=Ce qui est indiqué comme la date de la première occurrence ne peu pas être lu comme une date.
-moccacalendar.updates.lastInstance.notDate=Ce qui est indiqué comme la date de la dernière occurrence ne peu pas être lu comme une date.
+moccacalendar.updates.firstInstance.notDate=La date indiquée pour la première occurrence n'est pas reconnue en tant que date.
+moccacalendar.updates.lastInstance.notDate=La date indiquée pour la dernière occurrence n'est pas reconnue en tant que date.
 
 # validation messages: Update Service
 moccacalendar.updates.eventUpdated=L'heure de l’évènement a été mise à jour.
@@ -172,9 +172,9 @@ rendering.macro.moccacalendar.parameter.filter.description=Les valeurs disponibl
 rendering.macro.moccacalendar.parameter.calendarDoc.name=Page du calendrier
 rendering.macro.moccacalendar.parameter.calendarDoc.description=Ce paramètre définit les événements de quel calendrier sont affichés (uniquement si le filtre est défini sur « page »). Cette valeur est également utilisée comme calendrier par défaut où créer de nouveaux évènements. Si elle n'est pas renseignée, le document actuel est utilisé.
 rendering.macro.moccacalendar.parameter.defaultView.name=Vue par défaut
-rendering.macro.moccacalendar.parameter.defaultView.description=Type d'affichage par défaut pour le calendrier ; personnalisable par l'utilisateur. Valeurs possibles : "mois", "semaine", "journée", "liste d'événements".
+rendering.macro.moccacalendar.parameter.defaultView.description=Affichage par défaut du Calendrier, personnalisable par l'utilisateur. Valeurs disponibles : 'month', 'agendaWeek', 'agendaDay' ou 'plainList'.
 rendering.macro.moccacalendar.parameter.firstDay.name=Premier jour de la semaine
-rendering.macro.moccacalendar.parameter.firstDay.description=La semaine commence le :\n0 = dimanche\n1 = samedi\n...\n6 = lundi\nSi vide, par défaut, la semaine débute le dimanche.
+rendering.macro.moccacalendar.parameter.firstDay.description=La semaine commence :\n0 = Dimanche\n1 = Samedi\n...\n6 = Lundi\nPar défaut, si la valeur n'est pas renseignée, la semaine débute Dimanche.
 rendering.macro.moccacalendar.parameter.minTime.name=Heure minimale du calendrier
 rendering.macro.moccacalendar.parameter.minTime.description=Heure minimale affichée dans le calendrier. Les utilisateurs ne verront pas des horaires antérieurs à ce paramètre. Laissez vide pour utiliser la valeur par défaut (08h00).
 rendering.macro.moccacalendar.parameter.maxTime.name=Heure maximale du calendrier
