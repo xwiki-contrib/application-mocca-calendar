@@ -43,28 +43,28 @@ MoccaCalendar.calendar.defaultCalendarTitle=Autres événements
 MoccaCalendar.calendar.viewall=Vue d'ensemble de tous les calendriers
 MoccaCalendar.calendar.create=Créer un nouveau calendrier
 MoccaCalendar.calendar.plainlist=agenda
-MoccaCalendar.calendar.plainlist.titlepast=Evènements passés
+MoccaCalendar.calendar.plainlist.titlepast=Événements passés
 MoccaCalendar.calendar.plainlist.titleupcoming=Événements à venir
-MoccaCalendar.calendar.plainlist.nopastevents=Aucun événement trouvé.
+MoccaCalendar.calendar.plainlist.nopastevents=Aucun événement passé trouvé.
 MoccaCalendar.calendar.plainlist.noupcomingevents=Aucun événement à venir trouvé.
-MoccaCalendar.calendar.firstDayOfWeek=1
+MoccaCalendar.calendar.firstDayOfWeek=0
 MoccaCalendar.calendarevent.viewall=Tous les événements
-### Missing: MoccaCalendar.calendarevent.filterEvents=Filter Events by Calendar
+MoccaCalendar.calendarevent.filterEvents=Filtrer les évènements par Calendrier
 MoccaCalendar.calendarevent.filterEvents.submit=Filtrer les événements
 MoccaCalendar.calendarevent.create=Créer un événement
-MoccaCalendar.calendarevent.backlink=Retour au calendier &amp;#171;{0}&amp;#187;
-MoccaCalendar.calendarevent.confirmDelete=Voulez-vous vraiment supprimer l''évènement &amp;#171;{0}&amp;#187; ?
+MoccaCalendar.calendarevent.backlink=Retour au calendrier &amp;#171;{0}&amp;#187;
+MoccaCalendar.calendarevent.confirmDelete=Voulez-vous vraiment supprimer l''évènement &amp;#171;{0}&amp;#187; ?
 MoccaCalendar.calendarevent.view=Évènement
-MoccaCalendar.calendarevent.confirmDelete.allEventsButton=Touts les instances
-MoccaCalendar.generic.errormessage=Erreur interne au serveur
+MoccaCalendar.calendarevent.confirmDelete.allEventsButton=Toutes les instances
+MoccaCalendar.generic.errormessage=Erreur Interne du Serveur
 
 # Class fields
 MoccaCalendar.MoccaCalendarClass_title=Titre
-MoccaCalendar.MoccaCalendarClass_color=Couleur du fond des saisies dans la vue du calendrier
+MoccaCalendar.MoccaCalendarClass_color=Couleur du fond des évènements dans la vue du calendrier
 MoccaCalendar.MoccaCalendarClass_textColor=Couleur du texte des saisies dans la vue du calendrier
 MoccaCalendar.MoccaCalendarClass_description=Description
-MoccaCalendar.MoccaCalendarClass_content1=Contenue
-MoccaCalendar.MoccaCalendarClass.textColor.unset=(Blanc)
+MoccaCalendar.MoccaCalendarClass_content1=Contenu
+MoccaCalendar.MoccaCalendarClass.textColor.unset=(blanc)
 
 # Live table generic keys
 moccacalendar.livetable.doc.title=Calendrier
@@ -77,14 +77,14 @@ moccacalendar.livetable.doc.date=Date de modification
 moccacalendar.livetable.doc.creationDate=Date de création
 moccacalendar.livetable._avatar=Avatar
 moccacalendar.livetable._images=Images
-moccacalendar.livetable._attachments=Attachements
+moccacalendar.livetable._attachments=Pièces jointes
 moccacalendar.livetable._actions=Actions
 moccacalendar.livetable._actions.edit=Modifier
 moccacalendar.livetable._actions.delete=Supprimer
 moccacalendar.livetable.emptyvalue=-
 moccacalendar.livetable.title=Titre
 moccacalendar.livetable.description=Description
-moccacalendar.livetable.content1=Contenue
+moccacalendar.livetable.content1=Contenu
 
 # Mocca Calendar Events keys
 # Class fields
@@ -93,7 +93,7 @@ MoccaCalendar.MoccaCalendarEventClass_startDate=Date de début
 MoccaCalendar.MoccaCalendarEventClass_endDate=Date de fin
 MoccaCalendar.MoccaCalendarEventClass_description=Description
 MoccaCalendar.MoccaCalendarEventClass_allDay=Toute la journée
-MoccaCalendar.MoccaCalendarEventClass_recurrent=Toutes les instances
+MoccaCalendar.MoccaCalendarEventClass_recurrent=Récurrent
 
 # modification class fields
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=Fréquence
@@ -102,7 +102,7 @@ MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=jours ou
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=hebdomadaire
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=bihebdomadaire
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=mensuel
-MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=trimestrielle
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=trimestriel
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=annuel
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=Première occurrence de l'événement
 MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Dernière occurrence de l'événement
@@ -112,7 +112,7 @@ MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=Date de fin modif
 MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=Description modifiée
 
 # the modification switch
-moccacalendarevent.editswitch.label=Édition :
+moccacalendarevent.editswitch.label=Édition :
 moccacalendarevent.editswitch.oneInstance=uniquement cette instance
 moccacalendarevent.editswitch.allInstances=toutes les instances
 
@@ -127,7 +127,7 @@ moccacalendarevent.livetable.doc.date=Date de modification
 moccacalendarevent.livetable.doc.creationDate=Date de création
 moccacalendarevent.livetable._avatar=Avatar
 moccacalendarevent.livetable._images=Images
-moccacalendarevent.livetable._attachments=Attachements
+moccacalendarevent.livetable._attachments=Pièces jointes
 moccacalendarevent.livetable._actions=Action
 moccacalendarevent.livetable._actions.edit=Éditer
 moccacalendarevent.livetable._actions.delete=Supprimer
@@ -145,10 +145,10 @@ val_title_notempty=Le titre est obligatoire.
 val_startDateMissing=La date de début est manquante pour cet événement.
 val_startDateNotDate=La date de début saisie n'est pas reconnue comme une date.
 val_endDateNotDate=La date de fin saisie n'est pas reconnue comme une date.
-val_endDate=La date de début doit être après la date de fin.
+val_endDate=La date de fin doit être après la date de début.
 val_title_already_exists=Un événement avec ce nom existe déjà.
-moccacalendar.updates.firstInstance.notDate=Ce qui est indiqué comme la date de la première instance ne peu pas être lue comme une date.
-moccacalendar.updates.lastInstance.notDate=Ce qui est indiqué comme la date de la dernière instance ne peu pas être lu comme une date.
+moccacalendar.updates.firstInstance.notDate=La date indiquée pour la première occurrence n'est pas reconnue en tant que date.
+moccacalendar.updates.lastInstance.notDate=La date indiquée pour la dernière occurrence n'est pas reconnue en tant que date.
 
 # validation messages: Update Service
 moccacalendar.updates.eventUpdated=L'heure de l’évènement a été mise à jour.
@@ -158,34 +158,34 @@ moccacalendar.updates.nodocument=L'évènement n'est plus accessible.
 
 # validation messages: Delete Service
 moccacalendar.delete.startDateInvalid=La date de début de l'évènement ne peut pas être lue.
-moccacalendar.delete.saveMessage=L''instance de l''évènement {0} est supprimé.
+moccacalendar.delete.saveMessage=L''occurrence de l''évènement le {0} a été supprimée.
 
 # validation messages: Modification Service
-moccacalendar.modify.createMessage=Une instance d'un évènement a été ajoutée.
-moccacalendar.modify.saveMessage=Une instance d'un évènement a été mise à jour.
+moccacalendar.modify.createMessage=Une occurrence d'un évènement a été modifiée.
+moccacalendar.modify.saveMessage=Une occurrence d'un évènement a été mise à jour.
 
 # Calendar macro
 rendering.macro.moccacalendar.name=Mocca Calendar
-rendering.macro.moccacalendar.description=Met un calendrier à disposition
-rendering.macro.moccacalendar.parameter.filter.name=Afficher les événements depuis ...
-rendering.macro.moccacalendar.parameter.filter.description=Les valeurs disponibles sont : "wiki", "space", "page".\nWiki : Tous les événements\nSpace : Uniquement les événements de l'espace du calendrier\nPage : Uniquement les événements qui sont enfants de cette page.
+rendering.macro.moccacalendar.description=Affiche un Calendrier
+rendering.macro.moccacalendar.parameter.filter.name=Afficher les événements depuis...
+rendering.macro.moccacalendar.parameter.filter.description=Les valeurs disponibles sont : "wiki", "space", ou "page", où "page" affiche uniquement les événements qui sont enfants de cette page, "space" uniquement les évènements de l'espace du calendrier, et "wiki" tous les événements.
 rendering.macro.moccacalendar.parameter.calendarDoc.name=Page du calendrier
-rendering.macro.moccacalendar.parameter.calendarDoc.description=Ce document présente les événements disponibles.
-rendering.macro.moccacalendar.parameter.defaultView.name=Visualisation par défaut
-rendering.macro.moccacalendar.parameter.defaultView.description=Type d'affichage par défaut pour le calendrier, personnalisable par l'utilisateur.\nAffichages disponibles : "mois", "semaine", "journée", "liste d'événements".
+rendering.macro.moccacalendar.parameter.calendarDoc.description=Ce paramètre définit les événements de quel calendrier sont affichés (uniquement si le filtre est défini sur « page »). Cette valeur est également utilisée comme calendrier par défaut où créer de nouveaux évènements. Si elle n'est pas renseignée, le document actuel est utilisé.
+rendering.macro.moccacalendar.parameter.defaultView.name=Vue par défaut
+rendering.macro.moccacalendar.parameter.defaultView.description=Affichage par défaut du Calendrier, personnalisable par l'utilisateur. Valeurs disponibles : 'month', 'agendaWeek', 'agendaDay' ou 'plainList'.
 rendering.macro.moccacalendar.parameter.firstDay.name=Premier jour de la semaine
-rendering.macro.moccacalendar.parameter.firstDay.description=La semaine débute le :\n0 = dimanche\n1 = samedi\n...\n6 = lundi\nSi vide, par défaut, la semaine débute le dimanche.
+rendering.macro.moccacalendar.parameter.firstDay.description=La semaine commence :\n0 = Dimanche\n1 = Samedi\n...\n6 = Lundi\nPar défaut, si la valeur n'est pas renseignée, la semaine débute Dimanche.
 rendering.macro.moccacalendar.parameter.minTime.name=Heure minimale du calendrier
-rendering.macro.moccacalendar.parameter.minTime.description=Heure minimale affichée dans le calendrier.\nLaissez vide pour utiliser la valeur par défaut (08h00).
+rendering.macro.moccacalendar.parameter.minTime.description=Heure minimale affichée dans le calendrier. Les utilisateurs ne verront pas des horaires antérieurs à ce paramètre. Laissez vide pour utiliser la valeur par défaut (08h00).
 rendering.macro.moccacalendar.parameter.maxTime.name=Heure maximale du calendrier
-rendering.macro.moccacalendar.parameter.maxTime.description=Heure maximale affichée dans le calendrier.\nLaissez vide pour utiliser la valeur par défaut (23h00).
+rendering.macro.moccacalendar.parameter.maxTime.description=Heure maximale affichée dans le calendrier. Les utilisateurs ne verront pas d'évènements postérieurs à ce paramètre. Laissez vide pour utiliser la valeur par défaut (23h00).
 rendering.macro.moccacalendar.parameter.year.name=Année
-rendering.macro.moccacalendar.parameter.year.description=Année affichée lors du chargement du calendrier.\nPar défaut, le calendrier affiche l'année courante.
+rendering.macro.moccacalendar.parameter.year.description=Année affichée lors du chargement du calendrier. Par défaut, le calendrier affiche l'année courante.
 rendering.macro.moccacalendar.parameter.month.name=Mois
-rendering.macro.moccacalendar.parameter.month.description=Mois (du 1 au 12) affiché lors du chargement du calendrier.\nPar défaut, le calendrier affiche le mois courant.
+rendering.macro.moccacalendar.parameter.month.description=Mois (de 1 à 12) affiché lors du chargement du calendrier. Par défaut, le calendrier affiche le mois courant.
 rendering.macro.moccacalendar.parameter.date.name=Jour
-rendering.macro.moccacalendar.parameter.date.description=Jour (du 1 au 31) affiché lors du chargement du calendrier.\nPar défaut, le calendrier affiche le jour courant.
-### Missing: rendering.macro.moccacalendar.parameter.eventLimit.name=Event limit
-### Missing: rendering.macro.moccacalendar.parameter.eventLimit.description=Sets a limit on daily event display. Extra events appear in a popover. If false (default) shows all events, else (true) restricts them to the day cell’s height.
+rendering.macro.moccacalendar.parameter.date.description=Jour (du 1 au 31) affiché lors du chargement du calendrier. Par défaut, le calendrier affiche le jour courant.
+rendering.macro.moccacalendar.parameter.eventLimit.name=Limite d'évènements
+rendering.macro.moccacalendar.parameter.eventLimit.description=Fixe une limite à l'affichage des événements quotidiens. Les événements supplémentaires apparaissent dans un pop-up. Si définit à false (par défaut), tous les événements sont affichés, sinon (true), ils sont limités à la hauteur de la cellule du jour.
 </content>
 </xwikidoc>
