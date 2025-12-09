@@ -453,6 +453,24 @@ if (typeof(XWiki) == "undefined" || typeof(XWiki.widgets) == "undefined" || type
         saveUrl = this.interactionParameters.event.saveUrl;
       }
       this.content.writeAttribute('action', saveUrl + '&amp;xpage=plain&amp;ajax=true');
+      let formData = new FormData(this.content);
+      if (formData.get('MoccaCalendar.MoccaCalendarEventClass_0_allDay') == 1) {
+        this.content.querySelectorAll('input.datetime').forEach(dateInput =&gt; {
+          // Convert the date fields from the displayed format to the one accepted by the backend.
+          const dateObj = moment(dateInput.value, moment().toMomentFormatString(dateInput.getAttribute('data-format')));
+          if (dateInput.id == 'MoccaCalendar.MoccaCalendarEventClass_0_endDate') {
+            // For the end date, set the hour to 23:59 instead of 00:00.
+            dateObj.hours(23);
+            dateObj.minutes(59);
+          }
+          const calendarEventObjectDateFormat = moment().toMomentFormatString(this.helper.dateFormat);
+          // Add a hidden element to the DOM to avoid flickering.
+          const tempElement = dateInput.clone();
+          tempElement.addClassName('hidden');
+          tempElement.value = dateObj.isValid() ? dateObj.format(calendarEventObjectDateFormat) : '';
+          dateInput.parentElement.insertBefore(tempElement, dateInput);
+        });
+      }
       this.content.request({
         onSuccess: function() {
           this.saving = false;
