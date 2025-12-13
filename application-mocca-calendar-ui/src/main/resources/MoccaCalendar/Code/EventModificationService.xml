@@ -36,17 +36,19 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>{{velocity}}
-#set($eventDocStr = $request.getParameter('eventDoc'))
-#if($eventDocStr)
-  #set($eventDoc = $xwiki.getDocument($eventDocStr))
-  #if ($request.getParameter('modificationIsNew') == 'true')
-    #set($newModification = $eventDoc.addObjectFromRequest())
-    #set($discard = $eventDoc.save($services.localization.render('moccacalendar.modify.createMessage'), true))
-  #else
-    #set($updated = $eventDoc.updateObjectsFromRequest($request.getParameter('classname')))
-    ## here we could check that $updated.size() == 1; otherwise something went wrong
-    #set($discard = $eventDoc.save($services.localization.render('moccacalendar.modify.saveMessage'), true))
+  <content>{{velocity wiki="false"}}
+#if ("$!request.outputSyntax" == 'plain')
+  #set ($eventDocStr = $request.getParameter('eventDoc'))
+  #if ($eventDocStr)
+    #set ($eventDoc = $xwiki.getDocument($eventDocStr))
+    #if ($request.getParameter('modificationIsNew') == 'true')
+      #set ($newModification = $eventDoc.addObjectFromRequest())
+      #set ($discard = $eventDoc.save($services.localization.render('moccacalendar.modify.createMessage'), true))
+    #else
+      #set ($updated = $eventDoc.updateObjectsFromRequest($request.getParameter('classname')))
+      ## here we could check that $updated.size() == 1; otherwise something went wrong
+      #set ($discard = $eventDoc.save($services.localization.render('moccacalendar.modify.saveMessage'), true))
+    #end
   #end
 #end
 {{/velocity}}</content>

@@ -228,6 +228,9 @@ $doc.display($field)
   &lt;input type="hidden" id="modificationIsNew" name="modificationIsNew" value="$modifiedEventObjectIsNew" /&gt;
   &lt;input type="hidden" id="eventOrigStartDate" name="${editOnePrefix}_eventOrigStartDate" value="$escapetool.xml($instanceStartStr)" /&gt;
   &lt;input type="hidden" name="eventDoc"  value="$escapetool.xml($services.model.serialize($doc.getDocumentReference(),'default'))" /&gt;
+  ## Provide a helper date format from class property to be used in JS.
+  #getDateFormat('startDate' false $format)
+  &lt;input type="hidden" name="dateClassPropertyFormat"  value="$escapetool.xml($format)" /&gt;
 &lt;/div&gt;
 #end ## if isSingleInstance
 

@@ -213,7 +213,7 @@
       <cache>long</cache>
     </property>
     <property>
-      <code>require(['jquery'], function(jQuery) {
+      <code>require(['jquery', 'moment'], function(jQuery, moment) {
 
   function disable(element) { element.setAttribute('disabled','disabled') }
   function enable(element) { element.removeAttribute('disabled') }
@@ -233,11 +233,46 @@
 
     if (action == 'action_save' || action == 'action_saveandcontinue' || action == 'save-moccacalendar-event') {
       jQuery(document).trigger('xwiki:actions:beforeSave')
+
+      // Format the dates with the expected backend date format.
+      const form = document.getElementById('inline');
+      var parameters = form.serialize({ submit: false });
+
+      // Backend-required date format (e.g., "dd.MM.yyyy HH:mm").
+      const xwikiFormat = parameters.dateClassPropertyFormat;
+      const backendMomentFormat = moment().toMomentFormatString(xwikiFormat);
+
+      form.querySelectorAll('input.datetime').forEach(input =&gt; {
+        const name = input.name;
+        const value = input.value;
+        const displayFormat = input.getAttribute('data-format');
+
+        // 1) Try parsing using backend format first.
+        let dateObj = moment(value, backendMomentFormat, true);
+
+        // 2) Fallback: parse using the input's display format.
+        if (!dateObj.isValid() &amp;&amp; displayFormat) {
+          const displayMomentFormat = moment().toMomentFormatString(displayFormat);
+          dateObj = moment(value, displayMomentFormat, true);
+        }
+
+        // If still invalid, skip this field.
+        if (!dateObj.isValid()) return;
+
+        // 3) Special handling for end date → force 23:59.
+        if (name.endsWith('_endDate')) {
+          dateObj.hour(23).minute(59);
+        }
+
+        // 4) Write the formatted value back into the parameters map.
+        parameters[name] = dateObj.format(backendMomentFormat);
+      });
+
       new Ajax.Request(
-         new XWiki.Document( new XWiki.DocumentReference('', ['MoccaCalendar','Code'], 'EventModificationService')).getURL('get'),
+         new XWiki.Document( new XWiki.DocumentReference('', ['MoccaCalendar','Code'], 'EventModificationService')).getURL('get', 'outputSyntax=plain'),
          {
            method: 'post',
-           parameters: $('inline').serialize({submit:false}),
+           parameters: parameters,
            onSuccess: function(response) {
               if (action == 'action_save') {
                 new XWiki.widgets.Notification( "saved", "done");
