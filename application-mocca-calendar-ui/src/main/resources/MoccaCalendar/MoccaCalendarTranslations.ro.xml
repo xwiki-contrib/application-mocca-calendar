@@ -1,1 +1,228 @@
+<?xml version="1.1" encoding="UTF-8"?>
 
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.3" reference="MoccaCalendar.MoccaCalendarTranslations" locale="">
+  <web>MoccaCalendar</web>
+  <name>MoccaCalendarTranslations</name>
+  <language/>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>MoccaCalendarClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title>Mocca Calendar Translations</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>#general
+MoccaCalendar.calendar=Calendar
+MoccaCalendar.calendar.title=Calendar
+MoccaCalendar.calendar.defaultCalendarTitle=Alte Evenimente
+MoccaCalendar.calendar.viewall=Prezentare generală a tuturor calendarelor
+MoccaCalendar.calendar.create=Creează un calendar nou
+MoccaCalendar.calendar.plainlist=agendă
+MoccaCalendar.calendar.plainlist.titlepast=Evenimente Trecute
+MoccaCalendar.calendar.plainlist.titleupcoming=Evenimente Viitoare
+MoccaCalendar.calendar.plainlist.nopastevents=Nu au fost găsite evenimente trecute.
+MoccaCalendar.calendar.plainlist.noupcomingevents=Nu au fost găsite evenimente viitoare.
+MoccaCalendar.calendar.firstDayOfWeek=0
+MoccaCalendar.calendarevent.viewall=Toate evenimentele
+MoccaCalendar.calendarevent.filterEvents=Filtrează Evenimentele după Calendar
+MoccaCalendar.calendarevent.filterEvents.submit=Filtrează evenimentele
+MoccaCalendar.calendarevent.create=Creează un eveniment nou
+MoccaCalendar.calendarevent.backlink=Înapoi la calendar «{0}»
+MoccaCalendar.calendarevent.confirmDelete=Chiar vrei să ștergi evenimentul «{0}» ?
+MoccaCalendar.calendarevent.view=Eveniment
+MoccaCalendar.calendarevent.confirmDelete.allEventsButton=Toate Instanțele
+MoccaCalendar.generic.errormessage=Eroare Internă a Serverului
+
+# Class fields
+MoccaCalendar.MoccaCalendarClass_title=Titlu
+MoccaCalendar.MoccaCalendarClass_color=Culoarea de fundal a intrărilor în vizualizarea calendarului
+MoccaCalendar.MoccaCalendarClass_textColor=Culoarea textului intrărilor în vizualizarea calendarului
+MoccaCalendar.MoccaCalendarClass_description=Descriere
+MoccaCalendar.MoccaCalendarClass_content1=Conținut
+MoccaCalendar.MoccaCalendarClass.textColor.unset=(alb)
+
+# Live table generic keys
+moccacalendar.livetable.doc.title=Calendar
+moccacalendar.livetable.doc.name=Nume pagină
+moccacalendar.livetable.doc.space=Spațiu
+moccacalendar.livetable.doc.fullname=Nume complet al paginii
+moccacalendar.livetable.doc.author=Ultimul autor
+moccacalendar.livetable.doc.creator=Creator
+moccacalendar.livetable.doc.date=Dată actualizare
+moccacalendar.livetable.doc.creationDate=Dată creare
+moccacalendar.livetable._avatar=Avatar
+moccacalendar.livetable._images=Imagini
+moccacalendar.livetable._attachments=Atașamente
+moccacalendar.livetable._actions=Acțiuni
+moccacalendar.livetable._actions.edit=Editează
+moccacalendar.livetable._actions.delete=Șterge
+moccacalendar.livetable.emptyvalue=-
+moccacalendar.livetable.title=Titlu
+moccacalendar.livetable.description=Descriere
+moccacalendar.livetable.content1=Conținut
+
+# Mocca Calendar Events keys
+# Class fields
+MoccaCalendar.MoccaCalendarEventClass_title=Titlu
+MoccaCalendar.MoccaCalendarEventClass_startDate=Dată de început
+MoccaCalendar.MoccaCalendarEventClass_endDate=Dată de sfârșit
+MoccaCalendar.MoccaCalendarEventClass_description=Descriere
+MoccaCalendar.MoccaCalendarEventClass_allDay=Toată ziua
+MoccaCalendar.MoccaCalendarEventClass_recurrent=Recurent
+
+# modification class fields
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency=Frecvență
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_daily=zilnic
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_workdays=zile lucrătoare
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_weekly=săptămânal
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_biweekly=bilunar
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_monthly=lunar
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_quarterly=trimestrial
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_frequency_yearly=anual
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_firstInstance=Prima apariție a evenimentului
+MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_lastInstance=Ultima apariție a evenimentului
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_title=Titlu modificat
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_startDate=Dată de început modificată
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_endDate=Dată de sfârșit modificată
+MoccaCalendar.Code.MoccaCalendarEventModificationClass_description=Descriere modificată
+
+# the modification switch
+moccacalendarevent.editswitch.label=Editează:
+moccacalendarevent.editswitch.oneInstance=doar această instanță
+moccacalendarevent.editswitch.allInstances=toate instanțele
+
+# Event live table generic keys (currently unused)
+moccacalendarevent.livetable.doc.title=Titlu pagină
+moccacalendarevent.livetable.doc.name=Nume pagină
+moccacalendarevent.livetable.doc.space=Spațiu
+moccacalendarevent.livetable.doc.fullname=Nume complet al paginii
+moccacalendarevent.livetable.doc.author=Ultimul autor
+moccacalendarevent.livetable.doc.creator=Creator
+moccacalendarevent.livetable.doc.date=Dată actualizare
+moccacalendarevent.livetable.doc.creationDate=Dată creare
+moccacalendarevent.livetable._avatar=Avatar
+moccacalendarevent.livetable._images=Imagini
+moccacalendarevent.livetable._attachments=Atașamente
+moccacalendarevent.livetable._actions=Acțiune
+moccacalendarevent.livetable._actions.edit=Editează
+moccacalendarevent.livetable._actions.delete=Șterge
+moccacalendarevent.livetable.emptyvalue=-
+
+# Live table specific keys
+moccacalendarevent.livetable.title=Titlu
+moccacalendarevent.livetable.startDate=Dată de început
+moccacalendarevent.livetable.endDate=Dată de sfârșit
+moccacalendarevent.livetable.description=Descriere
+
+# validation messages: on save
+val_title_notvalid=Titlu conține caractere nepermise.
+val_title_notempty=Titlul este obligatoriu.
+val_startDateMissing=Lipsește data de început pentru eveniment.
+val_startDateNotDate=Data de început furnizată nu poate fi interpretată ca o dată.
+val_endDateNotDate=Data de sfârșit furnizată nu poate fi interpretată ca o dată.
+val_endDate=Data de sfârșit trebuie să fie după data de început.
+val_title_already_exists=Există deja un eveniment cu acest nume.
+moccacalendar.updates.firstInstance.notDate=Data primei instanțe furnizate nu poate fi interpretată ca o dată.
+moccacalendar.updates.lastInstance.notDate=Data ultimei instanțe furnizate nu poate fi interpretată ca o dată.
+
+# validation messages: Update Service
+moccacalendar.updates.eventUpdated=Ora evenimentului a fost actualizată.
+moccacalendar.updates.eventrecurrent=Evenimentele recurente nu pot fi mutate.
+moccacalendar.updates.valuesinvalid=Ora nouă a evenimentului este invalidă.
+moccacalendar.updates.nodocument=Evenimentul nu mai este disponibil.
+
+# validation messages: Delete Service
+moccacalendar.delete.startDateInvalid=Data de început a evenimentului nu a putut fi citită.
+moccacalendar.delete.saveMessage=Instanța evenimentului de la {0} a fost ștearsă.
+
+# validation messages: Modification Service
+moccacalendar.modify.createMessage=A fost adăugată o modificare pentru o instanță a evenimentului.
+moccacalendar.modify.saveMessage=Modificarea pentru o instanță a evenimentului a fost actualizată.
+
+# Calendar macro
+rendering.macro.moccacalendar.name=Mocca Calendar
+rendering.macro.moccacalendar.description=Afișează un Calendar
+rendering.macro.moccacalendar.parameter.filter.name=Afișează evenimentele din ...
+rendering.macro.moccacalendar.parameter.filter.description=Valorile posibile sunt 'wiki', 'spațiu' sau 'pagină', unde: 'pagină': vor fi incluse doar evenimentele care sunt pagini copil ale acestei pagini, 'spațiu': vor fi incluse doar evenimentele care se află în spațiul documentului calendar, 'wiki': vor fi incluse toate evenimentele.
+rendering.macro.moccacalendar.parameter.calendarDoc.name=Pagină de calendar
+rendering.macro.moccacalendar.parameter.calendarDoc.description=Documentul de calendar ale cărui evenimente sunt afișate (numai dacă filtrul este setat la 'pagină'). Această valoare este folosită și ca calendar implicit pentru crearea de evenimente noi. Dacă lipsește, este utilizat documentul curent.
+rendering.macro.moccacalendar.parameter.defaultView.name=Vizualizare implicită
+rendering.macro.moccacalendar.parameter.defaultView.description=Modul inițial în care este afișat calendarul; poate fi schimbat de utilizator. Valorile posibile sunt: 'luna', 'agendă săptămânală', 'agendă zilnică' sau 'listă simplă'.
+rendering.macro.moccacalendar.parameter.firstDay.name=Prima zi a săptămânii
+rendering.macro.moccacalendar.parameter.firstDay.description=Prima zi (de la 0 pentru Duminică până la 6 pentru Luni) a săptămânii care va fi afișată în calendar. Lasă necompletat pentru Duminică.
+rendering.macro.moccacalendar.parameter.minTime.name=Ora de început
+rendering.macro.moccacalendar.parameter.minTime.description=Prima oră care va fi afișată în calendar. Utilizatorii nu vor vedea orele de dinaintea acestei ore. Lasă necompletat pentru valoarea implicită (8:00).
+rendering.macro.moccacalendar.parameter.maxTime.name=Ora de sfârșit
+rendering.macro.moccacalendar.parameter.maxTime.description=Ultima oră care va fi afișată în calendar. Utilizatorii nu vor vedea orele de după această oră. Lasă necompletat pentru valoarea implicită (23:00).
+rendering.macro.moccacalendar.parameter.year.name=An
+rendering.macro.moccacalendar.parameter.year.description=Anul datei care va fi afișată la încărcarea calendarului. Lasă necompletat pentru data de astăzi.
+rendering.macro.moccacalendar.parameter.month.name=Luna
+rendering.macro.moccacalendar.parameter.month.description=Luna (de la 0 la 11) a datei care va fi afișată la încărcarea calendarului. Lasă necompletat pentru data de astăzi.
+rendering.macro.moccacalendar.parameter.date.name=Ziua
+rendering.macro.moccacalendar.parameter.date.description=Ziua (de la 1 la 31) a datei care va fi afișată la încărcarea calendarului. Lasă necompletat pentru data de astăzi.
+rendering.macro.moccacalendar.parameter.eventLimit.name=Limită de evenimente
+rendering.macro.moccacalendar.parameter.eventLimit.description=Stabilește o limită pentru afișarea zilnică a evenimentelor. Evenimentele suplimentare apar într-un popover. Dacă este 'false' (implicit), sunt afișate toate evenimentele; dacă este 'true', acestea sunt restricționate la înălțimea celulei zilei.
+</content>
+  <object>
+    <name>MoccaCalendar.MoccaCalendarTranslations</name>
+    <number>0</number>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>f5d1be7a-4a54-44f5-b263-4bc248308297</guid>
+    <class>
+      <name>XWiki.TranslationDocumentClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <freeText>forbidden</freeText>
+        <largeStorage>0</largeStorage>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>1</number>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators>|, </separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <property>
+      <scope>WIKI</scope>
+    </property>
+  </object>
+</xwikidoc>
