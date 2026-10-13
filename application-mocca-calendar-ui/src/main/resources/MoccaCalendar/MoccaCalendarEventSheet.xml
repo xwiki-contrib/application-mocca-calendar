@@ -361,6 +361,45 @@ This page does not contain an event.
     </property>
     <property>
       <code>document.observe("xwiki:dom:loaded", function() {
+  var isEventDateInput = function(input) {
+    return input &amp;&amp; input.tagName === 'INPUT'
+      &amp;&amp; /^MoccaCalendar\.(MoccaCalendarEventClass|Code\.MoccaCalendarEventModificationClass)_\d+_(startDate|endDate)$/.test(input.name);
+  };
+
+  // The picker keeps focus on the input when its days are clicked.
+  var pickerInteraction = null;
+  var updateDateInteraction = function(event) {
+    var input = document.activeElement;
+    var widget = Event.findElement(event, '.bootstrap-datetimepicker-widget');
+    pickerInteraction = isEventDateInput(input) &amp;&amp; widget
+      ? {input: input, widget: widget} : null;
+  };
+
+  document.addEventListener('mousedown', updateDateInteraction, true);
+  document.addEventListener('touchstart', updateDateInteraction, true);
+  document.addEventListener('focus', function() {
+    pickerInteraction = null;
+  }, true);
+  document.addEventListener('input', function(event) {
+    if (isEventDateInput(event.target)) {
+      pickerInteraction = null;
+    }
+  }, true);
+
+  document.addEventListener('keydown', function(event) {
+    var input = event.target;
+    var editingKey = [33, 34, 37, 38, 39, 40, 46].indexOf(event.keyCode) !== -1;
+    var usingPicker = pickerInteraction &amp;&amp; pickerInteraction.input === input
+      &amp;&amp; document.documentElement.contains(pickerInteraction.widget);
+    if (editingKey &amp;&amp; isEventDateInput(input)) {
+      if (usingPicker) {
+        // Unbound combinations of picker keys must not move the input caret.
+        event.preventDefault();
+      } else {
+        event.stopPropagation();
+      }
+    }
+  }, true);
 
   var attachEvents = function() {
     var cp = $('calendarParent');
