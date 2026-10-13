@@ -65,6 +65,13 @@
       <artifactId>slf4j-api</artifactId>
       <scope>runtime</scope>
     </dependency>
+    <!-- The wiki the tests run against needs commons-lang 2 at runtime, but the parent POM restricts it to the test
+         scope, which keeps it out of the packaged wiki. -->
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <scope>runtime</scope>
+    </dependency>
     <!-- Test dependencies -->
     <!-- dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -78,10 +85,30 @@
       <version>${platform.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- Needed by WebDriverManager to download the browser driver; it only gets it through the docker-java
+         libraries, which the parent POM excludes. -->
+    <dependency>
+      <groupId>org.apache.httpcomponents.client5</groupId>
+      <artifactId>httpclient5</artifactId>
+      <version>5.0.3</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <testSourceDirectory>src/test/it</testSourceDirectory>
     <plugins>
+      <!-- commons-lang 2 is only added to the wiki the tests run against (see the dependency above); this module is
+           not part of the extension. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-commons-lang3</id>
+            <phase>none</phase>
+          </execution>
+        </executions>
+      </plugin>
       <!-- Make sure we only run AllTests since that test runs all the other ones, thus starting/stopping XWiki only
            once -->
       <plugin>

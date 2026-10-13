@@ -7,7 +7,7 @@ A calendar application for XWiki
 * [Issue Tracker](http://jira.xwiki.org/browse/MOCCACAL)
 * Communication: [Mailing List](http://dev.xwiki.org/xwiki/bin/view/Community/MailingLists>), [IRC]( http://dev.xwiki.org/xwiki/bin/view/Community/IRC)
 * [Development Practices](http://dev.xwiki.org)
-* Minimal XWiki version supported: XWiki 11.10.4
+* Minimal XWiki version supported: XWiki 12.10.3
 * License: LGPL v3
 * [Translations](https://l10n.xwiki.org/projects/xwiki-contrib/mocca-calendar-application/)
 * Sonar Dashboard: N/A

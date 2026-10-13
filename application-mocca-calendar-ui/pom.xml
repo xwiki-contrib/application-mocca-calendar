@@ -139,6 +139,11 @@
               <type>configuration</type>
             </entry>
           </entries>
+          <!-- Pages meant to be seen and customized by the users. -->
+          <contentPages>
+            <contentPage>.*/MoccaCalendar/WebHome\.xml</contentPage>
+            <contentPage>.*/Events/WebHome\.xml</contentPage>
+          </contentPages>
         </configuration>
       </plugin>
     </plugins>

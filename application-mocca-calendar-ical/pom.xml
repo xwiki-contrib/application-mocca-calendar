@@ -56,6 +56,10 @@
               <type>configuration</type>
             </entry>
           </entries>
+          <!-- Pages meant to be seen and customized by the users. -->
+          <contentPages>
+            <contentPage>.*/MoccaiCalendar/WebHome\.xml</contentPage>
+          </contentPages>
         </configuration>
       </plugin>
     </plugins>
