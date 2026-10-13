@@ -360,7 +360,9 @@ This page does not contain an event.
       <cache>long</cache>
     </property>
     <property>
-      <code>document.observe("xwiki:dom:loaded", function() {
+      <code>require(['jquery', 'xwiki-events-bridge'], function($) {
+  'use strict';
+
   var isEventDateInput = function(input) {
     return input &amp;&amp; input.tagName === 'INPUT'
       &amp;&amp; /^MoccaCalendar\.(MoccaCalendarEventClass|Code\.MoccaCalendarEventModificationClass)_\d+_(startDate|endDate)$/.test(input.name);
@@ -370,7 +372,7 @@ This page does not contain an event.
   var pickerInteraction = null;
   var updateDateInteraction = function(event) {
     var input = document.activeElement;
-    var widget = Event.findElement(event, '.bootstrap-datetimepicker-widget');
+    var widget = $(event.target).closest('.bootstrap-datetimepicker-widget')[0];
     pickerInteraction = isEventDateInput(input) &amp;&amp; widget
       ? {input: input, widget: widget} : null;
   };
@@ -401,31 +403,27 @@ This page does not contain an event.
     }
   }, true);
 
-  var attachEvents = function() {
-    var cp = $('calendarParent');
-    if (cp) cp.observe("change", function() {
-      $('xwikidocparentinput').setValue( $F('calendarParent'));
-      Event.fire($('xwikidocparentinput'), 'xwiki:suggest:selected');
-    })
-    var rc = $('MoccaCalendar.MoccaCalendarEventClass_0_recurrent');
-    var recurrencyArea = $('recurrentFields')
-    var recurrencyField = $('MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_0_frequency')
-    if (rc) {
-      rc.observe('change', function() {
-        var value = $F('MoccaCalendar.MoccaCalendarEventClass_0_recurrent');
-        if (value) {
-          if (recurrencyArea) recurrencyArea.show()
-        } else {
-          if (recurrencyArea) recurrencyArea.hide()
-        }
-      })
-    } else {
-      if(recurrencyField) recurrencyField.writeAttribute('disabled','disabled')
-    }
-  }
+  var recurrentSelector = '[id="MoccaCalendar.MoccaCalendarEventClass_0_recurrent"]';
+  var frequencySelector = '[id="MoccaCalendar.Code.MoccaCalendarEventRecurrencyClass_0_frequency"]';
 
-  document.observe('xwiki:moccacalendar:editloaded', attachEvents)
-  attachEvents()
+  // The handlers are delegated because the edit form is replaced each time the event dialog is loaded.
+  $(document).on('change', '#calendarParent', function() {
+    $('#xwikidocparentinput').val($(this).val()).trigger('xwiki:suggest:selected');
+  });
+
+  $(document).on('change', recurrentSelector, function() {
+    $('#recurrentFields').toggle(this.checked);
+  });
+
+  var initRecurrency = function() {
+    // An existing event has no recurrent checkbox, because its recurrence cannot be changed anymore.
+    if (!$(recurrentSelector).length) {
+      $(frequencySelector).prop('disabled', true);
+    }
+  };
+
+  $(document).on('xwiki:moccacalendar:editloaded', initRecurrency);
+  $(initRecurrency);
 });</code>
     </property>
     <property>
