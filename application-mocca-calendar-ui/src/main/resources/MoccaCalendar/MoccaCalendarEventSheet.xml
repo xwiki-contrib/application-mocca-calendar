@@ -112,8 +112,13 @@ $doc.display($field)
     ## we are in modal dialog edit view - no separate parent page widget
     #set($parentParamName="parent")
   #else
-    #set($discard=$xwiki.jsx.use("MoccaCalendar.MoccaCalendarEventSheet"))
-    #set($parentParamName="_parent")
+    #set ($discard = $xwiki.jsx.use('MoccaCalendar.MoccaCalendarEventSheet'))
+    ## The calendar picker; the modal dialog gets these resources from the page displaying the calendar.
+    #set ($discard = $xwiki.linkx.use($services.webjars.url('selectize.js', 'css/selectize.bootstrap3.css'), {'type': 'text/css', 'rel': 'stylesheet'}))
+    #set ($discard = $xwiki.ssfx.use('uicomponents/suggest/xwiki.selectize.css', true))
+    #set ($discard = $xwiki.jsfx.use('uicomponents/suggest/xwiki.selectize.js', true))
+    #set ($discard = $xwiki.ssx.use('MoccaCalendar.Code.Macro'))
+    #set ($parentParamName = '_parent')
   #end
 #end
 {{/velocity}}{{velocity}}{{html wiki="true" clean="false"}}
@@ -157,15 +162,16 @@ $doc.display($field)
 
 #end
 
-  ; &lt;label for="calendar"&gt;$escapetool.xml($services.localization.render('MoccaCalendar.calendar'))&lt;/label&gt;
-  : &lt;select id="calendarParent" name="$parentParamName"&gt;
+  ; &lt;label for="calendarParent"&gt;$escapetool.xml($services.localization.render('MoccaCalendar.calendar'))&lt;/label&gt;
+  : &lt;select id="calendarParent" class="moccacal-calendar-picker" name="$parentParamName"&gt;
   #foreach ($item in $services.moccacalendar.allEditableCalendars) ## TODO: add filter here, see MOCCACAL-76
     #set ($itemDoc = $xwiki.getDocument($item))
     #set ($selected = '')
     #if ($itemDoc.id == $calendarDoc.id)
-      #set($selected = "selected='selected'")
+      #set ($selected = "selected='selected'")
     #end
-    &lt;option value="$escapetool.xml($item)" $selected&gt;$itemDoc.displayTitle&lt;/option&gt;
+    #set ($itemColor = "$!itemDoc.getObject('MoccaCalendar.MoccaCalendarClass').getValue('color')")
+    &lt;option value="$escapetool.xml($item)" data-data="$escapetool.xml($jsontool.serialize({'color': $itemColor}))" $selected&gt;$itemDoc.displayTitle&lt;/option&gt;
   #end
   &lt;/select&gt;
 
@@ -408,8 +414,55 @@ This page does not contain an event.
 
   // The handlers are delegated because the edit form is replaced each time the event dialog is loaded.
   $(document).on('change', '#calendarParent', function() {
-    $('#xwikidocparentinput').val($(this).val()).trigger('xwiki:suggest:selected');
+    var calendar = $(this).val();
+    // The calendar picker has no value while the user is searching for another calendar.
+    if (calendar) {
+      $('#xwikidocparentinput').val(calendar).trigger('xwiki:suggest:selected');
+    }
   });
+
+  var renderCalendar = function(calendar) {
+    var color = $('&lt;span class="moccacal-calendar-color"/&gt;').css('background-color', calendar.color || '');
+    return $('&lt;div class="moccacal-calendar"/&gt;').text(calendar.label).prepend(color);
+  };
+
+  var calendarPicker;
+  var initCalendarPicker = function() {
+    require(['xwiki-selectize'], function() {
+      // The dropdown is attached to the page body, so it outlives the dialog its picker was created in.
+      if (calendarPicker &amp;&amp; !$.contains(document.documentElement, calendarPicker.$input[0])) {
+        calendarPicker.destroy();
+        calendarPicker = null;
+      }
+      var select = $('#calendarParent');
+      if (!select.length || select.hasClass('selectized')) {
+        return;
+      }
+      var selectedCalendar = select.val();
+      select.xwikiSelectize({
+        copyClassesToDropdown: true,
+        searchField: ['label'],
+        render: {
+          item: function(calendar) {
+            return renderCalendar(calendar).addClass('item');
+          },
+          option: function(calendar) {
+            return renderCalendar(calendar).addClass('option');
+          }
+        },
+        onChange: function(calendar) {
+          selectedCalendar = calendar || selectedCalendar;
+        },
+        // An event always belongs to a calendar, so the selection must not be left empty.
+        onBlur: function() {
+          if (!this.getValue()) {
+            this.setValue(selectedCalendar);
+          }
+        }
+      });
+      calendarPicker = select[0].selectize;
+    });
+  };
 
   $(document).on('change', recurrentSelector, function() {
     $('#recurrentFields').toggle(this.checked);
@@ -423,7 +476,9 @@ This page does not contain an event.
   };
 
   $(document).on('xwiki:moccacalendar:editloaded', initRecurrency);
+  $(document).on('xwiki:moccacalendar:editloaded', initCalendarPicker);
   $(initRecurrency);
+  $(initCalendarPicker);
 });</code>
     </property>
     <property>

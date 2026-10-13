@@ -1055,6 +1055,19 @@ div.xdialog-box-moccacal-modal-popup #recurrentFields dl {
   z-index: 1006;
 }
 
+/* The calendar picker of the event form; its dropdown must also be shown on top of the event modal. */
+.selectize-dropdown.moccacal-calendar-picker {
+  z-index: 1006;
+}
+.moccacal-calendar-color {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  height: 1em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  width: 1em;
+}
+
 /* calendar */
 body .fc {
   padding-right: 1px; /* odd hack to avoid scrollbars in FF at times */
@@ -1337,26 +1350,29 @@ div.fc-view.fc-plainList-view {
     <property>
       <code>{{velocity output="false"}}
 #if('#dateTimePicker_import()' == "#dateTimePicker_import()")
-  #set($picker_macro = false)
+  #set ($picker_macro = false)
   ## A simple date picker widget.
-  $xwiki.ssfx.use('uicomponents/widgets/datepicker/calendarDateSelect.css', true)
-  $xwiki.jsfx.use('uicomponents/widgets/datepicker/calendarDateSelect.js', true)
+  #set ($discard = $xwiki.ssfx.use('uicomponents/widgets/datepicker/calendarDateSelect.css', true))
+  #set ($discard = $xwiki.jsfx.use('uicomponents/widgets/datepicker/calendarDateSelect.js', true))
   ## Used to parse and serialize the selected date using the date format specified in the XClass.
-  $xwiki.jsfx.use('uicomponents/widgets/datepicker/simpleDateFormat.js', true)
+  #set ($discard = $xwiki.jsfx.use('uicomponents/widgets/datepicker/simpleDateFormat.js', true))
   ## A wrapper over the CalendarDateSelect widget that uses the SimpleDateFormat to parse/serialize the dates.
-  $xwiki.ssfx.use('uicomponents/widgets/datepicker/dateTimePicker.css', true)
-  $xwiki.jsfx.use('uicomponents/widgets/datepicker/dateTimePicker.js')
+  #set ($discard = $xwiki.ssfx.use('uicomponents/widgets/datepicker/dateTimePicker.css', true))
+  #set ($discard = $xwiki.jsfx.use('uicomponents/widgets/datepicker/dateTimePicker.js'))
 #else
   #set($picker_macro = true)
 #end
-$xwiki.jsx.use("Calendar.FullCalendar", {'defer': false})
-$xwiki.jsx.use("MoccaCalendar.Code.Macro", {'defer': false})
-$xwiki.jsx.use("MoccaCalendar.Code.DatePickerExtension", {'defer': false})
-$xwiki.jsx.use("MoccaCalendar.MoccaCalendarEventSheet")
-$xwiki.jsx.use("MoccaCalendar.Code.MoccaCalendarEventModificationClass")
-$xwiki.ssx.use("Calendar.FullCalendar")
-$xwiki.ssx.use("MoccaCalendar.Code.Macro")
-#set($calcounter = $request.getAttribute('MoccaCalendar.Macro:counter'))
+#set ($discard = $xwiki.jsx.use('Calendar.FullCalendar', {'defer': false}))
+#set ($discard = $xwiki.jsx.use('MoccaCalendar.Code.Macro', {'defer': false}))
+#set ($discard = $xwiki.jsx.use('MoccaCalendar.Code.DatePickerExtension', {'defer': false}))
+#set ($discard = $xwiki.jsx.use('MoccaCalendar.MoccaCalendarEventSheet'))
+#set ($discard = $xwiki.jsx.use('MoccaCalendar.Code.MoccaCalendarEventModificationClass'))
+## The calendar picker of the event dialog.
+#picker_import
+#set ($discard = $xwiki.jsfx.use('uicomponents/suggest/xwiki.selectize.js', true))
+#set ($discard = $xwiki.ssx.use('Calendar.FullCalendar'))
+#set ($discard = $xwiki.ssx.use('MoccaCalendar.Code.Macro'))
+#set ($calcounter = $request.getAttribute('MoccaCalendar.Macro:counter'))
 #if(!$calcounter) #set($calcounter = 0) #else #set($calcounter = $calcounter + 1) #end
 #set($discard = $request.setAttribute('MoccaCalendar.Macro:counter', $calcounter))
 #set($filter = $xcontext.macro.params.filter)
