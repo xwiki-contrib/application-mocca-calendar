@@ -92,6 +92,14 @@
       <artifactId>httpclient5</artifactId>
       <version>5.6.3</version>
       <scope>test</scope>
+      <exclusions>
+        <!-- httpclient5 asks for a newer slf4j-api than the one managed by the parent POM, which breaks the upper
+             bounds check; the managed slf4j-api is API-compatible. -->
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>
